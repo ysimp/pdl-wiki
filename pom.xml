@@ -7,7 +7,7 @@
   
   
    <description>Projet PDL ...</description>
-   <dependencies>
+    <dependencies>
 
 		<!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
 		<dependency>
@@ -46,6 +46,18 @@
 				    <scope>test</scope>
 				</dependency>
 				
+			<!-- https://mvnrepository.com/artifact/net.sourceforge/jwbf -->
+<dependency>
+    <groupId>net.sourceforge</groupId>
+    <artifactId>jwbf</artifactId>
+    <version>3.1.1</version>
+</dependency>
+
+<dependency>
+                <groupId>info.bliki.wiki</groupId>
+                <artifactId>bliki-core</artifactId>
+                <version>3.1.0</version>
+            </dependency>
 				
 				
 		
