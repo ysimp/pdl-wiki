@@ -14,8 +14,6 @@ public class Ligne {
 		this.ligneTableau = ligneTableau;
 	}
 	
-	
-   
 
 	public List<Cellule> getListCelluleLigne() {
 		return listCelluleLigne;
