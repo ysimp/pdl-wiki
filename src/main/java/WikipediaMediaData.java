@@ -8,6 +8,9 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import info.bliki.wiki.model.WikiModel;
+import net.sourceforge.jwbf.core.contentRep.Article;
+import net.sourceforge.jwbf.mediawiki.bots.MediaWikiBot;
 import utils.CSVUtils;
 
 
@@ -30,6 +33,7 @@ public class WikipediaMediaData {
     	8)listLigneChaqTableau est l'ensemble des ensembles de ligne de chaque tableau
     	*/
     	
+		/*
     	
         String url = "https://en.wikipedia.org/wiki/Comparison_of_Canon_EOS_digital_cameras";
         Document doc = null;
@@ -50,7 +54,7 @@ public class WikipediaMediaData {
          */
       
         
-        
+        /*
         
         List<String> donnees = new ArrayList<String>();
         List<List<String>> listLigneTableau = new ArrayList<List<String>>() ;
@@ -64,7 +68,7 @@ public class WikipediaMediaData {
          * 3-Retourner le dom de la page
          */
         
-        
+        /*
         try {
             doc = Jsoup.connect(url).get();
         } catch (IOException e) {
@@ -87,7 +91,7 @@ public class WikipediaMediaData {
          * 2-8 ajouter la ligne courante a l'ensemble des lignes du tableau
          */
  
-        
+       /* 
         tables = doc.select("table"); 
 
         for (int t = 0; t < (tables.size() - 1); t++){
@@ -128,7 +132,16 @@ public class WikipediaMediaData {
         
         }
         
-        
+        */
+		
+		String BASE_WIKIPEDIA_URL = "https://en.wikipedia.org/w/";
+		
+		MediaWikiBot wikiBot = new MediaWikiBot(BASE_WIKIPEDIA_URL);
+	    Article article = wikiBot.getArticle("Comparison_between_Esperanto_and_Ido");
+	    System.out.println(article.getText());
+	    
+	    String html =  WikiModel.toHtml(article.getText());
+	    Document docHtml = Jsoup.parse(html);
         
 	}
 		
