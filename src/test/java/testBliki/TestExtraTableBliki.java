@@ -50,12 +50,6 @@ public  Boolean extractionTableJsoup(String url) throws IOException {
 	    Document docHtml = Jsoup.parse(html);
 	//    String wurl = BASE_WIKIPEDIA_URL+url;
 	    
-	    /*
-	    List<String> listNomPageZeroTable = new ArrayList<String>();
-	    List<String> listNomPageEtudeValidees = new ArrayList<String>();
-	    List<String> listNomPageEtudeNonValidees = new ArrayList<String>();
-	    List<Page> listPageEtudeValidees = new ArrayList<Page>();
-	    */
 	    
 	    /*
 	    
