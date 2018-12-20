@@ -4,14 +4,14 @@ import java.util.List;
 
 public class Ligne {
 	private int numeroLigne;
-	private List<String> ligneTableau;
+	private List<String> ligne;
 	private List<Cellule> listCelluleLigne;
 	
 	public Ligne() {}
 	
 	public Ligne(List<String> ligneTableau) {
 		super();
-		this.ligneTableau = ligneTableau;
+		this.ligne = ligneTableau;
 	}
 	
 	
@@ -34,11 +34,11 @@ public class Ligne {
 	}
 
 	public List<String> getLigneTableau() {
-		return ligneTableau;
+		return ligne;
 	}
 
 	public void setLigneTableau(List<String> ligneTableau) {
-		this.ligneTableau = ligneTableau;
+		this.ligne = ligneTableau;
 	}
 	
 	

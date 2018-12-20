@@ -7,6 +7,8 @@ import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.RunWith;
 import org.junit.runner.notification.Failure;
+
+import testBliki.TestExtraTableBliki;
 import testPDL.BenchTest;
 
 
@@ -15,15 +17,13 @@ import testPDL.BenchTest;
 @IncludeTags({"Connexion","TransfoEnCSV"})
 public class TestRunWith {
 
-	public static void  test(String[] args) {// testJsoupTable
+	public static void  test(String[] args) {
 		Result result = JUnitCore.runClasses(TestConnexionJsoup.class, TestNreTables.class,
 				NbreLigneTable.class, TestExtraTableJsoup.class,
-				TestJsoupTable.class, BenchTest.class );
-		
+				TestJsoupTable.class,TestExtraTableBliki.class, BenchTest.class);		
 		for (Failure failure : result.getFailures()) {
 			System.out.println(failure.toString());
-		}
-		
+		}		
 		System.out.println(result.wasSuccessful());
 	}
 

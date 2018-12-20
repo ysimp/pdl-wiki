@@ -24,10 +24,7 @@ public class BenchTest {
 		int nbreTable = 0;
 		int countTable = 0; 
 		
-		TestConnexionJsoup testConnexionJsoup = new TestConnexionJsoup();
-		TestNreTables testNreTables = new TestNreTables();
 		TestExtraTableJsoup testExtraTable = new TestExtraTableJsoup();
-		TestJsoupTable testJsoupTable = new TestJsoupTable();
 		TestExtraTableBliki testExtraTableBliki = new TestExtraTableBliki();
 		
 		String BASE_WIKIPEDIA_URL = "https://en.wikipedia.org/wiki/";
@@ -47,18 +44,10 @@ public class BenchTest {
 	       System.out.println("Wikipedia url: " + wurl);
 	       // TODO: do something with the Wikipedia URL 
 	       // (ie extract relevant tables for correct URL, with the two extractors)
-	       
-	       //Document document = null;
-	      
+
 	       testExtraTable.extractionTableJsoup(url);
 	       testExtraTableBliki.extractionTableJsoup(url);
-	     //  document= testConnexionJsoup.connexion(wurl);
-	     //  Elements tables = null;
-	    //   tables = document.select("table"); ;
-//	       
-//	       countTable = countTable + nbreTable ;
-	       	       	       
-	      // testJsoupTable.testBenchExtraction(wurl);     
+	      
 	       
 	       // for exporting to CSV files, we will use mkCSVFileName 
 	       // example: for https://en.wikipedia.org/wiki/Comparison_of_operating_system_kernels
