@@ -41,11 +41,38 @@ public class TestExtraTableBliki {
 		Boolean testAccessDOM = false;
 		String BASE_WIKIPEDIA_URL_wikiTest = "https://en.wikipedia.org/w/";
 		MediaWikiBot wikiBot = new MediaWikiBot(BASE_WIKIPEDIA_URL_wikiTest);
+<<<<<<< HEAD
 		Article article = wikiBot.getArticle(url);
 		String html = WikiModel.toHtml(article.getText());
 		Document docHtml = Jsoup.parse(html);
 		if (docHtml != null) {
 			testAccessDOM = true;
+=======
+	    Article article = wikiBot.getArticle(url);
+	   // System.out.println(article.getText());
+	    
+	    String html =  WikiModel.toHtml(article.getText());
+	    Document docHtml = Jsoup.parse(html);
+	//    String wurl = BASE_WIKIPEDIA_URL+url;
+	    
+	    
+	    /*
+	    
+	    try {
+	    	docHtml = Jsoup.connect(url).get();
+	           if (doc!=null) {
+	        	   testAccessDOM = true;
+			}
+	           
+	           
+	       } catch (IOException e) {
+	    	   System.out.println("Erreur de connexion, vous vous êtes sans doute trompé dans la saisie de l'url");
+	       }
+*/
+	    
+	    if (docHtml != null || docHtml == null) {
+	    	testAccessDOM = true;
+>>>>>>> 4c3c0a10241affab817eb7d4975192f54bfc61f7
 		}
 		if (testAccessDOM == true) {
 			tables = docHtml.select("table");

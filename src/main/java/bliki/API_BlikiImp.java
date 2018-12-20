@@ -8,5 +8,6 @@ import net.sourceforge.jwbf.mediawiki.bots.MediaWikiBot;
 public class API_BlikiImp {
 	
 	public static void main_1(String[] args)  {
+
 }
 }
