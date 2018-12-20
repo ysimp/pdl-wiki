@@ -132,7 +132,7 @@ public class WikipediaMediaData {
         
         }
         
-        */
+        
 		
 		String BASE_WIKIPEDIA_URL = "https://en.wikipedia.org/w/";
 		
@@ -142,6 +142,8 @@ public class WikipediaMediaData {
 	    
 	    String html =  WikiModel.toHtml(article.getText());
 	    Document docHtml = Jsoup.parse(html);
+	    
+	    */
         
 	}
 		

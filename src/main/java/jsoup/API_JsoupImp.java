@@ -13,6 +13,7 @@ import utils.CSVUtils;
 
 
 public class API_JsoupImp {
+	/*
 	
 	String url = "https://en.wikipedia.org/wiki/Comparison_of_Canon_EOS_digital_cameras";
     List<String> donnees = new ArrayList<String>();
@@ -152,7 +153,7 @@ public class API_JsoupImp {
          * 1-vérifier si l'url existe
          * 2-Vérifier qu'il sagit d'une page wikipedia
          * 3-Retourner le dom de la page
-         */
+         *
 		
 		try {
             doc = Jsoup.connect(url).get();
@@ -260,7 +261,7 @@ public class API_JsoupImp {
 	} 
     
   
-	
+	*/
 	
 
 }

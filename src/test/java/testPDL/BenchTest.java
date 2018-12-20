@@ -51,7 +51,7 @@ public class BenchTest {
 	       //Document document = null;
 	      
 	       testExtraTable.extractionTableJsoup(url);
-	       //testExtraTableBliki.extractionTableJsoup(url);
+	       testExtraTableBliki.extractionTableJsoup(url);
 	     //  document= testConnexionJsoup.connexion(wurl);
 	     //  Elements tables = null;
 	    //   tables = document.select("table"); ;

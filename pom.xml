@@ -7,7 +7,7 @@
   
   
    <description>Projet PDL ...</description>
-    <dependencies>
+   <dependencies>
 
 		<!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
 		<dependency>
