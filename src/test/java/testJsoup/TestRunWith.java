@@ -18,9 +18,9 @@ import testPDL.BenchTest;
 public class TestRunWith {
 
 	public static void  test(String[] args) {
-		Result result = JUnitCore.runClasses(TestConnexionJsoup.class, TestNreTables.class,
-				NbreLigneTable.class, TestExtraTableJsoup.class,
-				TestJsoupTable.class,TestExtraTableBliki.class, BenchTest.class);		
+		Result result = JUnitCore.runClasses(TestConnexionJsoup.class, 
+				TestExtraTableJsoup.class,
+				TestExtraTableBliki.class, BenchTest.class);		
 		for (Failure failure : result.getFailures()) {
 			System.out.println(failure.toString());
 		}		
