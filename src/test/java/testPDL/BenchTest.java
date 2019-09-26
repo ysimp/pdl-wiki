@@ -17,6 +17,11 @@ public class BenchTest {
 	*  see below for more details
 	**/
 	
+	public static void main(String[] args) throws Exception {
+		
+		new BenchTest().testBenchExtractors();
+	}
+	
 	@SuppressWarnings("unused")
 	@Test
 	public void testBenchExtractors() throws Exception {
