@@ -17,6 +17,7 @@ public class BenchTest {
 	*  see below for more details
 	**/
 	
+	/* Main */
 	public static void main(String[] args) throws Exception {
 		
 		new BenchTest().testBenchExtractors();
