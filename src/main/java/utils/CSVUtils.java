@@ -17,6 +17,7 @@ public class CSVUtils {
     }
 
     //https://tools.ietf.org/html/rfc4180
+    //remplace simple guillemet double guillemet
     private static String followCVSformat(String value) {
 
         String result = value;

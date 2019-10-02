@@ -1,4 +1,4 @@
-package testJsoup;
+package testPDL;
 
 import org.junit.platform.runner.JUnitPlatform;
 import org.junit.platform.suite.api.IncludeTags;
@@ -8,9 +8,6 @@ import org.junit.runner.Result;
 import org.junit.runner.RunWith;
 import org.junit.runner.notification.Failure;
 
-import testBliki.TestExtraTableBliki;
-import testPDL.BenchTest;
-
 
 @RunWith(JUnitPlatform.class)
 @SelectPackages("pdl_V_1_0")
@@ -18,9 +15,9 @@ import testPDL.BenchTest;
 public class TestRunWith {
 
 	public static void  test(String[] args) {
-		Result result = JUnitCore.runClasses(TestConnexionJsoup.class, 
-				TestExtraTableJsoup.class,
-				TestExtraTableBliki.class, BenchTest.class);		
+		
+		/*Appeler les autres classes de test dans la runclasses*/
+		Result result = JUnitCore.runClasses(BenchTest.class);		
 		for (Failure failure : result.getFailures()) {
 			System.out.println(failure.toString());
 		}		
