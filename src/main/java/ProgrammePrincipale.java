@@ -22,7 +22,7 @@ public class ProgrammePrincipale {
 public static void BenchExtractors() throws Exception {
 		
 		int nbreTable = 0;
-		int countTable = 0; 
+		int countTable = 0; // c,d
 		
 		API_JsoupImp testExtraTable = new API_JsoupImp ();
 		API_BlikiImp testExtraTableBliki = new API_BlikiImp();
