@@ -1,13 +1,13 @@
 # How to install and use our project
 This document retranscribes  the instructions needed to extract tables from Wikipedia pages to convert them to CSV and HTML files.
 ## Installation
-### Git Bash : 
+### Git Bash
 Git Bash is a git command prompt to interact with the remote server hosting the Project.
 In order to clone the Project you must execute the following command:
 Git clone https://github.com/ysimp/pdl-wiki.git
-### SourceTree : 
+### SourceTree
 To avoid having to write command lines to clone the Project, you can use SourceTree which is an interface that will allow you to interact with your Git repositories, so you can focus on your coding. SourceTree will certainly allow you to visualize your code, to make commits of your project on your Git space.
-### IDE (Text Editor) :
+### IDE (Text Editor)
 After cloning your project in your personal folder or downloading the .rar or .zip… file from Gitlab, it is desirable to have an IDE (Eclipse, Netbeans, IntelliJ) in the latest version that will help you to code, structure, Compile, run tests and run your Project in Java. To open your already downloaded project, it is desirable to do the following:
 File> Open Project from File System> Directory> ... ..> Finish
 In order to install your favorite IDE you must have a Java Development Kit (JDK) with a minimal version 8.
