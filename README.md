@@ -5,7 +5,7 @@ Its goal is to improve the WikipediaMatrix 2018-2019 project which automatically
 There are two ways to extract the raw tabular data from either the HTML code (used by the web browser to describe the page) or the Wikitext (a markup language used).
 ## Goal of the project
 - Understanding the existing project (Wikipedia Matrix Project: The Truth of the former group M1 MIAGE 2018 - 2019).
--Improving the project at the documentation, code and test levels.
+- Improving the project at the documentation, code and test levels.
 - Improvement of the two extractors.
 ## Functionality supported
 The project has a file that contains 336 Wikipedia URLs. The software generates a CSV file for each table on the page. These files are in an output directory that contains tables from two different sources: 
@@ -24,16 +24,16 @@ Finally, the absence of an important step after the installation of the project 
 ## Project license
 This project is open source.
 ## Technologies used
-• Eclipse: The IDE used
-• JUnit: Unit test
-• Maven: Dependency Management.
-• JSoup: The java based HTML Parser.
+- Eclipse: The IDE used
+- JUnit: Unit test
+- Maven: Dependency Management.
+- JSoup: The java based HTML Parser.
 ## Authors
-### Simpara Yaya
-### El Mahjoub Abdrahmane
-### Konaté Mahamadou Kandé
-### Jahoui Hajar
-### Jahoui Jihad
+  * Simpara Yaya
+  * El Mahjoub Abdrahmane
+  * Konaté Mahamadou Kandé
+  * Jahoui Hajar
+  * Jahoui Jihad
 
 
 
