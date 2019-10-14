@@ -29,11 +29,11 @@ This project is open source.
 • Maven: Dependency Management.
 • JSoup: The java based HTML Parser.
 ## Authors
-Simpara Yaya
-El Mahjoub Abdrahmane
-Konaté Mahamadou Kandé
-Jahoui Hajar
-Jahoui Jihad
+### Simpara Yaya
+### El Mahjoub Abdrahmane
+### Konaté Mahamadou Kandé
+### Jahoui Hajar
+### Jahoui Jihad
 
 
 
