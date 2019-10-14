@@ -9,8 +9,8 @@ There are two ways to extract the raw tabular data from either the HTML code (us
 - Improvement of the two extractors.
 ## Functionality supported
 The project has a file that contains 336 Wikipedia URLs. The software generates a CSV file for each table on the page. These files are in an output directory that contains tables from two different sources: 
-• Tables extracted from the html code and will be saved in the output / html folder.
-• Tables extracted from the wikitext code and will be saved in the output / wiki folder.
+- Tables extracted from the html code and will be saved in the output / html folder.
+- Tables extracted from the wikitext code and will be saved in the output / wiki folder.
 ## Analysis of the existing
 The existing project has several drawbacks:
 First, very less information on the README.md document that creates difficulty in understanding how the project works.
