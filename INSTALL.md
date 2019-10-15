@@ -21,3 +21,5 @@ You must also check the existence of the inputData folder in the root of your pr
 This is the starting point of the project. This is the class that must be executed directly because it contains the main () function of the project.
 Do not forget to update the Project by right clicking on the Project> Maven> Update Project, in order to download the dependency libraries.
 
+## Run tests classes
+To launch the test classes you have to place yourself in a terminal access to the folder in which the project is located and enter the command **mvn test** .
