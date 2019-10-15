@@ -13,25 +13,25 @@ The output directory: Contains all the tables extracted from all the pages suppl
 ## Dependencies
 There are libraries from which the project depends for its proper functioning :
 
-### Junit :
-is the Java unit test framework that allows you to make assertions
+### Junit
+Is the Java unit test framework that allows you to make assertions
 
-### Logging :
-consists of adding processing in the applications to allow the emission and storage of messages following events. It keeps track of exceptions and executions(Stacktrace).
+### Logging
+Consists of adding processing in the applications to allow the emission and storage of messages following events. It keeps track of exceptions and executions(Stacktrace).
 
-### JSOUP :
+### JSOUP
 is a java library for working with real HTML. It provides a very convenient API for extracting and manipulating data using the best of DOM, CSS and JQuery methods. It serves as an HTML parser.
 
-### JWBF  :
+### JWBF
 The Wiki Bot Framework is a library for maintaining Wikipedia-like Wikis based on Mediawiki. The library provides methods for connecting, editing, and reading collections of articles to help you create your Bot Wiki project.
 
-### API Wikimedia : 
-content in the JWBF, it is a web service that provides access to some features such as authentication, page operations and search. It can provide meta-information about the wiki and the logged-in user.
-### Bliki :
-the Wikipédia java API is a parsing library that converts wikitext from Wikipedia to HTML.
+### API Wikimedia
+Content in the JWBF, it is a web service that provides access to some features such as authentication, page operations and search. It can provide meta-information about the wiki and the logged-in user.
+### Bliki
+The Wikipédia java API is a parsing library that converts wikitext from Wikipedia to HTML.
 
-### Apache MAVEN :
-is a management and production automation tool for Java software projects in general. It is used to automate continuous integration during software development.
+### Apache MAVEN
+Is a management and production automation tool for Java software projects in general. It is used to automate continuous integration during software development.
 The Maven architecture is based on the POM.xml file.
 POM (Project Object Model) contains project information and configuration details used by Maven to build the project.
 It contains default values ​​for most projects. Examples that illustrate it include the directory building, which is in the Target; 
@@ -43,23 +43,23 @@ Some of the configurations that can be specified in the POM are project dependen
 
 In order to properly organize our project, we have created a number of packages in the src/main and src/test directories :
 
-The src/main directory contains four packages :
+The **src/main** directory contains four packages :
 
-the Default Package: it contains the class allowing the execution of our application.
+**the Default Package:** it contains the class allowing the execution of our application.
 
-the Bliki package : is composed of the class API_BlikiImp which allows to extract the tables of a Wikipedia page from the code wikitext.
+**the Bliki package :** is composed of the class API_BlikiImp which allows to extract the tables of a Wikipedia page from the code wikitext.
 
-the Jsoup package : contains the API_JsoupImp class that extracts the tables from a Wikipedia page from the html code.
+**the Jsoup package :** contains the API_JsoupImp class that extracts the tables from a Wikipedia page from the html code.
 
-The utils package: includes all the classes that represent a web page, a table, a row and a cell of a table
+**the utils package:** includes all the classes that represent a web page, a table, a row and a cell of a table
 
-The src/test directory consists of a single package  testPDL which includes all the unit tests of our program.
+The **src/test directory** consists of a single package  testPDL which includes all the unit tests of our program.
 
 ## Use case Diagram
-<img src="use case.PNG" alt="" />
+<img src="use case.PNG" alt="Use case diagram" />
 
 ## Package Diagram
-<img src="diagram pakcage.PNG" alt="" />
+<img src="diagram pakcage.PNG" alt="packages diagram" />
 
 ## Class Diagram
-<img src="diagram class.PNG" alt="" />
+<img src="diagram class.PNG" alt="class diagram" />
