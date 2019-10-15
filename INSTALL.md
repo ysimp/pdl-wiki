@@ -9,9 +9,11 @@ Git clone https://github.com/ysimp/pdl-wiki.git
 To avoid having to write command lines to clone the Project, you can use SourceTree which is an interface that will allow you to interact with your Git repositories, so you can focus on your coding. SourceTree will certainly allow you to visualize your code, to make commits of your project on your Git space.
 ### IDE (Text Editor)
 After cloning your project in your personal folder or downloading the .rar or .zip… file from Gitlab, it is desirable to have an IDE (Eclipse, Netbeans, IntelliJ) in the latest version that will help you to code, structure, Compile, run tests and run your Project in Java. To open your already downloaded project, it is desirable to do the following:
-File> Open Project from File System> Directory> ... ..> Finish
+**File> Open Project from File System> Directory> ... ..> Finish .**
+
 In order to install your favorite IDE you must have a Java Development Kit (JDK) with a minimal version 8.
-Input & output : 
+
+### Input & output folders: 
 In order to run the project you must have an output folder in the root of your project. This folder will contain two subfolders: html and wikitext which will in turn contain the results of the execution of our extractor.
 You must also check the existence of the inputData folder in the root of your project which contains the wikiurls.txt file in which the various URLs of the wikipedia pages to be extracted have been stored.
 
