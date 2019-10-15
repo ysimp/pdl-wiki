@@ -54,3 +54,12 @@ the Jsoup package : contains the API_JsoupImp class that extracts the tables fro
 The utils package: includes all the classes that represent a web page, a table, a row and a cell of a table
 
 The src/test directory consists of a single package  testPDL which includes all the unit tests of our program.
+
+## Use case Diagram
+<img src="use case.PNG" alt="" />
+
+## Package Diagram
+<img src="diagram pakcage.PNG" alt="" />
+
+## Class Diagram
+<img src="diagram class.PNG" alt="" />
