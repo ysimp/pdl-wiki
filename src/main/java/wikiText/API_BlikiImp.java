@@ -1,4 +1,4 @@
-package bliki;
+package wikiText;
 
 import java.io.File;
 import java.io.FileWriter;

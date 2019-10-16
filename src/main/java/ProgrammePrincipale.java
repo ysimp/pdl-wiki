@@ -6,8 +6,8 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
-import bliki.API_BlikiImp;
-import jsoup.API_JsoupImp;
+import html.API_JsoupImp;
+import wikiText.API_BlikiImp;
 
 
 public class ProgrammePrincipale {
@@ -47,6 +47,8 @@ public static void BenchExtractors() throws Exception {
 
 	       testExtraTable.extractionTableJsoup(url);
 	       testExtraTableBliki.extractionTableJsoup(url);
+	       
+	       
 	      
 	       
 	       // for exporting to CSV files, we will use mkCSVFileName 
