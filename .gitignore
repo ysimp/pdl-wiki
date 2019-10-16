@@ -1,9 +1,11 @@
+/target/
+
+/input/
+/output/
+.csv
+.class
 .classpath
-.project
-.settings/
-target/
-output/html
-output/wikitext
+.idea/
 
 .metadata
 bin/
