@@ -1,4 +1,4 @@
-package jsoup;
+package html;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -62,9 +62,13 @@ public class API_JsoupImp {
 				Tableau tableau = new Tableau();
 				numTab++;
 				String helpFileName;
+				//Construction du nom du fichier CSV
 				helpFileName = CSVUtils.assureFomatDosTab(url);
-				String tableauCSV;				
-				tableauCSV = csvFileRacine + CSVUtils.mkCSVFileName(helpFileName, numTab);	
+				String tableauCSV;
+				
+				//Construction du fichier CSV dans le dossier output/html/
+				tableauCSV = csvFileRacine + CSVUtils.mkCSVFileName(helpFileName, numTab);
+				
 				FileWriter w = new FileWriter(tableauCSV);
 				table = tables.get(t);
 				rows = table.select("tr");
