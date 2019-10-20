@@ -75,6 +75,11 @@ public  Boolean extractionTableJsoup(String url) throws IOException {
 	    
 	    if (testAccessDOM==true) {
 	    	tables = docHtml.select("table"); 	
+	    	
+	    	for(Element t:tables)
+	    	{
+	    		
+	    	}
 			if (tables.size() == 0) {
 				System.out.println(" Attention !!! La page à l'étude n'a pas de tableau ...");
 			}
