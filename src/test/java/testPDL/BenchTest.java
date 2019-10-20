@@ -92,10 +92,4 @@ public class BenchTest {
 	}
 
 	
-	@Test
-	public void testPage1()
-	{
-		
-	}
-	
 }

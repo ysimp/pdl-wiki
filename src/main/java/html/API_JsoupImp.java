@@ -11,10 +11,10 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import utils.CSVUtils;
-import utils.Cellule;
-import utils.Ligne;
-import utils.Page;
-import utils.Tableau;
+import model.Cellule;
+import model.Ligne;
+import model.Page;
+import model.Tableau;
 
 
 public class API_JsoupImp {
@@ -87,9 +87,9 @@ public class API_JsoupImp {
 						donneesLigneTableau.add(CSVUtils.assureFomatCSV(td.get(k).text()));
 					}
 					
-					ligne.setLigneTableau(donneesLigneTableau);
+					//ligne.(donneesLigneTableau);
 					ligne.setNumeroLigne(i);
-					ligne.setListCelluleLigne(listCellule);
+					//ligne.setListCelluleLigne(listCellule);
 					CSVUtils.writeLine(w, donneesLigneTableau);
 					donneesTableau.add(donneesLigneTableau);
 					ligneTableau.add(ligne);
@@ -97,7 +97,7 @@ public class API_JsoupImp {
 				}
 				
 				donneesPage.add(donneesTableau);
-				tableau.setLigneTableau(ligneTableau);
+				//tableau.setLigneTableau(ligneTableau);
 				donneesTableau.clear();
 				listTableau.add(tableau);
 				ligneTableau.clear();
@@ -106,7 +106,7 @@ public class API_JsoupImp {
 				System.out.println("fin de la création N° " + numTab + " )  de la page" + page.getNomPage() + " \n");
 			}
 			
-			page.setPage(listTableau);
+			//page.setPage(listTableau);
 		}
 		
 		return testAccessDOM;

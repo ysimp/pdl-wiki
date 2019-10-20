@@ -15,10 +15,10 @@ import info.bliki.wiki.model.WikiModel;
 import net.sourceforge.jwbf.core.contentRep.Article;
 import net.sourceforge.jwbf.mediawiki.bots.MediaWikiBot;
 import utils.CSVUtils;
-import utils.Cellule;
-import utils.Ligne;
-import utils.Page;
-import utils.Tableau;
+import model.Cellule;
+import model.Ligne;
+import model.Page;
+import model.Tableau;
 
 public class API_BlikiImp {
 	
@@ -75,11 +75,6 @@ public  Boolean extractionTableJsoup(String url) throws IOException {
 	    
 	    if (testAccessDOM==true) {
 	    	tables = docHtml.select("table"); 	
-	    	
-	    	for(Element t:tables)
-	    	{
-	    		
-	    	}
 			if (tables.size() == 0) {
 				System.out.println(" Attention !!! La page à l'étude n'a pas de tableau ...");
 			}
@@ -114,9 +109,9 @@ public  Boolean extractionTableJsoup(String url) throws IOException {
 	                 donnees.add( CSVUtils.assureFomatCSV(td.get(k).text())  );
 	             }
 	          
-	             ligne.setLigneTableau(donnees);
+	          //   ligne.setLigneTableau(donnees);
 	             ligne.setNumeroLigne(i);
-	             ligne.setListCelluleLigne(listCellule);
+	            // ligne.setListCelluleLigne(listCellule);
 	            
 	             CSVUtils.writeLine(w, donnees);
 	             listLigneTableau.add(donnees);
@@ -125,7 +120,7 @@ public  Boolean extractionTableJsoup(String url) throws IOException {
 	         }
 	         	         
 	         listLigneChaqTableau.add(listLigneTableau);
-	         tableau.setLigneTableau(ligneTableau);
+	        // tableau.setLigneTableau(ligneTableau);
 	         listLigneTableau.clear();
 	         listTableau.add(tableau);
 	         ligneTableau.clear();
@@ -136,7 +131,7 @@ public  Boolean extractionTableJsoup(String url) throws IOException {
 	        
 	         
 			}
-			 page.setPage(listTableau);
+			// page.setPage(listTableau);
 	
 		}
 	

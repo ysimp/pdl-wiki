@@ -4,6 +4,9 @@ import java.io.IOException;
 import java.io.Writer;
 import java.util.List;
 
+import model.Ligne;
+import model.Tableau;
+
 public class CSVUtils {
 
 	private static final char DEFAULT_SEPARATOR = ',';
@@ -33,11 +36,19 @@ public class CSVUtils {
     
     
   //lorsau'il y a une virgule dans la cellule mettre le 
+   /** 
+    * TODO
+    * S'il y'a une virgule dans la cellule on doit le remplacer par un point si c'est numeric : 12,5 => 12.5
+     *Sinon on remplace par un espace : a,b => a b ou 12,a => 12 a etc...
+     * 
+     * @param value
+     * @return
+     */
     public static String assureFomatCSV(String value) {
 
         String result = value;
         if (result.contains(",")) {
-            result = result.replace(",", "\"\"");
+            result = result.replace(",", " ");
         }
         return result;
 
@@ -125,10 +136,30 @@ public class CSVUtils {
 
     }
     
+    public static void writeTable(Writer w, Tableau table) throws IOException { 
+    	
+    	for (Ligne  line : table.getlisteLignes()) {
+    		
+				w.append(line.toString());
+				w.append("\n ");
+		}
+    }
+    
     
     public static String mkCSVFileName(String url, int n) {
 		return url.trim() + "-" + n + ".csv";
 	}
 
+    
+    /**
+     * Permet de verifier si le fichier csv est valide
+     * @param le chemin du fichier csv
+     * @return boolean
+     * @throws 
+     * **/
+    
+    public boolean isCsvFileValid(String filePaht) {
+    	return true;
+    }
 	
 }
