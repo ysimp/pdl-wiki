@@ -18,7 +18,7 @@ public interface ConverterHtml {
 	public void convertAllTablesToCsv(String url) ;
 	
 	/**
-	 * Lit le fchier input et pour chaque url convertit les tableaux
+	 * Lit le fichier input et pour chaque url convertit les tableaux
 	 * appelle la methode convertAllTablesToCsv
 	 * 
 	 * */
