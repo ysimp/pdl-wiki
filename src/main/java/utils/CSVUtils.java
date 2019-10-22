@@ -1,5 +1,6 @@
 package utils;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.Writer;
 import java.util.List;
@@ -145,6 +146,40 @@ public class CSVUtils {
 				w.append(line.toString());
 				w.append("\n ");
 		}
+    }
+    
+    // supprimer un directory avec ses fichiers
+    public static void deleteOutPutFiles(File tempFile) {
+        try
+        {
+            if(tempFile.isDirectory()){
+               File[] entries = tempFile.listFiles();
+               for(File currentFile: entries){
+            	   deleteOutPutFiles(currentFile);
+               }
+               tempFile.delete();
+            }else{
+               tempFile.delete();
+            }
+        //getLogger().info("DELETED Temporal File: " + tempFile.getPath());
+        }
+        catch(Throwable t)
+        {
+            //getLogger().error("Could not DELETE file: " + tempFile.getPath(), t);
+        }
+    }
+    
+    public static void creatOutPutFolder() {
+    	
+    	// supprimer ancien fichiers 
+    	deleteOutPutFiles(new File(Constant.OUTPUT_PATH));
+    	
+    	
+    	//cree a nouveau 
+    	new File(Constant.OUTPUT_PATH).mkdir();
+    	new File(Constant.CSV_HTML_PATH).mkdir();
+    	new File(Constant.CSV_WIKI_PATH).mkdir();
+    	
     }
     
     

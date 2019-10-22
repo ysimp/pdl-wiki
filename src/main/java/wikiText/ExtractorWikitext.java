@@ -2,6 +2,7 @@ package wikiText;
 
 import java.io.IOException;
 
+import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
 import model.Page;
@@ -29,5 +30,5 @@ public interface ExtractorWikitext {
 		 * @throws
 		 * 
 		 * */
-		public Elements filterTables(Elements tables) throws Exception;
+		public Elements filterTables(Document doc) throws Exception;
 }

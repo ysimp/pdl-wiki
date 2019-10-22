@@ -53,7 +53,7 @@ public class ConverterWikiTextImpl implements ConverterWikitext{
 			
 			//Forme le chemin du fichier, nomPage+numTab
 			tableauCSV =Constant.CSV_WIKI_PATH + CSVUtils.mkCSVFileName(fileName, tab.getNumeroTableau());
-			 w = new FileWriter(tableauCSV);
+			 w = new FileWriter(tableauCSV,false);
 			
 			CSVUtils.writeTable(w, tab);//
 			

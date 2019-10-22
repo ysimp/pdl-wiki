@@ -18,6 +18,8 @@ public class Constant {
 	
 	public static String BASE_WIKIPEDIA_URL = "https://en.wikipedia.org/";
 	
+	public static String OUTPUT_PATH = "output" + File.separator ;
+	
 	public static String CSV_HTML_PATH = "output" + File.separator + "html" + File.separator;
 	
 	public static String CSV_WIKI_PATH = "output" + File.separator + "wikitext" + File.separator;
