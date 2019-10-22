@@ -8,6 +8,8 @@ import model.Ligne;
 import model.Tableau;
 
 public class CSVUtils {
+	
+	
 
 	private static final char DEFAULT_SEPARATOR = ',';
     

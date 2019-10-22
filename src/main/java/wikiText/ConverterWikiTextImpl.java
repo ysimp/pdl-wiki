@@ -12,6 +12,7 @@ import model.Page;
 import model.Tableau;
 import utils.CSVUtils;
 import utils.Constant;
+import utils.StatPrinter;
 
 public class ConverterWikiTextImpl implements ConverterWikitext{
 	
@@ -42,7 +43,11 @@ public class ConverterWikiTextImpl implements ConverterWikitext{
 		fileName= CSVUtils.assureFomatDosTab(url);		
 		
 		Page page=extractorWiki.extractTables(url);
+		
+		
 		page.setNomPage(fileName);
+		
+		StatPrinter.printStatPage(page) ;
 		
 		for (Tableau tab : page.getListeTableau()) {
 			

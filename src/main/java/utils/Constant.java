@@ -23,4 +23,8 @@ public class Constant {
 	public static String CSV_WIKI_PATH = "output" + File.separator + "wikitext" + File.separator;
 	
 	public static String WIKI_URL_PATH = "inputdata" + File.separator + "wikiurls.txt";
+	
+	public static String CLASS_TO_REMOVE = "inputdata" + File.separator + "classToRemove.txt";
+	
+	public static String ATTRIBUT_TO_REMOVE = "inputdata" + File.separator + "attributToRemove.txt";
 }
