@@ -25,7 +25,7 @@ public static void BenchExtractors() throws Exception {
 		int countTable = 0; 
 		
 		API_JsoupImp testExtraTable = new API_JsoupImp ();
-		API_BlikiImp testExtraTableBliki = new API_BlikiImp();
+		//API_BlikiImp testExtraTableBliki = new API_BlikiImp();
 		
 		String BASE_WIKIPEDIA_URL = "https://en.wikipedia.org/wiki/";
 		// directory where CSV files are exported (HTML extractor) 
@@ -46,7 +46,7 @@ public static void BenchExtractors() throws Exception {
 	       // (ie extract relevant tables for correct URL, with the two extractors)
 
 	       testExtraTable.extractionTableJsoup(url);
-	       testExtraTableBliki.extractionTableJsoup(url);
+	      // testExtraTableBliki.extractionTableJsoup(url);
 	       
 	       
 	      

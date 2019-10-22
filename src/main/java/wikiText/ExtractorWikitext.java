@@ -29,5 +29,5 @@ public interface ExtractorWikitext {
 		 * @throws
 		 * 
 		 * */
-		public Elements filterTables(Elements tables);
+		public Elements filterTables(Elements tables) throws Exception;
 }
