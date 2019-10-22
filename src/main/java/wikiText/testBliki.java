@@ -6,7 +6,6 @@ public class testBliki {
 
 	public static void main(String[] args) {
 		
-		
 
 		try {
 			new ConverterWikiTextImpl().convertAllPages();
