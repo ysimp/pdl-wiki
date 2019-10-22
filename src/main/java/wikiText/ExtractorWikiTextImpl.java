@@ -14,7 +14,9 @@ import java.util.logging.Logger;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.jsoup.select.Collector;
 import org.jsoup.select.Elements;
+import org.jsoup.select.Evaluator;
 
 import com.google.common.base.Optional;
 
@@ -105,22 +107,19 @@ public class ExtractorWikiTextImpl implements ExtractorWikitext {
 	private Elements removeTableByClass(Elements tables) throws Exception {
 
 		List<String> listeClasses=getListOfClassOrAttrubitToRemove(Constant.CLASS_TO_REMOVE);
+		List<Element> listTableToRemove=new ArrayList<Element>();
+		Element elem;
 		
-		//Supression de l'infobox
 		for (Element table : tables) {
 			
 			Set<String> set = table.classNames();
 			
-			Iterator it =set.iterator();
-			
-			while(it.hasNext()) {
-				String clsname= it.next().toString();
+			for (String classe : set) {
 				
-				if(clsname.startsWith("infobox")) {
-					
-					tables.remove(table);
-				}
+						
 			}
+				
+			
 		}
 
 		for(String classe:listeClasses)
