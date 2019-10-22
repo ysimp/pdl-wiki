@@ -1,6 +1,6 @@
 package wikiText;
 
-import java.io.IOException;
+import utils.CSVUtils;
 
 public class testBliki {
 
@@ -9,8 +9,9 @@ public class testBliki {
 		
 
 		try {
+			CSVUtils.creatOutPutFolder();
 			new ConverterWikiTextImpl().convertAllPages();
-		} catch (IOException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

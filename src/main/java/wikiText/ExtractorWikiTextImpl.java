@@ -2,21 +2,18 @@ package wikiText;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Set;
 import java.util.logging.Logger;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.jsoup.select.Collector;
 import org.jsoup.select.Elements;
-
-import com.google.common.base.Optional;
+import org.jsoup.select.Evaluator;
 
 import info.bliki.wiki.model.WikiModel;
 import model.Ligne;
@@ -89,9 +86,11 @@ public class ExtractorWikiTextImpl implements ExtractorWikitext {
 		return page;
 	}
 
-	public Elements filterTables(Elements tables) throws Exception {
+	public Elements filterTables(Document doc ) throws Exception {
+		Elements tables;
 		
-		tables = removeTableByClass(tables);
+		tables = removeTableByClass(doc);
+		tables=removeTableByAttribut(tables);
 		
 		return tables;
 		
@@ -102,33 +101,23 @@ public class ExtractorWikiTextImpl implements ExtractorWikitext {
 	 * Supprime tous les tableaux contenant les class definis dans le fichier classtoremove
 	 * 
 	 * */
-	private Elements removeTableByClass(Elements tables) throws Exception {
-
+	private Elements removeTableByClass(Document doc) throws Exception {
+		
 		List<String> listeClasses=getListOfClassOrAttrubitToRemove(Constant.CLASS_TO_REMOVE);
 		
-		//Supression de l'infobox
-		for (Element table : tables) {
-			
-			Set<String> set = table.classNames();
-			
-			Iterator it =set.iterator();
-			
-			while(it.hasNext()) {
-				String clsname= it.next().toString();
+		Elements tables = doc.select("table");
+		Elements tablesToRemove;
 				
-				if(clsname.startsWith("infobox")) {
-					
-					tables.remove(table);
-				}
-			}
-		}
-
 		for(String classe:listeClasses)
-		{
-			
-			tables = tables.not("."+classe);
+		{  	
+			//Recupère tous les elements dans les elements se trouvant dans le doc ayant la class passée en param
+			//Ensuite selectionne que les tableaux qui seront supprimés
+			tablesToRemove = Collector.collect(new Evaluator.Class(classe), doc).select("table");		
+			tables.removeAll(tablesToRemove);
+	
 		}
 		
+			
 		return tables;
 
 	}
@@ -140,12 +129,21 @@ public class ExtractorWikiTextImpl implements ExtractorWikitext {
 	private Elements removeTableByAttribut(Elements tables) throws Exception {
 
 		List<String> listeattr=getListOfClassOrAttrubitToRemove(Constant.ATTRIBUT_TO_REMOVE);
+		
+		List<Element> listTablesToRemove = new ArrayList<Element>();
 
 		for(String attr:listeattr)
 		{
+			for (Element table : tables) {
+				
+				Elements trToRemoves =Collector.collect(new Evaluator.Attribute(attr), table);
+				
+				if(!trToRemoves.isEmpty()) { listTablesToRemove.add(table);}
+			}
 			
-			tables = tables.not("["+attr+"]");
 		}
+		
+		tables.removeAll(listTablesToRemove);
 		
 		return tables;
 
