@@ -174,7 +174,6 @@ public class CSVUtils {
     	// supprimer ancien fichiers 
     	deleteOutPutFiles(new File(Constant.OUTPUT_PATH));
     	
-    	
     	//cree a nouveau 
     	new File(Constant.OUTPUT_PATH).mkdir();
     	new File(Constant.CSV_HTML_PATH).mkdir();

@@ -44,7 +44,6 @@ public class ConverterWikiTextImpl implements ConverterWikitext{
 		
 		Page page=extractorWiki.extractTables(url);
 		
-		
 		page.setNomPage(fileName);
 		
 		StatPrinter.printStatPage(page) ;
@@ -53,7 +52,7 @@ public class ConverterWikiTextImpl implements ConverterWikitext{
 			
 			//Forme le chemin du fichier, nomPage+numTab
 			tableauCSV =Constant.CSV_WIKI_PATH + CSVUtils.mkCSVFileName(fileName, tab.getNumeroTableau());
-			 w = new FileWriter(tableauCSV,false);
+			 w = new FileWriter(tableauCSV);
 			
 			CSVUtils.writeTable(w, tab);//
 			
