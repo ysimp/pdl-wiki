@@ -5,16 +5,16 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import utils.CSVUtils;
-import model.Cellule;
 import model.Ligne;
 import model.Page;
 import model.Tableau;
+import utils.CSVUtils;
 
 
 public class API_JsoupImp {
@@ -63,7 +63,7 @@ public class API_JsoupImp {
 				numTab++;
 				String helpFileName;
 				//Construction du nom du fichier CSV
-				helpFileName = CSVUtils.assureFomatDosTab(url);
+				helpFileName = CSVUtils.constructFileName(url);
 				String tableauCSV;
 				
 				//Construction du fichier CSV dans le dossier output/html/
@@ -78,19 +78,19 @@ public class API_JsoupImp {
 				for (int i = 1; i < rows.size(); i++) {
 					td = rows.get(i).select("td");
 
-					List<Cellule> listCellule = new ArrayList<Cellule>();
+					//List<Cellule> listCellule = new ArrayList<Cellule>();
 					
 					for (int k = 0; k < td.size(); k++) {
 						System.out.println(" | " + td.get(k).text() + " | ");
-						Cellule cellule = new Cellule(k, CSVUtils.assureFomatCSV(td.get(k).text()));
-						listCellule.add(cellule);
+						//Cellule cellule = new Cellule(k, CSVUtils.assureFomatCSV(td.get(k).text()));
+						//listCellule.add(cellule);
 						donneesLigneTableau.add(CSVUtils.assureFomatCSV(td.get(k).text()));
 					}
 					
 					//ligne.(donneesLigneTableau);
 					ligne.setNumeroLigne(i);
 					//ligne.setListCelluleLigne(listCellule);
-					CSVUtils.writeLine(w, donneesLigneTableau);
+					//CSVUtils.writeLine(w, donneesLigneTableau);
 					donneesTableau.add(donneesLigneTableau);
 					ligneTableau.add(ligne);
 					donneesLigneTableau.clear();

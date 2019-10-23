@@ -1,10 +1,7 @@
 package wikiText;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
 import java.io.FileWriter;
-import java.io.IOException;
+import java.util.List;
 
 import org.jsoup.nodes.Element;
 
@@ -35,12 +32,12 @@ public class ConverterWikiTextImpl implements ConverterWikitext{
 	 * {@inheritDoc}
 	 * 
 	 * */
-	public void convertAllTablesToCsv(String url) throws IOException  {
+	public void convertAllTablesToCsv(String url) throws Exception  {
 		
 		String fileName;
 		FileWriter w=null;
 		String tableauCSV;
-		fileName= CSVUtils.assureFomatDosTab(url);		
+		fileName= CSVUtils.constructFileName(url);		
 		
 		Page page=extractorWiki.extractTables(url);
 		
@@ -73,17 +70,17 @@ public class ConverterWikiTextImpl implements ConverterWikitext{
 	 * 
 	 * */
 	
-	public void convertAllPages() throws IOException{
+	public void convertAllPages() throws Exception{
 		
-		File file = new File(Constant.WIKI_URL_PATH);
-		BufferedReader br = new BufferedReader(new FileReader(file));
-		String url="";
 		
-		while((url=br.readLine())!=null) {
+		List<String> listUrls=CSVUtils.getListFromFile(Constant.WIKI_URL_PATH);
+		
+		for (String url : listUrls) {
 			
 			convertAllTablesToCsv(url);
 		}
-		br.close();
+		
+		
 		
 	}
 	

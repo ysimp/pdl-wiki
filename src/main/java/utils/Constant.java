@@ -13,10 +13,16 @@ import java.io.File;
  * Definition des
  * */
 public class Constant {
+	
+	public static int    MIN_ROW                     = 2;
+	
+	public static int    MIN_COLUM                   = 2;
 
 	public static String BASE_WIKIPEDIA_URL_wikiTest = "https://en.wikipedia.org/w/";
 	
 	public static String BASE_WIKIPEDIA_URL = "https://en.wikipedia.org/";
+	
+	public static String BASE_WIKIPEDIA_URL_JSOUP = "https://en.wikipedia.org/wiki/";
 	
 	public static String OUTPUT_PATH = "output" + File.separator ;
 	

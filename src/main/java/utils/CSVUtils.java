@@ -1,8 +1,11 @@
 package utils;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.Writer;
+import java.util.ArrayList;
 import java.util.List;
 
 import model.Ligne;
@@ -13,30 +16,6 @@ public class CSVUtils {
 	
 
 	private static final char DEFAULT_SEPARATOR = ',';
-    
-    public static void writeLine(Writer w, List<String> values) throws IOException {
-        writeLine(w, values, DEFAULT_SEPARATOR, ' ');
-    }
-
-    public static void writeLine(Writer w, List<String> values, char separators) throws IOException {
-        writeLine(w, values, separators, ' ');
-    }
-
-    //https://tools.ietf.org/html/rfc4180
-    //remplace simple guillemet double guillemet
-    private static String followCVSformat(String value) {
-
-        String result = value;
-        if (result.contains("\"")) {
-            result = result.replace("\"", "\"\"");
-        }
-        return result;
-
-    }
-    
-    
-    
-    
     
   //lorsau'il y a une virgule dans la cellule mettre le 
    /** 
@@ -57,10 +36,23 @@ public class CSVUtils {
 
     }
 
+    /**
+     * 
+     * @param url
+     * @param n
+     * @return
+     */
+    public static String mkCSVFileName(String url, int n) {
+		return url.trim() + "-" + n + ".csv";
+	}
     
-    
+    /**
+     * 
+     * @param url
+     * @return
+     */
   //Pour former le nom du fichier grâce au nom du lien  
-    public static String assureFomatDosTab(String url) {
+    public static String constructFileName(String url) {
 
         String result = url;
         
@@ -108,37 +100,12 @@ public class CSVUtils {
     }
     
     
-    
-
-    public static void writeLine(Writer w, List<String> values, char separators, char customQuote) throws IOException {
-
-        boolean first = true;
-
-        //default customQuote is empty
-
-        if (separators == ' ') {
-            separators = DEFAULT_SEPARATOR;
-        }
-
-        StringBuilder sb = new StringBuilder();
-        for (String value : values) {
-            if (!first) {
-                sb.append(separators);
-            }
-            if (customQuote == ' ') {
-                sb.append(followCVSformat(value));
-            } else {
-                sb.append(customQuote).append(followCVSformat(value)).append(customQuote);
-            }
-
-            first = false;
-        }
-        sb.append("\n");
-        w.append(sb.toString());
-
-
-    }
-    
+    /**
+     * 
+     * @param w
+     * @param table
+     * @throws IOException
+     */
     public static void writeTable(Writer w, Tableau table) throws IOException { 
     	
     	for (Ligne  line : table.getlisteLignes()) {
@@ -147,9 +114,13 @@ public class CSVUtils {
 				w.append("\n ");
 		}
     }
-    
+    /**
+     * 
+     * @param tempFile
+     */
     // supprimer un directory avec ses fichiers
     public static void deleteOutPutFiles(File tempFile) {
+    	
         try
         {
             if(tempFile.isDirectory()){
@@ -169,6 +140,9 @@ public class CSVUtils {
         }
     }
     
+    /**
+     * 
+     */
     public static void creatOutPutFolder() {
     	
     	// supprimer ancien fichiers 
@@ -181,12 +155,34 @@ public class CSVUtils {
     	
     }
     
-    
-    public static String mkCSVFileName(String url, int n) {
-		return url.trim() + "-" + n + ".csv";
-	}
+
 
     
+    /**
+     * 
+     * @param fileName
+     * @return
+     * @throws Exception
+     */
+ // lire un  fichier et return sous forme d'un arrayliste ( ligne = string) 
+	public static List<String> getListFromFile(String fileName) throws Exception
+	{
+		File file = new File(fileName);
+		BufferedReader br = new BufferedReader(new FileReader(file));
+		
+		List<String> liste=new ArrayList<String>();
+		String classe="";
+		
+		while((classe=br.readLine())!=null) {
+			
+			liste.add(classe);
+		}
+		
+		br.close();
+		
+		return liste;
+	}
+	
     /**
      * Permet de verifier si le fichier csv est valide
      * @param le chemin du fichier csv

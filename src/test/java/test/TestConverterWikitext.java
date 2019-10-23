@@ -1,4 +1,4 @@
-package testPDL;
+package test;
 
 public class TestConverterWikitext {
 

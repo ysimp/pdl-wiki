@@ -12,13 +12,12 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import info.bliki.wiki.model.WikiModel;
-import net.sourceforge.jwbf.core.contentRep.Article;
-import net.sourceforge.jwbf.mediawiki.bots.MediaWikiBot;
-import utils.CSVUtils;
-import model.Cellule;
 import model.Ligne;
 import model.Page;
 import model.Tableau;
+import net.sourceforge.jwbf.core.contentRep.Article;
+import net.sourceforge.jwbf.mediawiki.bots.MediaWikiBot;
+import utils.CSVUtils;
 
 public class API_BlikiImp {
 	
@@ -88,7 +87,7 @@ public  Boolean extractionTableJsoup(String url) throws IOException {
 				Tableau tableau = new Tableau();
 				numTab++;
 				String helpFileName;
-				helpFileName= CSVUtils.assureFomatDosTab(url);
+				helpFileName= CSVUtils.constructFileName(url);
 				// File dir = new File(csvFileRacine +helpFileName );
 				//dir.mkdirs();
 				String tableauCSV =csvFileRacine+CSVUtils.mkCSVFileName(helpFileName, numTab);
@@ -101,11 +100,11 @@ public  Boolean extractionTableJsoup(String url) throws IOException {
 	         for (int i = 1; i < rows.size(); i++){
 	         	td = rows.get(i).select("td");
 	         	
-                    List<Cellule> listCellule = new ArrayList<Cellule>();
+                   // List<Cellule> listCellule = new ArrayList<Cellule>();
 	             for (int k = 0; k < td.size(); k++){
 	                 System.out.println(" | " +td.get(k).text() + " | ");
-                      Cellule cellule = new Cellule(k,CSVUtils.assureFomatCSV(td.get(k).text()));
-                      listCellule.add(cellule);
+                    //  Cellule cellule = new Cellule(k,CSVUtils.assureFomatCSV(td.get(k).text()));
+                    //  listCellule.add(cellule);
 	                 donnees.add( CSVUtils.assureFomatCSV(td.get(k).text())  );
 	             }
 	          
@@ -113,7 +112,7 @@ public  Boolean extractionTableJsoup(String url) throws IOException {
 	             ligne.setNumeroLigne(i);
 	            // ligne.setListCelluleLigne(listCellule);
 	            
-	             CSVUtils.writeLine(w, donnees);
+	             //CSVUtils.writeLine(w, donnees);
 	             listLigneTableau.add(donnees);
 	             ligneTableau.add(ligne);
 	             donnees.clear();
