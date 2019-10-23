@@ -30,10 +30,10 @@ public static void BenchExtractors() throws Exception {
 		String BASE_WIKIPEDIA_URL = "https://en.wikipedia.org/wiki/";
 		// directory where CSV files are exported (HTML extractor) 
 		String outputDirHtml = "output" + File.separator + "html" + File.separator;
-		assertTrue(new File(outputDirHtml).isDirectory());
+		//assertTrue(new File(outputDirHtml).isDirectory());
 		// directory where CSV files are exported (Wikitext extractor) 
 		String outputDirWikitext = "output" + File.separator + "wikitext" + File.separator;
-		assertTrue(new File(outputDirWikitext).isDirectory());
+		//assertTrue(new File(outputDirWikitext).isDirectory());
 		
 		File file = new File("inputdata" + File.separator + "wikiurls.txt");
 		BufferedReader br = new BufferedReader(new FileReader(file));
