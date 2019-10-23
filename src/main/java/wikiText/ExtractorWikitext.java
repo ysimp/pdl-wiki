@@ -1,10 +1,5 @@
 package wikiText;
 
-import java.io.IOException;
-
-import org.jsoup.nodes.Document;
-import org.jsoup.select.Elements;
-
 import model.Page;
 
 public interface ExtractorWikitext {
@@ -19,16 +14,7 @@ public interface ExtractorWikitext {
 		 *
 		 * */
 		
-		public Page  extractTables(String url) throws IOException  ;
+		public Page  extractTables(String url) throws Exception  ;
 		
 		
-		/**
-		 * Permet de filtrer les tableaux (url) : supprimer les tableaux qui ne repondent pas aux critère de pertinence
-		 * @parm url du page wikipedia
-		 * @return les tableaux après filtrage
-		 * @throws
-		 * @throws
-		 * 
-		 * */
-		public Elements filterTables(Document doc) throws Exception;
 }
