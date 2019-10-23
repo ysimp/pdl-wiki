@@ -12,10 +12,6 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
 
 public class NonUtils {
 	
@@ -208,7 +204,7 @@ public class NonUtils {
 	                    System.out.println("Cell_N_"+ k +" \n");
 	                }
 	                System.out.println("fin de la ligne N° "+i+" \n");
-	                CSVUtils.writeLine(w, donnees);
+	                //CSVUtils.writeLine(w, donnees);
 	                listLigneTableau.add(donnees);
 	                donnees.clear();
 	            }
@@ -274,7 +270,7 @@ public class NonUtils {
 	                }
 	                
 	                System.out.println("fin de la ligne N° "+i+" \n");
-	                CSVUtils.writeLine(w, donnees);
+	               // CSVUtils.writeLine(w, donnees);
 	                listLigneTableau.add(donnees);
 	                donnees.clear();
 	            }
