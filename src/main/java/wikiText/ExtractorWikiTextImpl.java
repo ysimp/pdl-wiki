@@ -90,7 +90,8 @@ public class ExtractorWikiTextImpl implements ExtractorWikitext {
 		Elements tables;
 		
 		tables = removeTableByClass(doc);
-		tables=removeTableByAttribut(tables);
+		tables = removeTableByAttribut(tables);
+		tables = removeTablesWithMinRowOrColum(tables);
 		
 		return tables;
 		
@@ -149,6 +150,39 @@ public class ExtractorWikiTextImpl implements ExtractorWikitext {
 
 	}
 	
+	/**
+	 * Supprime les tables ayant moins de ligne
+	 * */
+	public Elements removeTablesWithMinRowOrColum(Elements tables) {
+		
+		List<Element> listTablesToRemove =new ArrayList<Element>();
+		
+		for (Element table : tables) {
+			
+			Elements trs = table.select("tr");
+
+			if(trs.size() <= Constant.MIN_ROW ) {
+				
+				listTablesToRemove.add(table);
+				
+			}else
+			{
+				Elements tds = trs.get(0).select("td");
+		
+				if(tds.size() <= Constant.MIN_COLUM) {
+					
+					listTablesToRemove.add(table);	
+				}
+				
+			}
+			
+		}
+		
+		tables.removeAll(listTablesToRemove);
+		
+		return tables;
+	}
+	
 	// lire le fichier class_to_romve et return sous forme d'un arrayliste 
 	private List<String> getListOfClassOrAttrubitToRemove(String fileName) throws Exception
 	{
@@ -190,5 +224,7 @@ public class ExtractorWikiTextImpl implements ExtractorWikitext {
 		    return docHtml;
 		    }
 	}
+	
+
 
 }
