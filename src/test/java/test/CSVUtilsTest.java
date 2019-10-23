@@ -4,15 +4,20 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import utils.CSVUtils;
+
 class CSVUtilsTest {
 
 	@Test
 	void testAssureFomatCSV() {
-		fail("Not yet implemented");
+		String valeur= "yaya,wel,mkk", resultatAttendu= "yaya wel mkk";
+		String resultat= CSVUtils.assureFomatCSV(valeur);
+		assertEquals(resultat,resultatAttendu,"Le résultat n'est pas égal au résultat attendu!!");
+	
 	}
 
 	@Test
-	void testAssureFomatDosTab() {
+	void testConstructFileName() {
 		fail("Not yet implemented");
 	}
 
@@ -38,6 +43,11 @@ class CSVUtilsTest {
 
 	@Test
 	void testIsCsvFileValid() {
+		fail("Not yet implemented");
+	}
+	
+	@Test
+	void testGetListFromFile() {
 		fail("Not yet implemented");
 	}
 
