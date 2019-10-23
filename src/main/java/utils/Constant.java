@@ -22,6 +22,8 @@ public class Constant {
 	
 	public static String BASE_WIKIPEDIA_URL = "https://en.wikipedia.org/";
 	
+	public static String BASE_WIKIPEDIA_URL_JSOUP = "https://en.wikipedia.org/wiki/";
+	
 	public static String OUTPUT_PATH = "output" + File.separator ;
 	
 	public static String CSV_HTML_PATH = "output" + File.separator + "html" + File.separator;
