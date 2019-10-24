@@ -4,8 +4,6 @@ package html;
 import java.io.FileWriter;
 import java.util.List;
 
-import org.jsoup.nodes.Element;
-
 import model.Page;
 import model.Tableau;
 import utils.CSVUtils;
@@ -18,10 +16,7 @@ public class ConverterHtmlImp implements ConverterHtml{
 		this.extractorHtml = new ExtractorHtmlImp();
 	}
 
-	public void convertTableToCsv(Element table) {
-		// TODO Auto-generated method stub
-		
-	}
+
 
 	public void convertAllTablesToCsv(String url) throws Exception {
 		String tableauCSV;
@@ -32,15 +27,14 @@ public class ConverterHtmlImp implements ConverterHtml{
 		Page page = extractorHtml.extractTables(url);
 		page.setNomPage(fileName);
 		
-		List<String> liste = CSVUtils.getListFromFile(Constant.WIKI_URL_PATH);
-		for (String string : liste) {
+	
 			
 			for (Tableau tab : page.getListeTableau()) {
 				tableauCSV =Constant.CSV_HTML_PATH + CSVUtils.mkCSVFileName(fileName, tab.getNumeroTableau());
 				out = new FileWriter(tableauCSV,false);
 				CSVUtils.writeTable(out, tab);
 			}	
-		}
+		
 	
 		if(out!=null)
 		{
@@ -50,8 +44,14 @@ public class ConverterHtmlImp implements ConverterHtml{
 		
 	}
 
-	public void convertAllPages() {
-		// TODO Auto-generated method stub
+	public void convertAllPages() throws Exception {
+		
+		List<String> liste = CSVUtils.getListFromFile(Constant.WIKI_URL_PATH);
+		for (String urL : liste) {
+			
+			convertAllTablesToCsv(urL);
+		}
+			
 		
 	}
 
