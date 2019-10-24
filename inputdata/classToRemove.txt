@@ -1,0 +1,9 @@
+box-More_citations_needed
+infobox
+navbox
+autocollapse
+collapsible
+mw-collapsible
+mw-collapsed
+vertical-navbox
+navbox-inner
