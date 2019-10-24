@@ -36,7 +36,7 @@ public class ExtractorHtmlImp implements ExtractorHtml{
 	    Ligne line;
 	    Tableau tab;
 	    int numTab=1;
-	    
+	    //
 		if (Connection(Constant.EN_BASE_WIKIPEDIA_URL + url)){
 		Document doc = Jsoup.connect(Constant.EN_BASE_WIKIPEDIA_URL + url).get();
 		tables = doc.select("table");
