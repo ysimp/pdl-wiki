@@ -1,6 +1,7 @@
 package html;
 
 import java.io.IOException;
+import java.util.logging.Logger;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -12,9 +13,14 @@ import model.Page;
 import model.Tableau;
 import utils.CSVUtils;
 import utils.Constant;
+import utils.filterTable;
 
 
 public class ExtractorHtmlImp implements ExtractorHtml{
+	
+	Logger loggerWiki = Logger.getLogger("WikiLoger");
+
+	private filterTable  filter= new filterTable();
 	
 	public boolean Connection(String url) {
 		try {
@@ -37,10 +43,16 @@ public class ExtractorHtmlImp implements ExtractorHtml{
 	    Tableau tab;
 	    int numTab=1;
 	    
-		if (Connection(Constant.EN_BASE_WIKIPEDIA_URL + url)){
-		Document doc = Jsoup.connect(Constant.EN_BASE_WIKIPEDIA_URL + url).get();
+		if (Connection(Constant.BASE_WIKIPEDIA_URL + url)){
+			
+		Document doc = Jsoup.connect(Constant.BASE_WIKIPEDIA_URL + url).get();
+		
 		tables = doc.select("table");
-    	//page.setTotalTableau(tables.size());
+		
+    	page.setTotalTableau(tables.size());
+    	
+    	tables =filter.filterTables(doc);
+
 		
 		//Parcours du tableau
 		for (Element t : tables) {
