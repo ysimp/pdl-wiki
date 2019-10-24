@@ -1,0 +1,49 @@
+Distribution, Free software repositories, Approximate number of pre-compiled packages, Approximate number of source packages, Default package management tool(s), Package format, Default installer, Graphical installation process, Netinstall, Netboot
+ Alpine Linux, {{Partial|Free  and nonfree}}, {{nts|8135}}[168], {{dunno}}, apk, .apk, setup-alpine, {{no}}, {{dunno}}, {{dunno}}
+ ALT Linux, {{Partial|Free  and nonfree}}, {{nts|8300}}[169], {{dunno}}, APT (APT-RPM)  RPM, RPM, , {{yes}}, {{dunno}}, {{dunno}}
+ Arch Linux, {{Partial|Free  and nonfree}}, {{nts|10700}}[170], {{nts|56500}} from AUR[171], Pacman, .pkg.tar.xz, None (install scripts only), {{no}}, {{yes}}, {{yes|iPXE}}
+ BLAG, {{Free|Free only}}, {{nts|10000}}[172], {{dunno}}, RPM  yum  APT, RPM, , {{yes}}, {{no}}, {{no}}
+ Bodhi Linux, {{Partial|Free  and nonfree}}, {{nts|35000}}, {{dunno}}, APT, .dpkg, Ubiquity, {{yes}}, {{dunno}}, {{dunno}}
+ CentOS, {{Partial|Free  and nonfree}}, {{nts|17565}}[173], {{dunno}}, RPM  yum/up2date, RPM, Anaconda, {{yes}}, {{yes}}, {{dunno}}
+ Chakra, {{Partial|Free  and nonfree}}, {{nts|3074}}[174], {{nts|4663|prefix=CCR: }}[175], Pacman (will be replaced by Akabei in future), .pkg.tar.xz, , {{partial|Package manager in development}}, {{dunno}}, {{dunno}}
+ ClearOS, {{Partial|Free  and nonfree}}, {{dunno}}, {{dunno}}, RPM  yum, RPM, , {{no}}, {{dunno}}, {{dunno}}
+ CrunchBang Linux, {{Partial|Free  and nonfree}}, {{nts|23000}}, {{dunno}}, APT, .deb, , {{yes}}, {{dunno}}, {{dunno}}
+ Damn Small Linux, {{Partial|Free  and nonfree}}, {{nts|610}}, {{dunno}}, myDSL  APT, .dsl  .tar.gz  .uci  .unc  .deb, , {{no}}, {{dunno}}, {{dunno}}
+ Debian, {{Partial|Free  and nonfree}}, {{nts|89103}}[176], {{nts|21041}}{{Efn|From the Sources.gz files in the main  contrib and non-free sections of Debian Jessie. On the 2015-11-21  Debian Sid  the development release  have 24757 source packages.}}, APT, .deb, Debian-Installer, {{yes}}, {{yes}}, {{yes|PXE}}
+ Devuan, {{Partial|Free  and nonfree}}, {{dunno}}, {{dunno}}, APT, .deb, Debian-Installer, {{yes}}, {{yes}}, {{yes|PXE}}
+ Dragora GNU/Linux-Libre, {{Free|Free only}}, {{nts|484}}, {{dunno}}, pkgsystem, .tlz, {{dunno}}, {{no}}, {{no}}, {{no}}
+ dyne:bolic, {{Free|Free only}}, {{dunno}}, {{dunno}}, APT, .deb, Debian-Installer, {{yes}}, {{no}}, {{no}}
+ Fedora, {{Partial|Free  and nonfree}}, {{nts|20000}} [177], {{nts|25041}}[178], DNF  yum  PackageKit, RPM, Anaconda, {{yes}}, {{yes}}, {{dunno}}
+ Gentoo, {{Partial|Free  and nonfree}}, {{nts|108}}[179], {{nts|19092}}[180]{{Efn|Note this number is just of packages in the Official Gentoo Overlay (or Portage Tree). Several hundred other packages are available from other overlays}}, Portage, .ebuild  .tbz2, , {{yes}}{{Efn|Can be installed graphically (GTK+ and ncurses)  but traditionally done by command line (install cd  live cd  netboot  and from distributions).}}, {{yes}}, {{yes|PXE}}
+ gNewSense, {{Free|Free only}}, {{dunno}}, {{dunno}}, APT, .deb, Debian-Installer, {{yes}}, {{yes}}, {{no}}
+ gnuLinEx, {{Partial|Free  and nonfree}}, {{nts|200}}, {{dunno}}, APT, .deb, , {{yes}}, {{dunno}}, {{dunno}}
+ Guix, {{Free|Free only}}, {{nts|9714}}[181], {{nts|9714}}, Guix, .scm  .go, guix system init, {{yes}}[182], {{yes}}, {{no}}
+ Hyperbola GNU/Linux-libre, {{free|Free only}}, {{nts|14494}}[183], {{dunno}}, Pacman, .pkg.tar.xz, None (install scripts), {{no}}, {{yes}}, {{dunno}}
+ Knoppix, {{Partial|Free  and nonfree}}, {{nts|3600}}, {{dunno}}, APT, .deb, , {{no}}, {{dunno}}, {{dunno}}
+ LibreCMC, {{Free|Free only}}, {{nts|826}}, {{dunno}}, {{dunno}}, {{dunno}}, , {{no}}, {{no}}, {{no}}
+ Linux Mint, {{Partial|Free  and nonfree}}, {{nts|50781}}, {{dunno}}, APT, .deb, Ubiquity, {{yes}}, {{dunno}}, {{dunno}}
+ Mageia, {{Partial|Free  and nonfree}}, {{nts|17283}} (i586)  {{nts|11409}} (x86-64)[184], {{nts|8834}}[185], urpmi  rpmdrake, RPM, DrakX, {{yes}}, {{yes}}, {{dunno}}
+ Mandriva Linux, {{Partial|Free  and nonfree}}, {{nts|22600}}, {{dunno}}, urpmi  rpmdrake, RPM, DrakX, {{yes}}, {{dunno}}, {{dunno}}
+ Manjaro Linux, {{Partial|Free  and nonfree}}, {{dunno}}, {{dunno}} from AUR[171], Pacman, .pkg.tar.xz, Calamares[186], {{yes}}[187], {{yes}}, {{yes|iPXE}}
+ MEPIS, {{Partial|Free  and nonfree}}, {{nts|20000}}, {{dunno}}, APT, .deb, MEPIS Install, {{yes}}, {{dunno}}, {{dunno}}
+ Musix GNU+Linux, {{Free|Free only}}, {{nts|1819}}, {{dunno}}, APT, .deb, Debian-Installer, {{yes}}, {{no}}, {{no}}
+ OpenELEC, {{Partial|Free  and nonfree}}, {{nts|140}}[188], {{dunno}}, XBMCbuntu addon manager  own and 3rd party addons, .zip, , {{yes}}, {{dunno}}, {{dunno}}
+ openSUSE, {{Partial|Free  and nonfree}}, {{nts|34000}}, Tumleweed) counting the entris in the package database file http://download.opensuse.org/tumbleweed/repo/oss/repodata/662416e0920e2bc2bb5ca45e337dcab310325f28ab1e5661d6f876b8dc232103-susedata.xml.gz{{Dead link|date=April 2019 |bot=InternetArchiveBot |fix-attempted=yes }}. Count no architecture and 64bit architecture only to avoid duplicate count via grep 'package pkgid="' '/tmp/662416e0920e2bc2bb5ca45e337dcab310325f28ab1e5661d6f876b8dc232103-susedata.xml' | grep noarch | wc (which gives 16000 and grep 'package pkgid="' '/tmp/662416e0920e2bc2bb5ca45e337dcab310325f28ab1e5661d6f876b8dc232103-susedata.xml' | grep x86_64 | wc (which gives 19000). the script http://inai.de/files/dist/countpkg-suse3 -r 'openSUSE_(Factory|Tumbleweed)'  which inspects the project list from the openSUSE.org Build Service instance and discounts non-SUSE and home projects. Numbers for 13.2: 63438 bin  32707 src; for 42.1: 43401 bin  17428 src. This script seems to count all architectures  so the 63'000 suse number could then be compared to a 630'000 debian number - but debian does not support 10 times more software - so better only count the most popular architecture as for the other entries here., YaST  Zypper, RPM, YaST, {{yes}}, {{yes}}, {{dunno}}
+ OpenWrt, {{Partial|Free  and nonfree}}, {{nts|2000}}, {{dunno}}, opkg, .ipk, -, {{no}}, {{dunno}}, {{dunno}}
+ Parabola GNU/Linux-libre, {{Free|Free only}}, {{nts|23000}}[189], {{dunno}}, Pacman, .pkg.tar.xz, None (install scripts) or Calamares, {{yes}}, {{yes}}, {{dunno}}
+ Pardus, {{Partial|Free  and nonfree}}, {{nts|4000}}, {{dunno}}, PiSi, .pisi, YALI, {{yes}}, {{dunno}}, {{dunno}}
+ Parsix, {{Partial|Free  and nonfree}}, {{nts|29000}}, {{nts|14900}}, APT, .deb, , {{yes}}, {{dunno}}, {{dunno}}
+ PCLinuxOS, {{Partial|Free  and nonfree}}, {{nts|12000}}, {{dunno}}, APT  RPM, RPM, , {{yes}}, {{dunno}}, {{dunno}}
+ Puppy, {{Partial|Free  and nonfree}}, {{nts|700}}, {{dunno}}, PupGet  DotPup, .pup  .pet, , {{yes}}, {{dunno}}, {{dunno}}
+ Red Hat Enterprise Linux, {{Partial|Free  and nonfree}}, {{nts|3000}} (plus {{nts|9155}} from EPEL[190]), {{dunno}}, RPM  yum, RPM, Anaconda, {{yes}}, {{dunno}}, {{dunno}}
+ Rxart, {{Partial|Free  and nonfree}}, {{nts|5000}}, {{dunno}}, APT, .deb, , {{yes}}, {{dunno}}, {{dunno}}
+ Sabayon Linux, {{Partial|Free  and nonfree}}, {{nts|13130|prefix=>}}, {{dunno}}, Portage  Entropy, ebuild  .tbz2, Calamares, {{yes}}, {{dunno}}, {{dunno}}
+ Scientific, {{Partial|Free  and nonfree}}, {{dunno}}, {{dunno}}, APT/yum, RPM, , {{yes}}, {{dunno}}, {{dunno}}
+ Slackware, {{Partial|Free  and nonfree}}, {{nts|2292}}, {{nts|7705}} from SlackBulids[191], slackpkg, tgz  .txz  .tlz  .tbz, bash script[192], {{no}}, {{yes}}, {{yes}}
+ Slax, {{Partial|Free  and nonfree}}, {{nts|2050}}, {{dunno}}, none, .lzm, , , {{dunno}}, {{dunno}}
+ SliTaz GNU/Linux, {{Partial|Free  and nonfree}}, {{nts|3381}}[193], {{dunno}}, Tazpkg, .tazpkg, tazinst, {{yes}}, {{yes|iPXE}}, {{yes|iPXE}}
+ Solus, {{Partial|Free  and nonfree}}, {{nts|9500}}, {{dunno}}, eopkg, .eopkg, os-installer, {{yes}}, {{no}}, {{no}}
+ Source Mage GNU/Linux, {{Partial|Free  and nonfree}}, {{nts|118}}, {{nts|8876}}, Sorcery Package Manager, src, , {{yes}}, {{dunno}}, {{dunno}}
+ SUSE Linux, {{Partial|Free  and nonfree}}, {{nts|24094}}, {{nts|11385}}, YaST  Zypper, RPM, YaST, {{yes}}, {{dunno}}, {{dunno}}
+ Tiny Core Linux, {{Partial|Free  and nonfree}}, {{nts|25160}}, {{dunno}}, ab  tce-load, tcz, tc-install  core2usb, {{yes}}, {{dunno}}, {{dunno}}
+ Tiny SliTaz, {{Partial|Free  and nonfree}}, {{nts|50}}, {{dunno}}, Web site[194], tazpkg, 

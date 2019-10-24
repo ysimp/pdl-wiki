@@ -1,0 +1,19 @@
+Yes[208],Unknown,PaX,Discontinued in 3.8.0,Unknown
+Unknown,Unknown,Unknown,Unknown,Unknown
+Yes,SELinux"""" AppArmor,PaX optional,Optional,Optional
+Unknown,Unknown,Unknown,Unknown,Unknown
+Unknown,Unknown,Unknown,Unknown,Unknown
+Yes,SELinux[209],Exec Shield[210],No,No
+Optional,SELinux"""" AppArmor,PaX optional,Optional,Optional
+Unknown,SELinux"""" AppArmor[f],Unknown,Unknown,Unknown
+Unknown,Unknown,Unknown,Unknown,Unknown
+Unknown,Unknown,Unknown,Unknown,Unknown
+Unknown,AppArmor,Unknown,Unknown,Yes
+Unknown,Unknown,Unknown,Unknown,Unknown
+Unknown,Optional[211],Unknown,Optional[211],Unknown
+Unknown,AppArmor"""" tomoyo,Unknown,Unknown,Optional
+Yes,AppArmor[212],Hardware NX and other methods in mainline kernel and toolchain[213],No,No
+Yes,AppArmor,Unknown,No,Unknown
+Unknown,Unknown,PaX,Yes,No
+Unknown,SELinux"""" AppArmor[g],Unknown,Unknown,Unknown
+Unknown,Unknown,Unknown,Unknown,Unknown

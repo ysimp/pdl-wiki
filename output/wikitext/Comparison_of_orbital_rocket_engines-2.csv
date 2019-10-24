@@ -1,0 +1,54 @@
+Engine, Origin, Designer, Vehicle, Use, Propellant, Specific impulse (s){{efn|name=VSL|At sea level if denoted SL  in vacuum otherwise}}, Thrust (N){{efn|name=VSL}}, Mass (kg), Thrust:{{zwsp}}weight ratio{{efn|Weight is calculated at standard gravity.}}, Chamber pressure (bar), Oxidiser:{{zwsp}}fuel ratio
+ Aeon 1, {{Flag|USA}}, Relativity Space, Terran 1, 1st, CH4?/?LOX, {{nts|310}}, {{nts|86 740}} (SL)[1], , , , 
+ Aeon 1 Vacuum, {{Flag|USA}}, Relativity Space, Terran 1, 2nd, CH4?/?LOX, {{nts|360}}, {{nts|100 085}} (SL)[2], , , , 
+ AJ-60A, {{Flag|USA}}, Aerojet, Atlas V, Booster, Solid, {{nts|275}}, {{nts|1 270 000}}[3], , , , 
+ AR1, {{Flag|USA}}, Aerojet Rocketdyne, Beta (potential)[4], 1st, RP-1?/?LOX, , {{nts|2 200 000}} (SL)[5], , , , 2.72
+ BE-3, {{Flag|USA}}, Blue Origin, New Shepard, 1st, LH2?/?LOX, , {{nts|490 000}}[6], , , , 
+ BE-3U, {{Flag|USA}}, Blue Origin, New Glenn, 2nd, LH2?/?LOX, , {{nts|710 000}}[7], , , , 
+ BE-4, {{Flag|USA}}, Blue Origin, New Glenn Vulcan, 1st, CH4?/?LOX, , {{nts|2 400 000}}[8][9], , , {{nts|134}}[10], 
+ Boeing 601HP{{efn|First ever ion engine used as a main engine on an operational commercial satellite (PAS-5)}}, {{Flag|USA}}, Boeing, Boeing 601HP satellites, Vacuum, Xenon, {{nts|2 568}} @0.5 kW, {{nts|0.018}} @0.5 kW, , , , 
+ CE-20, {{IND}}, LPSC, GSLV Mk III, Upper, LH2?/?LOX, {{nts|443}}, {{nts|200 000}}, {{nts|588}}, {{nts|34.7}}, {{nts|60.00}}, 5.05
+ CE-7.5, {{IND}}, LPSC, GSLV Mk II, Upper, LH2?/?LOX, {{nts|454}}[11], {{nts|73 500}} to {{nts|93 100}}, {{nts|445}}, {{nts|16.85}}, {{nts|58}}, 
+ Hadley, {{Flag|USA}}, Ursa Major Technologies, GOLauncher 1[12], 1st, RP-1?/?LOX, , {{nts|22 241}} (SL)[13], , , , 
+ HM-7B, {{EUR}}, Snecma, Ariane 2 Ariane 3 Ariane 4 Ariane 5 ECA, Upper, LH2?/?LOX, {{nts|446}}[14] {{nts|310}} (SL)[15], {{nts|64 800}}[14] {{nts|43 600}} (SL)[15], {{nts|165}}[14], {{nts|43.25}}, {{nts|37}}[14], 5
+ J-2X, {{Flag|USA}}, Pratt & Whitney Rocketdyne, SLS, Upper, LH2?/?LOX, {{nts|448}}[16], {{nts|{{convert|294 000|lbf|disp=number}}}}, {{nts|{{convert|5 450|lb|disp=number}}}}, {{nts|58.41}}, {{nts|{{convert|1380|psi|bar|disp=number}}}}, 5.5–4.5
+ LE-5B, {{JPN}}, Mitsubishi JAXA, H-IIA H-IIB, Upper, LH2?/?LOX, {{nts|447}}[17], {{nts|137 000}}, {{nts|269}}, {{nts|51.93}}, {{nts|36.0}}, 5
+ LE-7A, {{JPN}}, Mitsubishi JAXA, H-IIA H-IIB, 1st, LH2?/?LOX, {{nts|438}}[18] {{nts|338}} (SL)[18], {{nts|1 098 000}}, {{nts|1 800}}, {{nts|62.2}}, {{nts|121}}, 5.9
+ Lightning 1[19], {{Flag|USA}}, Firefly Aerospace, Alpha, 2nd, RP-1?/?LOX, {{nts|322}}, {{nts|70 100}}, , , , 
+ Merlin 1D FT, {{Flag|USA}}, SpaceX, Falcon 9 FT Falcon Heavy, 1st, RP-1?/?LOX, {{nts|311}}, {{nts|914 000}}[20] {{nts|845 000}} (SL)[20], {{nts|470}}, {{nts|194.5}}[20], , 
+ Merlin Vacuum 1D, {{Flag|USA}}, SpaceX, Falcon 9 Falcon Heavy, 2nd, RP-1?/?LOX, {{nts|348}}[21], {{nts|934 000}}[21], , , , 2.36
+ Mira (LM10), {{Flag|Italy}}, Avio, Vega E[22], 3rd[22], CH4?/?LOX[22], {{nts|362.3}}[22], {{nts|98 100}}[22], {{nts|250}}[22], {{nts|40}}[22], , {{nts|3.4}}[22]
+ NewtonThree, {{Flag|USA}}, Virgin Galactic, LauncherOne, Booster, RP-1?/?LOX, , {{nts|266 893}}[23], , , , 
+ NewtonFour, {{Flag|USA}}, Virgin Galactic, LauncherOne, 2nd, RP-1?/?LOX, , {{nts|22 241}}[23], , , , 
+ NEXT, {{Flag|USA}}, NASA, , Vacuum, Xenon, {{nts|4 100}} @6.9 kW, {{nts|0.236}} @6.9 kW, , , , 
+ NK-33A (AJ26-62) 11?111?/?14?15, {{Flag|USSR}}, JSC Kuznetsov, Antares 100 Soyuz-2-1v, 1st, RP-1?/?LOX, {{nts|331}}[24], {{nts|1 638 000}}, {{nts|1 222}}, {{nts|136.8}}, {{nts|145}}, 
+ NSTAR[25][26]{{efn|First ever ion engine used as a main engine on an operational science spacecraft (Deep Space 1)}}, {{Flag|USA}}, Hughes Electron Dynamics Boeing, {{nobr|Deep Space 1}} Dawn, Vacuum, Xenon, {{nts|3 100}} @2.3 kW, {{nts|0.0920}} @2.3 kW, {{nts|8.2}}, , , 
+ P80[27][28]{{rp|5}}[29], {{EUR}}, , Vega, 1st, HTPB, {{nts|280}}, {{nts|2 261 000}}, {{nts|96 000}} with fuel, , , 
+ P120C[30], {{EUR}}, , Ariane 6 Vega-C, Booster  1st, HTPB[31], {{nts|279}}[30], {{nts|4 650 000}}[30], {{nts|161 000}} with fuel[30], , , 
+ P230, {{EUR}}, SNPE and Avio Spa (Italy), Ariane 5, Booster, HTPB, {{nts|286}}[32] {{nts|259}} (SL), {{nts|6 470 000}} {{nts|5 860 000}} (SL), {{nts|269 000}} with fuel[32], , , 
+ PPS-1350 (???-100), {{RUS}}, OKB Fakel, SMART-1, Vacuum, Xenon, {{nts|1 650}} @1.5 kW, {{nts|0.088}} @1.5 kW, {{nts|5.3}}, , , 
+ S139, {{IND}}, SDSC, PSLV, 1st, HTPB, {{nts|269}}[33], {{nts|486 0000}}, {{nts|160 200}} with fuel, , {{nts|58}}, 
+ Raptor[34], {{Flag|USA}}, SpaceX, BFR, 1st  2nd, CH4?/?LOX, {{nts|356}}[35] {{nts|330}} (SL), {{nts|1 700 000}} (SL), {{nts|1360|prefix=~}} (goal)[36], {{nts|170|prefix=?}} (goal)[36], {{nts|300}}[37], 3.6[38]
+ Raptor Vacuum[34], {{Flag|USA}}, SpaceX, BFR, 2nd  1st on Mars, CH4?/?LOX, {{nts|380}}+[39], {{nts|1 900 000}}[35], {{nts|1360|prefix=~}} (goal)[36], {{nts|120|prefix=?}} (goal)[36], {{nts|300 }}[37], 3.6[38]
+ RD-0124 14?23, {{RUS}}, KBKhA, Soyuz-2.1b Soyuz-2-1v Angara, 2nd  3rd, RP-1?/?LOX, {{nts|359}}[40], {{nts|294 300}}, {{nts|520}}, {{nts|57.7}}, {{nts|160}}, 
+ RD-0146D, {{RUS}}, KBKhA, Angara, Upper, LH2?/?LOX, {{nts|470}}[41], 68 600, , , 59, 
+ RD-107A 14?22, {{RUS}}, NPO Energomash, Soyuz-FG Soyuz-2, 1st, RP-1?/?LOX, {{nts|320.2}}[42] {{nts|263.3}} (SL), {{nts|1 019 892}} {{nts|839 449}} (SL), {{nts|1 090}}, {{nts|78.53}}, {{nts|61.2}}, 
+ RD-108A 14?21, {{RUS}}, NPO Energomash, Soyuz-FG Soyuz-2, 2nd, RP-1?/?LOX, {{nts|320.6}}[42] {{nts|257.7}} (SL), {{nts|921 825}} {{nts|792 377}} (SL), {{nts|1 075}}, {{nts|75.16}}, {{nts|55.5}}, 
+ RD-171M{{efn|name=RD-170|Most powerful multi-chamber rocket engine in the world}}11?520, {{RUS}}, NPO Energomash, Zenit-2M Zenit-3SL Zenit-3SLB Zenit-3SLBF Soyuz-5, 1st, RP-1?/?LOX, {{nts|337.2}}[43] {{nts|309.5}} (SL), {{nts|7 904 160}} {{nts|7 256 921}} (SL), {{nts|9 300}}, {{nts|79.57}}, {{nts|250}}, 
+ RD-180, {{RUS}}, NPO Energomash, Atlas V Atlas III, 1st, RP-1?/?LOX, {{nts|338.4}}[44] {{nts|311.9}} (SL), {{nts|4 152 136}} {{nts|3 826 555}} (SL), {{nts|5 480}}, {{nts|71.2}}, {{nts|261.7}}, 2.72
+ RD-181, {{RUS}}, NPO Energomash, Antares 200, 1st, RP-1?/?LOX, {{nts|339.2}}[45] {{nts|311.9}} (SL), {{nts|2 085 000}} {{nts|1 922 000}} (SL), {{nts|2 200}}, {{nts|89}}, {{nts|262.6}}, 
+ RD-191, {{RUS}}, NPO Energomash, Angara, 1st, RP-1?/?LOX, {{nts|337.5}}[46] {{nts|311.2}} (SL), {{nts|2 084 894}} {{nts|1 922 103}} (SL), {{nts|2 200}}, {{nts|89.09}}, {{nts|262.6}}, 
+ RD-193, {{RUS}}, NPO Energomash, Soyuz-2-1v, 1st, RP-1?/?LOX, {{nts|337.5}}[47] {{nts|311.2}}, {{nts|2 084 894}} {{nts|1 922 103}} (SL), {{nts|1 900}}, {{nts|103.15}}, , 
+ RD-264 11?119, {{Flag|USSR}}, NPO Energomash, Dnepr, 1st, N2O4?/?UDMH, {{nts|318}}[48] {{nts|293}} (SL), {{nts|4 521 000}}, {{nts|3 600}}, {{nts|128.15}}, {{nts|206}}, 
+ RD-276 14?14?, {{RUS}}, NPO Energomash, Proton-M, 1st, N2O4?/?UDMH, {{nts|315.8}}[49] {{nts|288}} (SL), {{nts|1 831 882}} {{nts|1 671 053}} (SL), {{nts|1 120}}, {{nts|171.2}}, {{nts|168.5}}, 
+ RD-8 11D513, {{USSR}}, Pivdenne/Pivdenmash, Zenit, 2nd vernier, RP-1?/?LOX, {{nts|342}}, {{nts|78 450}}, {{nts|380}}, , 77.47, 2.4
+ RD-801, {{UKR}}, Pivdenne/Pivdenmash, Mayak, 1st, RP-1?/?LOX, , {{nts|1 340 000}}  1 198 000 (SL), {{nts|1 630}}, , 180, 2.65
+ RD-805 (RD-802), {{UKR}}, Pivdenne/Pivdenmash, , Upper, RP-1?/?LOX, , , , , , 
+ RD-809 (RD-809M), {{UKR}}, Pivdenne/Pivdenmash, Antares, Upper, RP-1?/?LOX, , , , , , 
+ RD-809K, {{UKR}}, Pivdenne/Pivdenmash, Mayak, Upper, RP-1?/?LOX, , , , , , 
+ RD-810, {{UKR}}, Pivdenne/Pivdenmash, Mayak  Zenit, 1st, RP-1?/?LOX, , {{nts|2 105 000}} 1 876 000 (SL), {{nts|2 800}}, , 180, 2.65
+ RD-843, {{UKR}}, Pivdenne/Pivdenmash, Vega, upper, N2O4?/?UDMH, , {{nts|2 452 000}}, {{nts|15.93}}, , 20.4, 2.0
+ RD-854 8D612, {{USSR}}, Pivdenne/Pivdenmash, R-36ORB, 3rd, N2O4?/?UDMH, , , , , , 
+ RD-861K, {{UKR}}, Pivdenne/Pivdenmash, (Tsyklon-4), 3rd, N2O4?/?UDMH, , , , , , 
+ RD-864 15D177, {{USSR}}, Pivdenne/Pivdenmash, R-36 (missile)  Dnipro, 3rd, N2O4?/?UDMH, {{nts|309}} high  298 low, {{nts|20 200}} high  8 450 low, {{nts|199}}, , 41 high/17 low, 1.8
+ RD-869 15D300, {{USSR}}, Pivdenne/Pivdenmash, R-36M2, 3rd, N2O4?/?UDMH, {{nts|313}} high  302.3 low, {{nts|20 470}} high  8 580 low, {{nts|196}
