@@ -7,9 +7,11 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import utils.Ligne;
-import utils.Page;
-import utils.Tableau;
+import model.Ligne;
+import model.Page;
+import model.Tableau;
+import utils.CSVUtils;
+import utils.Constant;
 
 
 public class ExtractorHtmlImp implements ExtractorHtml{
@@ -71,9 +73,6 @@ public class ExtractorHtmlImp implements ExtractorHtml{
 		return page;
 	}
 
-	public Elements filterTables(Elements tables) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 
 }

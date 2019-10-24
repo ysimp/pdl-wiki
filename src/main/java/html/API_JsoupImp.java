@@ -58,7 +58,7 @@ public class API_JsoupImp {
 			List<Tableau> listTableau = new ArrayList<Tableau>();
 
 			for (int t = 0; t < (tables.size() - 1); t++) {
-bleau tableau = new Tableau();
+				Tableau tableau = new Tableau();
 				numTab++;
 				String helpFileName;
 				helpFileName = CSVUtils.assureFomatDosTab(url);

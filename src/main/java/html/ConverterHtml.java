@@ -15,12 +15,12 @@ public interface ConverterHtml {
 	 * @param url
 	 * appelle la methode convertTableToCsv
 	 * */
-	public void convertAllTablesToCsv(String url) ;
+	public void convertAllTablesToCsv(String url) throws Exception;
 	
 	/**
 	 * Lit le fichier input et pour chaque url convertit les tableaux
 	 * appelle la methode convertAllTablesToCsv
 	 * 
 	 * */
-	public void convertAllPages();
+	public void convertAllPages() throws Exception;
 }
