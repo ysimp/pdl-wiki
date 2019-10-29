@@ -1,20 +1,20 @@
-package html;
+package jsoup;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import model.Ligne;
-import model.Page;
-import model.Tableau;
 import utils.CSVUtils;
+import utils.Cellule;
+import utils.Ligne;
+import utils.Page;
+import utils.Tableau;
 
 
 public class API_JsoupImp {
@@ -58,17 +58,12 @@ public class API_JsoupImp {
 			List<Tableau> listTableau = new ArrayList<Tableau>();
 
 			for (int t = 0; t < (tables.size() - 1); t++) {
-
 				Tableau tableau = new Tableau();
 				numTab++;
 				String helpFileName;
-				//Construction du nom du fichier CSV
-				helpFileName = CSVUtils.constructFileName(url);
-				String tableauCSV;
-				
-				//Construction du fichier CSV dans le dossier output/html/
-				tableauCSV = csvFileRacine + CSVUtils.mkCSVFileName(helpFileName, numTab);
-				
+				helpFileName = CSVUtils.assureFomatDosTab(url);
+				String tableauCSV;				
+				tableauCSV = csvFileRacine + CSVUtils.mkCSVFileName(helpFileName, numTab);	
 				FileWriter w = new FileWriter(tableauCSV);
 				table = tables.get(t);
 				rows = table.select("tr");
@@ -78,26 +73,26 @@ public class API_JsoupImp {
 				for (int i = 1; i < rows.size(); i++) {
 					td = rows.get(i).select("td");
 
-					//List<Cellule> listCellule = new ArrayList<Cellule>();
+					List<Cellule> listCellule = new ArrayList<Cellule>();
 					
 					for (int k = 0; k < td.size(); k++) {
 						System.out.println(" | " + td.get(k).text() + " | ");
-						//Cellule cellule = new Cellule(k, CSVUtils.assureFomatCSV(td.get(k).text()));
-						//listCellule.add(cellule);
+						Cellule cellule = new Cellule(k, CSVUtils.assureFomatCSV(td.get(k).text()));
+						listCellule.add(cellule);
 						donneesLigneTableau.add(CSVUtils.assureFomatCSV(td.get(k).text()));
 					}
 					
-					//ligne.(donneesLigneTableau);
+					ligne.setLigneTableau(donneesLigneTableau);
 					ligne.setNumeroLigne(i);
-					//ligne.setListCelluleLigne(listCellule);
-					//CSVUtils.writeLine(w, donneesLigneTableau);
+					ligne.setListCelluleLigne(listCellule);
+					CSVUtils.writeLine(w, donneesLigneTableau);
 					donneesTableau.add(donneesLigneTableau);
 					ligneTableau.add(ligne);
 					donneesLigneTableau.clear();
 				}
 				
 				donneesPage.add(donneesTableau);
-				//tableau.setLigneTableau(ligneTableau);
+				tableau.setLigneTableau(ligneTableau);
 				donneesTableau.clear();
 				listTableau.add(tableau);
 				ligneTableau.clear();
@@ -106,7 +101,7 @@ public class API_JsoupImp {
 				System.out.println("fin de la création N° " + numTab + " )  de la page" + page.getNomPage() + " \n");
 			}
 			
-			//page.setPage(listTableau);
+			page.setPage(listTableau);
 		}
 		
 		return testAccessDOM;
