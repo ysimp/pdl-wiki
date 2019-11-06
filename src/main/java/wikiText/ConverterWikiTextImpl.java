@@ -1,6 +1,8 @@
 package wikiText;
 
 import java.io.FileWriter;
+import java.io.IOException;
+import java.io.Writer;
 import java.util.List;
 
 import org.jsoup.nodes.Element;
@@ -9,21 +11,26 @@ import model.Page;
 import model.Tableau;
 import utils.CSVUtils;
 import utils.Constant;
+import utils.Stat;
 import utils.StatPrinter;
 
 public class ConverterWikiTextImpl implements ConverterWikitext{
 	
 	private ExtractorWikitext extractorWiki;
+	private Writer writerStats;
 	
-	
+	/**
+	 * Constructor
+	 */
 	public ConverterWikiTextImpl()
 	{
 		extractorWiki=new ExtractorWikiTextImpl();
+		
 	}
 	
 
 	public void convertTableToCsv(Element table) {
-		// TODO Auto-generated method stub
+		//pas utiliser a supprimer 
 		
 		
 	}
@@ -41,8 +48,9 @@ public class ConverterWikiTextImpl implements ConverterWikitext{
 		
 		Page page=extractorWiki.extractTables(url);
 		
-		
 		page.setNomPage(fileName);
+		
+		Stat.generateStatByPage(page,writerStats);
 		
 		StatPrinter.printStatPage(page) ;
 		
@@ -76,11 +84,25 @@ public class ConverterWikiTextImpl implements ConverterWikitext{
 		
 		List<String> listUrls=CSVUtils.getListFromFile(Constant.WIKI_URL_PATH);
 		
+		
+		 try {
+			 writerStats= new FileWriter(Constant.OUTPUT_PATH+"stats.csv",true);
+		} catch (IOException e) {
+	
+			e.printStackTrace();
+		}
+		 
 		for (String url : listUrls) {
 			
 			convertAllTablesToCsv(url);
 		}
 		
+		
+		if(writerStats!=null)
+		{
+			writerStats.flush();
+			writerStats.close();
+		}
 		
 		
 	}

@@ -1,13 +1,8 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
-import java.io.IOException;
-
-import bliki.API_BlikiImp;
-import jsoup.API_JsoupImp;
 
 
 public class ProgrammePrincipale {
@@ -24,8 +19,8 @@ public static void BenchExtractors() throws Exception {
 		int nbreTable = 0;
 		int countTable = 0; 
 		
-		API_JsoupImp testExtraTable = new API_JsoupImp ();
-		API_BlikiImp testExtraTableBliki = new API_BlikiImp();
+		//API_JsoupImp testExtraTable = new API_JsoupImp ();
+	//	API_BlikiImp testExtraTableBliki = new API_BlikiImp();
 		
 		String BASE_WIKIPEDIA_URL = "https://en.wikipedia.org/wiki/";
 		// directory where CSV files are exported (HTML extractor) 
@@ -45,8 +40,8 @@ public static void BenchExtractors() throws Exception {
 	       // TODO: do something with the Wikipedia URL 
 	       // (ie extract relevant tables for correct URL, with the two extractors)
 
-	       testExtraTable.extractionTableJsoup(url);
-	       testExtraTableBliki.extractionTableJsoup(url);
+	    //   testExtraTable.extractionTableJsoup(url);
+	    //   testExtraTableBliki.extractionTableJsoup(url);
 	      
 	       
 	       // for exporting to CSV files, we will use mkCSVFileName 

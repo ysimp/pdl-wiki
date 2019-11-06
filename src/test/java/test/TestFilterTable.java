@@ -39,7 +39,7 @@ public class TestFilterTable {
 		
 		// recuperer le 1er article de wikipedia
 		
-		docHtml =  Jsoup.connect(Constant.BASE_WIKIPEDIA_URL_JSOUP+listeUrl.get(3)).get();
+		docHtml =  Jsoup.connect(Constant.BASE_WIKIPEDIA_URL+listeUrl.get(3)).get();
 	}
 	/**
 	 * @throws Exception 

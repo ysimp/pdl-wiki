@@ -46,7 +46,7 @@ public class ExtractorWikiTextImpl implements ExtractorWikitext {
 	    	
 	    	page.setTotalTableau(tables.size());
 	    	
-	    	tables =filter.filterTables(docHtml);
+	    	//tables =filter.filterTables(docHtml);
 	    	
 	    	
 			//Parcours du tableau
