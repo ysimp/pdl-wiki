@@ -32,8 +32,8 @@ public class ExtractorHtmlImp implements ExtractorHtml{
 		}
 	}
 
-	public Page extractTables(String url) throws Exception{
-		
+	public Page extractTables(String url, boolean filte) throws Exception{
+		Document doc = null;
 		Elements rows = null;
 	    Elements tds = null;
 	    Elements tables = null;
@@ -42,7 +42,20 @@ public class ExtractorHtmlImp implements ExtractorHtml{
 	    Ligne line;
 	    Tableau tab;
 	    int numTab=1;
-	    
+		Boolean testAccessDOM = false;
+		String wurl = Constant.BASE_WIKIPEDIA_URL + url;
+		try {
+			doc = Jsoup.connect(wurl).get();
+			if (doc != null) {
+				testAccessDOM = true;
+			}
+
+		} catch (IOException e) {
+			System.out.println("Erreur de connexion, vous vous êtes sans doute trompé dans la saisie de l'url");
+		}
+
+		if (testAccessDOM == true) {
+
 		if (Connection(Constant.BASE_WIKIPEDIA_URL + url)){
 			
 		Document doc = Jsoup.connect(Constant.BASE_WIKIPEDIA_URL + url).get();
@@ -50,7 +63,7 @@ public class ExtractorHtmlImp implements ExtractorHtml{
 		tables = doc.select("table");
 		
     	page.setTotalTableau(tables.size());
-    	
+    	if(filte)
     	tables =filter.filterTables(doc);
 
 		
