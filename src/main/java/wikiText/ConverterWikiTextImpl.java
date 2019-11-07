@@ -5,8 +5,6 @@ import java.io.IOException;
 import java.io.Writer;
 import java.util.List;
 
-import org.jsoup.nodes.Element;
-
 import model.Page;
 import model.Tableau;
 import utils.CSVUtils;
@@ -29,11 +27,6 @@ public class ConverterWikiTextImpl implements ConverterWikitext{
 	}
 	
 
-	public void convertTableToCsv(Element table) {
-		//pas utiliser a supprimer 
-		
-		
-	}
 
 	/**
 	 * {@inheritDoc}
@@ -46,11 +39,11 @@ public class ConverterWikiTextImpl implements ConverterWikitext{
 		String tableauCSV;
 		fileName= CSVUtils.constructFileName(url);		
 		
-		Page page=extractorWiki.extractTables(url);
+		Page page=extractorWiki.extractTables(url,false);
 		
 		page.setNomPage(fileName);
 		
-		Stat.generateStatByPage(page,writerStats);
+		//Stat.generateStatByPage(page,writerStats);
 		
 		StatPrinter.printStatPage(page) ;
 		
@@ -83,26 +76,19 @@ public class ConverterWikiTextImpl implements ConverterWikitext{
 		
 		
 		List<String> listUrls=CSVUtils.getListFromFile(Constant.WIKI_URL_PATH);
+		 
+		// ouvirir le fichier de statistique 
+		 writerStats= new FileWriter(Constant.OUTPUT_PATH+"stats.csv",true);
 		
-		
-		 try {
-			 writerStats= new FileWriter(Constant.OUTPUT_PATH+"stats.csv",true);
-		} catch (IOException e) {
-	
-			e.printStackTrace();
-		}
 		 
 		for (String url : listUrls) {
 			
 			convertAllTablesToCsv(url);
 		}
 		
-		
-		if(writerStats!=null)
-		{
-			writerStats.flush();
-			writerStats.close();
-		}
+		// fermer le fichier stats
+		writerStats.flush();
+		writerStats.close();
 		
 		
 	}

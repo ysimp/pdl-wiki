@@ -4,12 +4,7 @@ import org.jsoup.nodes.Element;
 
 public interface ConverterWikitext {
 	
-	/***
-	 * Prend un tableau et l'ecrit dans un fichier CSV
-	 * @param tableau
-	 * @return void
-	 **/
-	public void convertTableToCsv(Element table ) ;
+	
 	
 	/**
 	 * Ecrit sous format CSV tous les tableaux d'une page donnée
