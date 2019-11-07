@@ -6,4 +6,3 @@ collapsible
 mw-collapsible
 mw-collapsed
 vertical-navbox
-navbox-inner
