@@ -1,12 +1,14 @@
 package test;
 
 import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.io.File;
 import java.util.List;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
@@ -71,7 +73,15 @@ public class TestConverterWikitext {
 		
 	}
 	
-	
+	@DisplayName("Tester si les fichiers extraits ot été générer ou pas")
+	@Test
+	public void testConvertAllPages() throws Exception {
+		
+		converterWiki.convertAllPages();
+		int numberOfFile = new File(Constant.CSV_WIKI_PATH).listFiles().length;
+		assertEquals(numberOfFile, CSVUtils.nbreTableauBlikiTotal(), "Les le nombre de fichiers générés devrait être egal au nombre de tableau total");
+
+	}
 	
 	
 }
