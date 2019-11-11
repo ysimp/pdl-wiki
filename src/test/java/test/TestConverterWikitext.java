@@ -22,7 +22,7 @@ public class TestConverterWikitext {
 	
 	@BeforeEach
 	public void setUp() throws Exception {
-		converterWiki = new ConverterWikiTextImpl();
+		converterWiki = new ConverterWikiTextImpl(false);
 		listUrl= CSVUtils.getListFromFile(Constant.WIKI_URL_PATH);
 	}
 	
