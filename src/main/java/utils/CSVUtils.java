@@ -8,8 +8,15 @@ import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
+
+import info.bliki.wiki.model.WikiModel;
 import model.Ligne;
 import model.Tableau;
+import net.sourceforge.jwbf.core.contentRep.Article;
+import net.sourceforge.jwbf.mediawiki.bots.MediaWikiBot;
 
 public class CSVUtils {
 	
@@ -113,6 +120,9 @@ public class CSVUtils {
 				w.append(line.toString());
 				w.append("\n ");
 		}
+    	
+    	w.flush();
+    	w.close();
     }
     /**
      * 
@@ -143,15 +153,13 @@ public class CSVUtils {
     /**
      * 
      */
-    public static void creatOutPutFolder() {
+    public static void creatOutPutFolder(String filename) {
     	
     	// supprimer ancien fichiers 
-    	deleteOutPutFiles(new File(Constant.OUTPUT_PATH));
+    	deleteOutPutFiles(new File(filename));
     	
     	//cree a nouveau 
-    	new File(Constant.OUTPUT_PATH).mkdir();
-    	new File(Constant.CSV_HTML_PATH).mkdir();
-    	new File(Constant.CSV_WIKI_PATH).mkdir();
+    	new File(filename).mkdir();  	
     	
     }
     
@@ -193,5 +201,51 @@ public class CSVUtils {
     public boolean isCsvFileValid(String filePaht) {
     	return true;
     }
+    
+    public static int nbreTableauJsoup(String url) throws Exception {
+    	
+    	Document doc =null;
+    	Elements tables =null;
+    	
+    	String urlpage = Constant.BASE_WIKIPEDIA_URL + url;
+    	
+    	
+			doc = Jsoup.connect(urlpage).get();
+			
+			if(doc!=null) {
+				
+				tables =doc.select("table");
+				return tables.size();
+			}
+	
+    	return -1;
+    }
+    
+    public static int nbreTableauBliki(String url) throws Exception {
+    	
+    	Document docHtml =null;
+    	MediaWikiBot wikiBot = new MediaWikiBot(Constant.BASE_WIKIPEDIA_URL_wikiTest);
+	    Article article = wikiBot.getArticle(url);
+	    if(article.getText().isEmpty()) {
+	    	return -1;
+	    }
+	    else {
+	    String html =  WikiModel.toHtml(article.getText());
+	     docHtml = Jsoup.parse(html);
+	    return docHtml.select("table").size();
+	    }
+    }
+    
+    public static boolean testerFileCsvIsEmpty(String fileName) throws Exception
+	{
+		
+		File file = new File(fileName);
+		
+		BufferedReader br = new BufferedReader(new FileReader(file));
+		
+		return br.readLine() != null;
+	}
+    
+    
 	
 }

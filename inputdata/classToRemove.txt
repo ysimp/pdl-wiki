@@ -1,4 +1,11 @@
+ambox
+box-More_citations_needed
+sistersitebox
 infobox
 navbox
+vertical-navbox
+navbox-inner
 autocollapse
 collapsible
+mw-collapsible
+mw-collapsed
