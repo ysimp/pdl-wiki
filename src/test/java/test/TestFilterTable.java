@@ -5,11 +5,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.util.List;
 import java.util.Objects;
 
-import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -40,6 +38,7 @@ public class TestFilterTable {
 		
 		docHtml =  Jsoup.connect(Constant.BASE_WIKIPEDIA_URL_JSOUP+listeUrl.get(3)).get();
 	}
+	
 	/**
 	 * @throws Exception 
 	 * 

@@ -3,8 +3,6 @@ package wikiText;
 import java.io.FileWriter;
 import java.util.List;
 
-import org.jsoup.nodes.Element;
-
 import model.Page;
 import model.Tableau;
 import utils.CSVUtils;
@@ -22,12 +20,7 @@ public class ConverterWikiTextImpl implements ConverterWikitext{
 	}
 	
 
-	public void convertTableToCsv(Element table) {
-		// TODO Auto-generated method stub
-		
-		
-	}
-
+	
 	/**
 	 * {@inheritDoc}
 	 * 

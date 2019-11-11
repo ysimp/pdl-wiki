@@ -91,13 +91,16 @@ public class ExtractorWikiTextImpl implements ExtractorWikitext {
 	
 	public Document getDocumentFromUrl(String url) {
 		
-		
+
 			MediaWikiBot wikiBot = new MediaWikiBot(Constant.BASE_WIKIPEDIA_URL_wikiTest);
 		    Article article = wikiBot.getArticle(url);
+		   
+		    
 		    if(article==null) {
 		    	loggerWiki.warning(url+" n'existe pas");
 		    	return null;
 		    }
+		    
 		    else {
 		    String html =  WikiModel.toHtml(article.getText());
 		    Document docHtml = Jsoup.parse(html);
