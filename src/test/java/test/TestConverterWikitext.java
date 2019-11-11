@@ -45,11 +45,7 @@ public class TestConverterWikitext {
 				
 			File file =new File(tableauCSV);
 			
-			
-			
 			 assertTrue("Le fichier "+i+" devrait etre créer",file.exists());
-			 
-			 
 			
 		}
 		

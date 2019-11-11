@@ -57,13 +57,6 @@ public class ConverterWikiTextImpl implements ConverterWikitext{
 			
 		}
 		
-		if(w!=null)
-		{
-			w.flush();
-			w.close();
-		}
-		
-		
 	}
 	
 	

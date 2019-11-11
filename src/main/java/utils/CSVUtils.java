@@ -120,6 +120,9 @@ public class CSVUtils {
 				w.append(line.toString());
 				w.append("\n ");
 		}
+    	
+    	w.flush();
+    	w.close();
     }
     /**
      * 
@@ -202,7 +205,7 @@ public class CSVUtils {
     	return true;
     }
     
-    public static int nbreTableau(String url) throws Exception {
+    public static int nbreTableauJsoup(String url) throws Exception {
     	
     	Document doc =null;
     	Elements tables =null;
