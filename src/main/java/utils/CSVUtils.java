@@ -243,8 +243,31 @@ public class CSVUtils {
 		
 		BufferedReader br = new BufferedReader(new FileReader(file));
 		
-		return br.readLine() != null;
+		boolean test= br.readLine() != null;
+		
+		br.close();
+		
+		return test;
 	}
+    
+    /**
+     * 
+     * @return
+     * @throws Exception
+     */
+    
+    public static int nbreTableauBlikiTotal() throws Exception {
+        
+        
+        List<String> listUrls=getListFromFile(Constant.WIKI_URL_PATH);
+        
+        int somme=0;
+        for (String url : listUrls) {
+            somme+=nbreTableauBliki(url);
+        }
+        
+        return somme;
+    }
     
     
 	
