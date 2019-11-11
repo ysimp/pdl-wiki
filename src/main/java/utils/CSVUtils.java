@@ -131,6 +131,7 @@ public class CSVUtils {
         {
             if(tempFile.isDirectory()){
                File[] entries = tempFile.listFiles();
+               
                for(File currentFile: entries){
             	   deleteOutPutFiles(currentFile);
                }
