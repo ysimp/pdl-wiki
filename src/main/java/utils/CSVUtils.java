@@ -20,11 +20,7 @@ import net.sourceforge.jwbf.mediawiki.bots.MediaWikiBot;
 
 public class CSVUtils {
 	
-	
-
-	private static final char DEFAULT_SEPARATOR = ',';
     
-  //lorsau'il y a une virgule dans la cellule mettre le 
    /** 
     * TODO
     * S'il y'a une virgule dans la cellule on doit le remplacer par un point si c'est numeric : 12,5 => 12.5
@@ -202,6 +198,12 @@ public class CSVUtils {
     	return true;
     }
     
+    /**
+     * 
+     * @param url
+     * @return
+     * @throws Exception
+     */
     public static int nbreTableauJsoup(String url) throws Exception {
     	
     	Document doc =null;
@@ -221,6 +223,12 @@ public class CSVUtils {
     	return -1;
     }
     
+    /**
+     * 
+     * @param url
+     * @return
+     * @throws Exception
+     */
     public static int nbreTableauBliki(String url) throws Exception {
     	
     	Document docHtml =null;
@@ -236,6 +244,12 @@ public class CSVUtils {
 	    }
     }
     
+    /**
+     * 
+     * @param fileName
+     * @return
+     * @throws Exception
+     */
     public static boolean testerFileCsvIsEmpty(String fileName) throws Exception
 	{
 		
@@ -243,9 +257,30 @@ public class CSVUtils {
 		
 		BufferedReader br = new BufferedReader(new FileReader(file));
 		
-		return br.readLine() != null;
+		boolean test=br.readLine() != null;
+		br.close();
+		
+		return test;
 	}
     
     
+    /**
+     * 
+     * @return
+     * @throws Exception
+     */
+    
+    public static int nbreTableauBlikiTotal() throws Exception {
+    	
+    	
+	    List<String> listUrls=getListFromFile(Constant.WIKI_URL_PATH);
+	    
+	    int somme=0;
+	    for (String url : listUrls) {
+			somme+=nbreTableauBliki(url);
+		}
+	    
+	    return somme;
+    }
 	
 }
