@@ -51,7 +51,7 @@ public class TestFilterTable {
 		 Elements afterFilter=filterTable.removeTableByClass(docHtml);
 		 //Comparison_between_Ido_and_Interlingua
 		  int nbPertinentTable= 2;
-		 assertEquals(afterFilter.size(), nbPertinentTable,"Le nombre de tableau pertinent apres Filtrage par class doit �tre egal "+nbPertinentTable);
+		 assertEquals(afterFilter.size(), nbPertinentTable,"Le nombre de tableau pertinent apres Filtrage par class doit être egal "+nbPertinentTable);
 		 
 		 
 	}
@@ -64,12 +64,12 @@ public class TestFilterTable {
 	public void TestremoveTableByAttribut() throws Exception
 	{
 		docHtml =Jsoup.connect("https://en.wikipedia.org/wiki/Comparison_between_Ido_and_Interlingua").get();
-		 Objects.requireNonNull(docHtml,"Le document ne doit pas �tre null");
+		 Objects.requireNonNull(docHtml,"Le document ne doit pas être null");
 		 Elements afterFilter=filterTable.removeTableByAttribut(docHtml.select("table"));
 		 
 		 int nbPertinentTable= 8;
 		 assertEquals(afterFilter.size(), nbPertinentTable,"Le nombre de tableau pertinent "
-		 						+ "apres Filtrage par class doit �tre egal "+nbPertinentTable);
+		 						+ "apres Filtrage par class doit être egal "+nbPertinentTable);
 		 
 		 
 	}
@@ -78,13 +78,13 @@ public class TestFilterTable {
 	public void TestremoveTableByAttribut2() throws Exception
 	{
 		docHtml =Jsoup.connect("https://en.wikipedia.org/wiki/Comparison_between_Esperanto_and_Ido").get();
-		 Objects.requireNonNull(docHtml,"Le document ne doit pas �tre null");
+		 Objects.requireNonNull(docHtml,"Le document ne doit pas être null");
 		 
 		 Elements afterFilter=filterTable.removeTableByAttribut(docHtml.select("table"));
 		 
 		 int nbPertinentTable= 9;
 		 assertEquals(afterFilter.size(), nbPertinentTable,"Le nombre de tableau pertinent "
-		 						+ "apres Filtrage par class doit �tre egal "+nbPertinentTable);
+		 						+ "apres Filtrage par class doit être egal "+nbPertinentTable);
 		 
 		 
 	}
@@ -97,7 +97,21 @@ public class TestFilterTable {
 	@Test
 	public void TestremoveTablesWithMinRowOrColum()
 	{
-		
+		docHtml =Jsoup.connect("https://en.wikipedia.org/wiki/Comparison_between_Ido_and_Interlingua").get();
+		 Objects.requireNonNull(docHtml,"Le document ne doit pas être null");
+		 Elements afterFilterRowOrCol=filterTable.removeTablesWithMinRowOrColum(docHtml.select("table"));
+		 for(Element tab: docHtml.select("table")) {
+		 Elements lignes= tab.select("tr");
+		 if(lignes.size()<=Constant.MIN_ROW) {
+			 assertFalse(afterFilterRowOrCol.contains(tab),"cette table ne doit pas être présente car elle ne repond pas aux critères");
+		 }
+		 else {
+			 Elements cols= lignes.get(0).select("td");
+			 if(cols.size()<=Constant.MIN_COLUM) {
+				 assertFalse(afterFilterRowOrCol.contains(tab),"cette table ne doit pas être présente car elle ne repond pas aux critères"); 
+			 }
+		 }
+		 }
 	}
 	
 	
@@ -113,14 +127,42 @@ public class TestFilterTable {
 			
 	 docHtml =Jsoup.connect("https://en.wikipedia.org/wiki/Comparison_between_Esperanto_and_Ido").get();
 			
-	 Objects.requireNonNull(docHtml,"Le document ne doit pas �tre null");
+	 Objects.requireNonNull(docHtml,"Le document ne doit pas être null");
 	 Elements afterFilter=filterTable.removeTableByClass(docHtml);
 	 			afterFilter = filterTable.removeTableByAttribut(afterFilter);
 	 			
 	 int nbPertinentTable= 6;
 	 
 	 assertEquals(afterFilter.size(), nbPertinentTable,"Le nombre de tableau pertinent "
-	 						+ "apres Filtrage doit �tre egal "+nbPertinentTable);
+	 						+ "apres Filtrage doit être egal "+nbPertinentTable);
+	}
+	
+		/** 
+	 * tester la methode globale qui va tout filter 
+	 * @throws Exception 
+	 */
+
+	@Test
+	public void testfilterTables2() throws Exception{
+		docHtml =Jsoup.connect("https://en.wikipedia.org/wiki/Comparison_between_Ido_and_Interlingua").get();
+		Objects.requireNonNull(docHtml,"Le document ne doit pas être null");
+		Elements tables= filterTable.filterTables(docHtml);
+		List<String> listeClasses=CSVUtils.getListFromFile(Constant.CLASS_TO_REMOVE);
+		List<String> listeattr=CSVUtils.getListFromFile(Constant.ATTRIBUT_TO_REMOVE);
+		
+		for(String classe: listeClasses) {
+			assertTrue(docHtml.getElementsByClass(classe).isEmpty(),""+classe+"présent dans le document après le filtrage");
+		}
+		for(Element table: tables) {
+			for(String attr: listeattr) {
+				assertTrue(table.getElementsByAttribute(attr).isEmpty(),""+attr+"présent dans la table"+table+"du document après le filtrage");
+			}
+			Elements lignes= table.select("tr");
+			assertTrue(lignes.size()>Constant.MIN_ROW,"le tableau"+table+"ne contient pas assez de lignes car <MIN ROW");
+			if(lignes.size()>Constant.MIN_ROW) {
+				assertTrue(lignes.get(0).select("td").size()>Constant.MIN_COLUM,"le tableau"+table+"ne contient pas assez de colonnes dans sa 1ère ligne car <MIN COL");
+			}
+		}
 	}
 	
 	
