@@ -37,7 +37,7 @@ public class filterTable {
 	 * Supprime tous les tableaux contenant les class definis dans le fichier classtoremove
 	 * 
 	 * */
-	public  Elements removeTableByClass(Document doc) throws Exception {
+	public Elements removeTableByClass(Document doc) throws Exception {
 		
 		List<String> listeClasses=CSVUtils.getListFromFile(Constant.CLASS_TO_REMOVE);
 		
@@ -62,7 +62,7 @@ public class filterTable {
 	 * Supprime tous les tableaux contenant les attributs definis dans le fichier attributstoremove
 	 * 
 	 * */
-	public  Elements removeTableByAttribut(Elements tables) throws Exception {
+	public Elements removeTableByAttribut(Elements tables) throws Exception {
 
 		List<String> listeattr=CSVUtils.getListFromFile(Constant.ATTRIBUT_TO_REMOVE);
 		

@@ -94,6 +94,7 @@ public class TestConverterWikitext {
 	
 	@DisplayName("Tester si les fichiers generes ne sont pas vide ")
 	@Test
+	@Disabled
 	public void testConvertAllPages2() throws Exception {
 		
 		converterWiki.convertAllPages();

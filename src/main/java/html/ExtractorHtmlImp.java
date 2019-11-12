@@ -20,19 +20,19 @@ public class ExtractorHtmlImp implements ExtractorHtml{
 	
 	Logger loggerWiki = Logger.getLogger("WikiLoger");
 
-	private filterTable  filter= new filterTable();
+	 private filterTable  filter= new filterTable();
 	
 	public boolean Connection(String url) {
 		try {
 			Jsoup.connect(url).get();
 			return true;
 		} catch (IOException e) {
-			System.out.println("Erreur de connexion, vous vous êtes sans doute trompé dans la saisie de l'url");
+			System.out.println("Erreur de connexion, vous vous êtes sans doute trompé dans la saisie de l'url"+" "+url);
 			return false;
 		}
 	}
 
-	public Page extractTables(String url) throws Exception{
+	public Page extractTables(String url,boolean filte) throws Exception{
 		
 		Elements rows = null;
 	    Elements tds = null;
@@ -50,7 +50,7 @@ public class ExtractorHtmlImp implements ExtractorHtml{
 		tables = doc.select("table");
 		
     	page.setTotalTableau(tables.size());
-    	
+    	if(filte)
     	tables =filter.filterTables(doc);
 
 		

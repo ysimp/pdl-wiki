@@ -14,7 +14,7 @@ public interface ExtractorHtml {
  *
  * */
 	
-	public Page  extractTables(String url) throws Exception ;
+	public Page  extractTables(String url, boolean filter ) throws Exception ;
 	
 	
 	

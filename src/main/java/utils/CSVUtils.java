@@ -120,6 +120,16 @@ public class CSVUtils {
     	w.flush();
     	w.close();
     }
+    
+    public static void writeTableJsoup(Writer w, Tableau table) throws IOException { 
+    	
+    	for (Ligne  line : table.getlisteLignes()) {
+    		
+				w.append(line.toString());
+				w.append("\n ");
+		}
+    	
+    }
     /**
      * 
      * @param tempFile

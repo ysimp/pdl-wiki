@@ -21,10 +21,10 @@ public class ConverterHtmlImp implements ConverterHtml{
 	public void convertAllTablesToCsv(String url) throws Exception {
 		String tableauCSV;
 		String fileName;
-		fileName = CSVUtils.constructFileName(url);
+		fileName = CSVUtils.constructFileName(url);	
 		FileWriter out=null;
 		
-		Page page = extractorHtml.extractTables(url);
+		Page page = extractorHtml.extractTables(url,false);
 		page.setNomPage(fileName);
 		
 	
@@ -32,15 +32,14 @@ public class ConverterHtmlImp implements ConverterHtml{
 			for (Tableau tab : page.getListeTableau()) {
 				tableauCSV =Constant.CSV_HTML_PATH + CSVUtils.mkCSVFileName(fileName, tab.getNumeroTableau());
 				out = new FileWriter(tableauCSV,false);
-				CSVUtils.writeTable(out, tab);
+				CSVUtils.writeTableJsoup(out, tab);
+				out.flush();
+				out.close();
+					
 			}	
 		
 	
-		if(out!=null)
-		{
-			out.flush();
-			out.close();
-		}
+		
 		
 	}
 
