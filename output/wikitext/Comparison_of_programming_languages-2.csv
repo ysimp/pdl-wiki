@@ -1,0 +1,76 @@
+Language, Intended use, Imperative, Object-oriented, Functional, Procedural, Generic, Reflective, Event-driven, Other paradigm(s), Standardized?
+ 1C:Enterprise, Application  RAD  business  general  web  mobile, {{Yes}}, , {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}, Object-based  Prototype-based programming, {{no}}
+ ActionScript 3.0, Application  client-side  web, {{Yes}}, {{Yes}}, {{Yes}}, , , , {{Yes}}, , {{yes|1996}}  ECMA
+ Ada, Application  embedded  realtime  system, {{Yes}}, {{Yes}}[2], , {{Yes}}[3], {{Yes}}[4], , , concurrent [5] distributed [6], {{yes|1983}}  2005  2012  ANSI  ISO  GOST 27831-88[7]
+ Aldor, Highly domain-specific  symbolic computing, {{Yes}}, {{Yes}}, {{Yes}}, , , , , , {{no}}
+ ALGOL 58, Application, {{Yes}}, , , , , , , , {{no}}
+ ALGOL 60, Application, {{Yes}}, , , , , , , , {{yes|1960}}  IFIP WG 2.1  ISO[8]
+ ALGOL 68, Application, {{Yes}}, , , , , , , concurrent, {{yes|1968}}  IFIP WG 2.1  GOST 27974-88 [9]
+ Ateji PX, Parallel application, , {{Yes}}, , , , , , pi calculus, {{no}}
+ APL, Application  data processing, {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}, array-oriented  tacit, {{yes|1989}}  ISO
+ Assembly language, General, {{Yes}}, , , , , , , any  syntax is usually highly specific  related to the target processor, {{no}}
+ AutoHotkey, GUI automation (macros)  highly domain-specific, {{Yes}}, {{Yes}}[10], , {{Yes}}, , , {{Yes}}, , {{no}}
+ AutoIt, GUI automation (macros)  highly domain-specific, {{Yes}}, , , {{Yes}}, , , {{Yes}}, , {{no}}
+ Ballerina, Integration  agile  server-side  general, {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}, , , {{Yes}}, concurrent  transactional  statically and strongly typed programming  diagrammatic / visual programming, {{Yes|2018}} De facto standard via Ballerina Language Specification[11]
+ Bash, Shell  scripting, {{Yes}}, , , {{Yes}}, , , , , {{no}}  but optionally POSIX.2 [12]
+ BASIC, Application  education, {{Yes}}, , , {{Yes}}, , , , , {{yes|1983}}  ANSI  ISO  ECMA
+ BeanShell, Application  scripting, {{Yes}}, {{Yes}}, {{Yes}}, , , {{Yes}}, , , {{no|In progress}}  JCP[13]
+ BLISS, System, , , , {{Yes}}, , , , , {{no}}
+ BlitzMax, Application  game, {{Yes}}, {{Yes}}, , {{Yes}}, , {{Yes}}, , , {{no}}
+ Boo, Application  game scripting, , {{Yes}}, , , , , , , {{no}}
+ Bro, domain-specific  application, {{Yes}}, , , , , , {{Yes}}, , {{no}}
+ C, Application  system [14] general purpose  low-level operations, {{Yes}}, , , {{Yes}}, {{Yes}}, , , , {{yes|1989}}  ANSI C89  ISO C90  ISO C99  ISO C11  ISO C18[15]
+ C++, Application  system, {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}, , , , {{yes|1998}}. ISO/IEC 2003  ISO/IEC 2011 ISO/IEC 2014 ISO/IEC 2017[16]
+ C#, Application  RAD  business  client-side  general  server-side  web, {{Yes}}, {{Yes}}, {{Yes}}[17], {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}, structured  concurrent, {{yes|2000}}  ECMA  ISO[18]
+ Clarion, General  business  web, {{Yes}}, {{Yes}}, {{Yes}}[19], , , , , , {{unknown}}
+ Clean, General, , , {{Yes}}, , {{Yes}}, , , , {{no}}
+ Clojure, General, , , {{Yes}}, , , , , concurrent, {{no}}
+ CLU, General, {{Yes}}, {{Yes}}, , {{Yes}}, {{Yes}}, , , , {{no}}
+ COBOL, Application  business, {{Yes}}, {{Yes}}, , {{Yes}}, , , , , {{yes|ANSI X3.23 1968  1974  1985; ISO/IEC 1989:1985  2002  2014}}
+ Cobra, Application  business  general  web, {{Yes}}, {{Yes}}, {{Yes}}, , {{Yes}}, {{Yes}}, , , {{no}}
+ ColdFusion (CFML), Web, , {{Yes}}, , {{Yes}}, , , , , {{no}}
+ Common Lisp, General, {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}, extensible syntax  Array-oriented  syntactic macros  multiple dispatch  concurrent, {{yes|1994}}  ANSI
+ COMAL 80, Education, {{Yes}}, , , {{Yes}}, , , , , {{no}}
+ Crystal, General purpose, {{Yes}}, {{Yes}}[20], {{Yes}}, {{Yes}}, , , , alpha stage[21], {{no}}
+ Cython, Application  general  numerical computing, {{Yes}}, {{Yes}}, {{Yes}}, , , {{Yes}}, , aspect-oriented, {{no}}
+ D, Application  system, {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}, , generative  concurrent, {{no}}
+ Dart, Application  web  server-side  mobile  IoT, {{Yes}}, {{Yes}}, {{Yes}}, , , , , structured, {{yes|Ecma-408 standard}}
+ Dylan, Application, , {{Yes}}, {{Yes}}, , , , , , {{no}}
+ Eiffel, General  application  business  client-side  server-side  web (EWF), {{Yes}}, {{Yes}}, {{Yes}}[22][23], , {{Yes}}, {{Yes}} Erl-G, {{Yes}} Agents, distributed SCOOP  Void-safe, {{yes|2005}}  ECMA  ISO[24]
+ Elixir, Application  distributed, , , {{Yes}}, , , , {{Yes}}, concurrent  distributed, {{no}}
+ Erlang, Application  distributed, , , {{Yes}}, , , , {{Yes}}, concurrent  distributed, {{no}}
+ Euphoria, Application, , , , {{Yes}}, , {{Yes}}, , , {{no}}
+ Factor, General, {{Yes}}, , can be viewed as, , {{Yes}}, {{Yes}}, , stack-oriented, {{no}}
+ FP, , , , {{Yes}}, , , , , , {{no}}
+ F#, Application, {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}, , {{no}}
+ Forth, General, {{Yes}}, , can be viewed as, , , , , stack-oriented, {{yes|1994}}  ANSI
+ Fortran, Application  numerical computing, {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}, , , array-based  vectorized  concurrent  native distributed/shared-memory parallelism, {{yes|1966}}  ANSI 66  ANSI 77  MIL-STD-1753  ISO 90  ISO 95  ISO 2003  ISO/IEC 1539-1:2010 (2008)  ISO/IEC JTC1/SC22/WG5 N2145 (2018)
+ FreeBASIC, Application  numerical computing, {{Yes}}, {{Yes}}, , {{Yes}}, {{Yes}}, , , , {{no}}
+ Gambas, Application, {{Yes}}, {{Yes}}, , , , , {{Yes}}, , {{no}}
+ Game Maker Language, Application  games, {{Yes}}, {{Yes}}, , , , , {{Yes}}, , {{no}}
+ GLBasic, Application  games, {{Yes}}, {{Yes}}, , {{Yes}}, , , , simple object-oriented, {{no}}
+ Go, Application  web  server-side, {{Yes}}, [25], , {{Yes}}, , {{Yes}}, {{Yes}}, concurrent, {{yes|De facto standard}} via Go Language Specification
+ Gosu, Application  general  scripting  web, {{Yes}}, {{Yes}}, , , {{Yes}}, {{Yes}}, , , {{no}}
+ GraphTalk, Application, , {{Yes}}, , , , , , logic, {{no}}
+ Groovy, Application  general  scripting  web, {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}, meta-programming, {{no|In progress}}  JCP[26]
+ Harbour, Application  business  data processing  general  web, {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}, , declarative, {{no}}
+ Haskell, Application, , , {{Yes}}, , {{Yes}}, , , lazy evaluation, {{yes|2010}}  Haskell 2010[27]
+ Haxe, Application  general  web, {{Yes}}, {{Yes}}, {{Yes}}, , {{Yes}}, {{Yes}}, , , {{no}}
+ HyperNext, Application  education, , , , {{Yes}}, , , {{Yes}}, weakly typed, {{no}}
+ HyperTalk, Application  RAD  general, , {{Yes}}, , , , , {{Yes}}, weakly typed, {{unk}}
+ Io, Application  host-driven scripting, {{Yes}}, {{Yes}}, , , , , , , {{no}}
+ IPL, General, , , {{Yes}}, , , , , , {{unk}}
+ ISLISP, General, {{Yes}}, {{Yes}}, {{Yes}}, , {{Yes}}, , , , {{yes|1997}}  ISO
+ J, Data processing, , , , , , , , array-oriented  function-level  tacit, {{no}}
+ JADE, Application  distributed, {{Yes}}, {{Yes}}, , , , , , , {{no}}
+ Java, Application  business  client-side  general  mobile development  server-side  web, {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}, concurrent, {{yes|De facto standard}} via Java Language Specification
+ JavaScript, Client-side  server-side  web, {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}, , {{Yes}}, {{Yes}}, prototype-based, {{yes|1997}}  ECMA
+ Joy, Research, , , {{Yes}}, , , , , stack-oriented, {{no}}
+ Julia, General  technical computing, {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}, , multiple dispatch  meta  scalar and array-oriented  parallel  concurrent  distributed ("cloud"), {{No}}
+ K, Data processing  business, , , , , , , , array-oriented  tacit, {{unk}}
+ Kotlin, Application  mobile development  server-side  client-side  web, {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}, {{Yes}}[28], {{Yes}}, , {{no}}
+ Ksh, Shell  scripting, {{Yes}}, {{Yes}}, , {{Yes}}, , , , several variants  custom programmable  dynamic loadable modules, {{Yes|1992}}  POSIX.2 [29]
+ LabVIEW (G), Application  industrial instrumentation-automation, {{Yes}}, {{Yes}}, {{Yes}}, , , , {{Yes}}, dataflow  visual, {{no}}
+ Lisp, General, , , {{Yes}}, , , , , , {{unk}}
+ LiveCode, Application  RAD  general, , {{Yes}}, , , , , {{Yes}}, weakly typed, {{no}}
+ Log

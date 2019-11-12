@@ -1,0 +1,61 @@
+Client, Desktop, Mobile, Other
+ Windows, macOS, Unix-like, Haiku, Amiga, Windows Phone, Android, BlackBerry OS, iOS, Symbian, MeeGo, Java ME, WebOS, Web, VGCs
+ Adium, {{no}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ BBM, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{no}}
+ AIM, {{yes}}, {{yes}}, {{dropped}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{no}}, {{no}}
+ aMSN, {{yes}}, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Ayttm, {{yes}}, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ BitlBee, {{yes}}, {{yes}}, {{yes}}, {{no}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Bombus, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{no}}, {{no}}, {{no}}
+ Centericq, {{yes}}, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ climm, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Coccinella, {{yes}}, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Conversations, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Discord, {{yes}}, {{yes}}, {{partial}}[31], {{no}}, {{no}}, {{no}}, {{yes}}, {{no}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{no}}
+ eBuddy, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{no}}, {{yes}}, {{no}}, {{yes}}, {{no}}
+ emesene, {{yes}}, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Empathy, {{no}}, {{no}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Facebook Messenger, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{yes}}, {{no}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{no}}
+ FaceTime, {{no}}, {{included}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{included}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Flock, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{no}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{no}}
+ Fire, {{no}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Gadu-Gadu, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{no}}, {{yes}}, {{yes}}, {{no}}, {{yes}}, {{no}}, {{yes}}, {{no}}
+ Gajim, {{yes}}, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Google Hangouts, {{partial}}[32], {{partial}}[32], {{partial}}[32][31], {{no}}, {{no}}, {{no}}, {{yes}}, {{no}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{no}}
+ Hookt, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{no}}, {{yes}}, {{no}}, {{yes}}, {{no}}
+ Hike, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}
+ IBM Lotus Sametime, {{yes}}, {{yes}}, {{yes}}, {{no}}, {{no}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ ICQ, {{yes}}, {{yes}}, {{yes}}, {{no}}, {{no}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{no}}
+ IMVU, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Instantbird, {{yes}}, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Jitsi, {{yes}}, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{partial|Unstable}}, {{partial|Unstable}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ KakaoTalk, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Kadu, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Kik, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{yes}}, {{no}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Kopete, {{yes}}[33][34], {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Line, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Messages, {{no}}, {{included}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{included}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ MCabber, {{no}}, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Skype for Business, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{yes}}, {{no}}, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Miranda IM, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ MySpaceIM, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ naim, {{yes}}, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Nimbuzz, {{Yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{no}}, {{yes}}, {{yes}}, {{yes}}, {{no}}
+ Palringo, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Paltalk, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{no}}
+ Pidgin, {{yes}}, {{yes}}, {{yes}}, {{no}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Psi, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ QIP, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{no}}, {{no}}, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ QuteCom, {{yes}}, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Jami, {{yes}}, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ RingID, {{yes}}[35], {{no}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{yes}}, {{no}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{yes}}, {{no}}
+ Riot.im, {{yes}}, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{no}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{no}}
+ Signal, {{yes}}[36], {{yes}}[36], {{partial}}[37][38], {{no}}, {{no}}, {{no}}, {{yes}}, {{no}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{dropped}}[38], {{no}}
+ Snapchat, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{no}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Surespot, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{no}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Skype, {{yes}}, {{yes}}, {{partial}}[31], {{no}}, {{no}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{no}}, {{yes}}, {{no}}, {{no}}, {{yes}}, {{yes|PSP PSV XB1}}
+ SOMA, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{no}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Spark (XMPP client), {{yes}}, {{yes}}[39], {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Telegram (standard messages), {{yes}}, {{yes}}, {{yes}}, {{no}}, {{no}}, {{yes}}, {{yes}}, {{no}}[40], {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{no}}
+ Telegram (secret chats), {{yes}}, {{yes-no}}[41], {{yes-no}}[42], {{no}}, {{no}}, {{yes}}, {{yes}}, {{no}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Tencent QQ, {{yes}}, {{yes}}, {{yes}}, {{no}}, {{no}}, {{yes}}, {{yes}}, {{yes}}, 

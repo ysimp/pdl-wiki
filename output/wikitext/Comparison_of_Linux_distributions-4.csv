@@ -1,0 +1,42 @@
+Distribution, x86, x86-64, ia64, ppc[102], ppc64, sparc32, sparc64, arm, hppa[103], loongson, mips[104], sh, s390, s390x, alpha[105], m68k[106], riscv
+ Alpine Linux, {{yes}}, {{yes}}, {{no}}, {{no}}, {{yes}}, {{no}}, {{no}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{no}}, {{no}}, {{no}}
+ Arch Linux, {{partial|Unofficial[107] Official discontinued 2017-11-08[108]}}, {{yes}}, {{no}}, {{partial|Discontinued unofficial port}}, {{no}}, {{no}}, {{no}}, {{partial|Unofficial[109]}}, {{no}}, {{partial|Discontinued. Unofficial port[110]}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ BackTrack, {{partial|Discontinued from BackTrack 5 and superseded by Kali Linux[111]}}, {{partial|Discontinued from BackTrack 5 and superseded by Kali Linux}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{partial|Discontinued from BackTrack 5 and superseded by Kali Linux}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ BLAG, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Bodhi Linux, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{partial|Discontinued 2013-10-23}}[112], {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ BOSS Linux, {{yes}}, {{yes}}, {{no}}, {{yes}}, {{yes}}, {{no}}, {{no}}, {{dunno}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ CentOS, {{partial|AltArch}}, {{yes}}, {{partial|Discontinued 3.5-3.8 4.1-4.7}}[113], {{partial|Beta  Discontinued 4.0}}, {{partial|AltArch}}, {{partial|Beta 4.2}}[113][114], {{no}}, {{partial|AltArch}}, {{no}}, {{no}}, {{no}}, {{no}}, {{partial|Discontinued 3.5-3.8 4.1-4.7}}[113][115], {{partial|Discontinued 3.5-3.8 4.1-4.7}}[113][115], {{partial|Discontinued 4.2-4.3}}[113][116][117], {{no}}
+ Chakra, {{no}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{dunno}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ CRUX, {{yes}}, {{yes}}, {{no}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Debian[118], {{yes}}, {{yes|Yes 4.0+}}, {{partial|Discontinued 3.0-7.0}}[119], {{partial|Discontinued 2.2-8}}, {{yes}}, {{partial|Discontinued 2.1-4.0}}[120], {{partial|Discontinued -7[121]}}, {{yes|Yes 2.2+}}, {{partial|Discontinued 3.0-5.0}}, {{yes}}, {{yes|Yes 3.0+}}, {{partial|In progress}}, {{partial|Discontinued 3.0-7}}, {{yes|Yes 7+}}, {{partial|Discontinued 2.1-5.0}}, {{partial|Discontinued 2.0-3.1}}, {{partial|In progress[122]}}
+ Devuan, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Dragora GNU/Linux-Libre, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ dyne:bolic, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Fedora[123], {{yes}}, {{yes}}, {{partial|Discontinued from Fedora 9 }}[124], {{partial|Discontinued from Fedora 17 }}, {{yes}}, {{no}}, {{partial|Inactive from Fedora 12}}[125], {{yes}}[126], {{no}}, {{partial|In progress}}, {{partial|Inactive from Fedora 13 }}[127], {{no}}, {{no}}, {{yes}}, {{no}}, {{no}}, {{partial|In progress[128]}}
+ Finnix, {{yes}}, {{yes}}, {{no}}, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Gentoo[129], {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}[130], {{yes}}, {{yes}}[131], {{yes}}[132][133], {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{partial|Test release}}[134]
+ gNewSense, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Guix[135], {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Hyperbola GNU/Linux-libre, {{yes}}, {{yes}}, {{no}}, {{no}}, {{partial|In progress[136]}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{partial|In progress[137]}}
+ Kali Linux, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ LibreCMC, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{yes}} XBurst, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Manjaro Linux, {{yes}} Unofficial[138], {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{yes}} Unofficial[139], {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ MEPIS, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Musix GNU+Linux, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ OpenELEC, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ openSUSE[140], {{partial|Discontinued 42.1}}, {{yes}}, {{no}}, {{no}}[141], {{no}}[141], {{no}}, {{partial|partial}}[142], {{partial|partial}}[143], {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ OpenWrt[144], {{yes}}, {{yes}}, {{no}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{no}}, {{no}}, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Oracle Linux[145], {{yes}}, {{yes}}, {{partial|Discontinued 5}}[146], {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Parabola GNU/Linux-libre, {{yes}}, {{yes}}, {{no}}, {{no}}, {{partial|Test release[147]}}, {{no}}, {{no}}, {{yes|Yes  ARMv7[148][149]}}, {{no}}, {{partial|Discontinued[150]}}, {{partial|Discontinued[150]}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{partial|Test release[151]}}
+ Red Flag Linux, {{partial|Discontinued 8.0}}[152], {{partial|Discontinued 8.0}}[152], {{partial|Discontinued 3}}[153], {{no}}, {{partial|Discontinued 3}}[153], {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Red Hat Linux[154], {{partial|Discontinued 9.0}}, {{no}}, {{partial|Discontinued 7.1-7.2}}, {{partial|Test release 5.1[155]}}, {{no}}, {{partial|Discontinued 4.0-4.2 5.1-6.2}}, {{partial|Test release 5.1[155]}}, {{no}}, {{no}}, {{no}}, {{partial|Test release 5.1[155]}}, {{no}}, {{partial|Discontinued 7.2}}, {{yes}}, {{partial|Discontinued 2.1-7.1}}, {{partial|Test release 5.1[155]}}
+ Red Hat Enterprise Linux[156], {{partial|Discontinued 2.1-6[157]}}, {{yes}} 3+, {{partial|Discontinued 2.1-5[158]}}, {{yes}} 3+, {{yes}} 3+, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{partial|Discontinued 3-4[159]}}, {{yes}} 3+, {{no}}, {{no}}
+ Sabayon Linux, {{no|Discontinued}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Scientific Linux, {{yes}}, {{yes}}, {{partial|Discontinued 3-4}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ SHR, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Slackware, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{partial|Discontinued ?}}[160], {{no}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{partial|Discontinued ?}}[161], {{partial|Discontinued ?}}[161], {{partial|Discontinued 8.1}}[162], {{no}}
+ Solus, {{no}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Source Mage GNU/Linux, {{yes}}, {{yes}}, {{no}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{dunno}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ SUSE Linux Enterprise Server[163], {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{no}}, {{no}}, {{partial|AArch64 only[164]}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{yes}}, {{no}}, {{no}}
+ Tor-ramdisk, {{yes}}, {{yes}}[165], {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{yes}}[166], {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+ Trisquel GNU/Linux, {{yes}}, {{yes}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {

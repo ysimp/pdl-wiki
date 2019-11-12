@@ -1,0 +1,23 @@
+Name, Operating system, User interface, Sector by sector{{efn|name="Raw"}}, File by file{{efn|name="File"}}, Hot transfer{{efn|name="LiveCopy"}}, Mount or extract{{efn|Extracting is the process of browsing a disk image and retrieving some of the files that it contains  one users choice. Mounting a disk image is the process of make the disk image content available to the user as if he or she is accessing a physical read-only disk.}}, Operation model, License
+ Standalone, Client–server, From a Live OS
+ Acronis True Image[1], Windows, Graphical, {{yes}}{{Efn|name="ATIht"}}, {{Yes|FAT32  NTFS}}{{efn|name="ATIH-Linux"}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}} (64 MB), {{Nonfree|Trialware}}{{Efn|name="ATItryv"}}
+ Apple Software Restore, macOS, Command-line, {{yes}}, {{yes|HFS+}}, {{no}}, {{yes|via hdiutil}}, {{yes}}, {{yes}}, {{No}}, {{Depends|Part of macOS}}
+ CloneDisk[2], Windows 7, Graphical, {{yes}}, {{yes|FAT  FAT32  NTFS  exFAT  UDF}}, {{no}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{Free|Freeware}}
+ Clonezilla[3], Linux, Text-based, {{yes}}, {{yes|FAT12  FAT16  FAT32  NTFS  ext2  ext3  ext4  reiserfs  reiser4  xfs  jfs  btrfs  f2fs  NILFS2  HFS+  UFS  minix  VMFS3}}, {{no}}, {{Partial|Through a hack}}[4], {{yes}}, {{yes}} (Clonezilla server edition), {{yes}} (210 MB), {{Free|GPL}}
+ dcfldd, Linux, Command-line, {{yes}}, {{no}}, {{no}}, {{yes}}, {{yes}}, {{no}}, {{dunno}}, {{Free|GPL}}
+ dd (Unix), Unix, Command-line, {{yes}}, {{no}}, {{no}}, {{yes}}{{efn|name="Loop device"}}, {{yes}}, {{no}}, {{yes}}{{efn|name="dd"}}, {{Free|GPLv3}}
+ Disk Utility, macOS, Graphical, {{yes}}, {{yes|HFS+}}, {{yes}}, {{yes}}, {{yes}}, {{no}}, {{yes}}, {{Depends|Part of macOS}}
+ Drive SnapShot[5], Windows, Graphical  Command-line, {{yes}}[6], {{no}}, {{yes}}, {{yes}}, {{yes}}, {{no}}, {{no}}, {{Nonfree|Trialware}}
+ FSArchiver, Linux, Text-based, {{no}}, {{yes|FAT32  btrfs  ext2  ext3  ext4  ReiserFS-4  HPFS  JFS  XFS}}, {{dunno}}, {{dunno}}, {{yes}}, {{no}}, {{dunno}}, {{Free|GPL}}
+ Ghost[7], Windows, Graphical  Command-line, {{yes}}, {{yes|FAT32  NTFS  HPFS  ext2  ext3 [8]}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{Nonfree|Trialware}}
+ GParted Live CD[9], Linux, Graphical, {{no}}, {{yes|ext2  ext3}}, {{no}}, {{no}}, {{yes}}, {{no}}, {{yes}}, {{Free|GPL}}
+ HDClone[10], Windows  (Linux[11]), Graphical  Command-line, {{yes}}, {{Yes| FAT16  FAT32  ExFAT  NTFS  ReFS  ext2  ext3  ext4  XFS  HFS+}}, {{yes}}, {{yes}}, {{yes}}, {{no}}, {{yes}}, {{Nonfree|Freemium}}
+ Image for Windows[12], Windows, Graphical, {{yes}}, {{yes|FAT32  NTFS  ext2  ext3}}, {{yes}}, {{yes}}, {{yes}}, {{no}}, {{yes}}, {{Nonfree|Trialware}}
+ IsoBuster[13], Windows, Graphical, {{yes}}, {{yes|FAT12  FAT16  FAT32  ExFAT  NTFS  ext2  ext3  ext4  MFS  HFS  HFS+  UDF  XFS[14]}}, {{no}}, {{yes}}, {{yes}}, {{no}}, {{yes}}, {{Nonfree|Trialware}}
+ Kleo Bare Metal Backup, Independent (Live OS), Graphical, {{yes}}, {{yes|FAT32  NTFS  ext2  ext3  HFS+}}, {{no}}, {{dunno}}, {{no}}, {{yes}}, {{yes}} (570 MB), {{Free|Freeware}}
+ Mondo Rescue[15], Linux, Text-based, {{yes}}, {{yes|FAT32  NTFS  ext2  ext3}}, {{yes}}, {{dunno}}, {{yes}}, {{dunno}}, {{yes}} *{{efn|name="Mindi-Linux"}}, {{Free|GPL}}
+ ntfsclone[16][17], Linux, Command-line, {{no}}, {{yes|NTFS}}, {{dunno}}, {{dunno}}, {{yes}}, {{no}}, {{no}}{{efn|name=compilation}}, {{Free|GPL}}
+ partimage[18][19], Linux, Text-based, {{no}}, {{yes|FAT32  ext2  ext3  ReiserFS-3  HPFS  JFS  XFS; UFS (beta)  HFS (beta)  NTFS (experimental)}}[20], {{dunno}}, {{dunno}}, {{yes}}, {{yes}}, {{no}}{{efn|name=compilation}}, {{Free|GPL}}
+ Partition-Saving[21], Windows  Linux  DOS, Text-based Command-line, {{yes}}, {{yes|FAT32  NTFS  ext2  ext3}}, {{no}}, {{yes}}, {{yes}}, {{no}}, {{yes}}, {{Free|Freeware}}
+ Redo Backup and Recovery, Independent (Live OS), Graphical, {{yes}}, {{yes|FAT32  NTFS  ext2  ext3  ext4}}, {{no}}, {{no}}, {{no}}, {{Partial|Can access networked drives}}, {{yes}} (225 MB), {{Free|GPL}}
+ 

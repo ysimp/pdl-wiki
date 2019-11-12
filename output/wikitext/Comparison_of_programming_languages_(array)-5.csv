@@ -1,0 +1,11 @@
+Language/ Library, Create, Determinant, Transpose, Element, Column, Row, Eigenvalues
+ APL, {{Mono|m?dims?x11 x12 ...}}, {{Mono|-.×m}}, {{Mono|?m}}, {{Mono|m[i;j]}} or {{Mono|i j?m}}, {{Mono|m[;j]}} or {{Mono|j?[2]m}} or {{Mono|j??m}}, {{Mono|m[i;]}} or {{Mono|i?m}}, {{Mono|??1?m}}
+ Fortran, {{Mono|m = RESHAPE([x11  x12  ...]  SHAPE(m))}}, , {{Mono|TRANSPOSE<wbr/>(m)}}, {{Mono|m(i j)}}, {{Mono|m(: j)}}, {{Mono|m(i :)}}, 
+ Ch [47], {{Mono|m = {...}}}, {{Mono|determinant<wbr/>(m)}}, {{Mono|transpose<wbr/>(m)}}, {{Mono|{{nowrap|m[i-1][j-1]}}}}, {{Mono|shape<wbr/>(m 0)}}, {{Mono|shape<wbr/>(m 1)}}, {{Mono|eigen<wbr/>(output  m  NULL)}}
+ Mathematica, {{Mono|m = {{x11  x12  ...}  ...}}}, {{Mono|Det[m]}}, {{Mono|Transpose<wbr/>[m]}}, {{Mono|m[[i j]]}}, {{Mono|{{nowrap|m[[;; j]]}}}}, {{Mono|m[[i]]}}, {{Mono|Eigenvalues<wbr/>[m]}}
+ MATLAB / GNU Octave, {{Mono|m = [...]}}, {{Mono|det(m)}}, {{Mono|m.'}}, {{Mono|m(i j)}}, {{Mono|m(: j)}}, {{Mono|m(i :)}}, {{Mono|eig(m)}}
+ NumPy, {{Mono|m = mat(...)}}, {{Mono|linalg.det(m)}}, {{Mono|m.T}}, {{Mono|{{nowrap|m[i-1 j-1]}}}}, {{Mono|m[: j-1]}}, {{Mono|m[i-1 :]}}, {{Mono|linalg.eigvals(m)}}
+ S-Lang, {{Mono|m = reshape<wbr/>([x11  x12  ...]  [new-dims])}}, , {{Mono|m = transpose<wbr/>(m)}}, {{Mono|m[i j]}}<wbr/>, {{Mono|m[* j]}}, {{Mono|m[j *]}}, 
+ SymPy, {{Mono|m = Matrix(...)}}, , {{Mono|m.T}}, {{Mono|{{nowrap|m[i-1 j-1]}}}}, , , 
+ Wolfram Language, {{Mono|m = {{x11  x12  ...}  ...}}}, {{Mono|Det[m]}}, {{Mono|Transpose<wbr/>[m]}}, {{Mono|m[[i j]]}}, {{Mono|{{nowrap|m[[;; j]]}}}}, {{Mono|m[[i]]}}, {{Mono|Eigenvalues<wbr/>[m]}}
+ 
