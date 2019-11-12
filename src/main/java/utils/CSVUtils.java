@@ -54,7 +54,7 @@ public class CSVUtils {
      * @param url
      * @return
      */
-  //Pour former le nom du fichier gr‚ce au nom du lien  
+  //Pour former le nom du fichier gr√¢ce au nom du lien  
     public static String constructFileName(String url) {
 
         String result = url;
@@ -196,7 +196,18 @@ public class CSVUtils {
      * **/
     
     public boolean isCsvFileValid(String filePaht) {
+    		List<String> maliste= new ArrayList<String>();
+    	maliste= CSVUtils.getListFromFile(nom_fichier);
+    	if(maliste==null)
+    		return false;
+    	else {
+    	int nbr= maliste.get(0).split(",").length;
+    	for(String ligne:maliste) {
+    		if(ligne.split(",").length!=nbr)
+    			return false;
+    	}
     	return true;
+    	}
     }
     
     /**
