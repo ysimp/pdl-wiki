@@ -44,7 +44,7 @@ public class ExtractorHtmlImp implements ExtractorHtml{
 	    int numTab=1;
 	    Document doc= Connection(Constant.BASE_WIKIPEDIA_URL + url);
 
-			if(doc!=null)
+			if(doc!=null) {
 		
 		tables = doc.select("table");
 		
