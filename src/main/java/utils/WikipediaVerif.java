@@ -6,18 +6,23 @@ public class WikipediaVerif {
 	 * Permet de verifier si url existe
 	 * @param url
 	 * @return boolean
+	 * @throws IOException 
 	 * */
-	public boolean urlExist(String url) {
-		return true;
+	public static boolean urlExist(String url) throws IOException {
+		assertNotNull(url,"l'url est nulle");
+		 Document doc = null;
+		doc=Jsoup.connect(url).get();
+		return doc!=null;
 	}
 	
 	/**
-	 * Permet de verifier si url correspond à un article
+	 * Permet de verifier si url correspond Ã  un article
 	 * @param url
 	 * @return boolean
+	 * @throws IOException 
 	 * */
-	public boolean isArticleWikipedia(String url) {
-		return true;
+	public static boolean isArticleWikipedia(String url) throws IOException {
+		return (urlExist(url)&&url.toLowerCase().contains("wikipedia"));
 	}
 	
 	
