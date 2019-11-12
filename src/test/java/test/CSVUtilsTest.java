@@ -87,12 +87,10 @@ class CSVUtilsTest {
 	@Test
 	void testCreatOutPutFolder() {
 		CSVUtils.creatOutPutFolder();
-		File projet= new File("C:\\Users\\ASUS\\Desktop\\M1 MIAGE\\MonPDL");
-		//Writer projet= new FileWriter(Constant.OUTPUT_PATH+"stats.csv",true);
-		 File[] myclasspath = projet.listFiles();
-         for(File chercherOutput: myclasspath){
-      	  assertFalse(chercherOutput.getAbsolutePath().equals("output"),"le dossier output existe déjà");
-         }
+		File projet= new File(Constant.OUTPUT_PATH);
+
+       	assertFalse(projet.exists(),"le dossier output existe déjà");
+         
 	}
 
 	@Test
