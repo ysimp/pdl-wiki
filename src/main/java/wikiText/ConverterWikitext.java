@@ -1,7 +1,5 @@
 package wikiText;
 
-import org.jsoup.nodes.Element;
-
 public interface ConverterWikitext {
 	
 	
