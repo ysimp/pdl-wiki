@@ -12,14 +12,14 @@ class WikipediaVerifTest {
 
 	@Test
 	void testUrlExist() throws IOException {
-		assertTrue(WikipediaVerif.urlExist("https://en.wikipedia.org/wiki/Comparison_between_Esperanto_and_Ido"),"ProblÃ¨me avec la fonction car cet url existe!");
-		assertFalse(WikipediaVerif.urlExist("https://www.moimm.com"),"ProblÃ¨me avec la fonction car cet url n'existe normalement pas!");
+		assertTrue(WikipediaVerif.urlExist("https://en.wikipedia.org/wiki/Comparison_between_Esperanto_and_Ido"),"Problème avec la fonction car cet url existe!");
+		assertFalse(WikipediaVerif.urlExist("https://www.moimm.com"),"Problème avec la fonction car cet url n'existe normalement pas!");
 	}
 
 	@Test
 	void testIsArticleWikipedia() throws IOException {
-		assertTrue(WikipediaVerif.isArticleWikipedia("https://en.wikipedia.org/wiki/Comparison_between_Esperanto_and_Ido"),"ProblÃ¨me avec la fonction car ceci est un url wikipedia!");
-		assertFalse(WikipediaVerif.isArticleWikipedia("https://www.mom.fr"),"ProblÃ¨me avec la fonction car ceci n'est pas un url wikipedia!");
+		assertTrue(WikipediaVerif.isArticleWikipedia("https://en.wikipedia.org/wiki/Comparison_between_Esperanto_and_Ido"),"Problème avec la fonction car ceci est un url wikipedia!");
+		assertFalse(WikipediaVerif.isArticleWikipedia("https://www.mom.fr"),"Problème avec la fonction car ceci n'est pas un url wikipedia!");
 	}
 
 }

@@ -16,12 +16,12 @@ public interface ExtractorWikitext {
 		 *
 		 * */
 		
-		public Page  extractTables(String url, boolean withFilter) throws Exception  ;
+		public Page  extractTables(String url, boolean withfilter) throws Exception  ;
 		
 		/**
 		 * Permet de recuperer une page et le tranforme en html
 		 * @param WikiUrl : le nom de l'article lit depuis le fichier 
 		 * */
 		
-		public Document getDocumentFromUrl(String url);
+		public Document getDocumentFromUrl(String url) ;
 }

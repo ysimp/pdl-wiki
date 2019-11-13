@@ -27,7 +27,7 @@ public class ExtractorWikiTextImpl implements ExtractorWikitext {
 	/**
 	 * {@inheritDoc}
 	 */
-	public Page extractTables(String url, boolean withfilter) throws Exception {
+	public Page extractTables(String url,boolean withfilter) throws Exception {
 		
 		// recupere document correspond au url 
 		Document docHtml = getDocumentFromUrl(url);
@@ -47,7 +47,7 @@ public class ExtractorWikiTextImpl implements ExtractorWikitext {
 	    	page.setTotalTableau(tables.size());
 	    	
 	    	if(withfilter)
-	    	 tables =filter.filterTables(docHtml);
+	    	tables =filter.filterTables(docHtml);
 	    	
 	    	
 			//Parcours du tableau
@@ -106,7 +106,6 @@ public class ExtractorWikiTextImpl implements ExtractorWikitext {
 		    }
 	}
 	
-
 
 
 }

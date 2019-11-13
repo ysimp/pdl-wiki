@@ -1,7 +1,7 @@
 package test;
 
 /**
- * @author Mahamadou Kand√© Konat√©
+ * @author Mahamadou KandÈ KonatÈ
  */
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -28,7 +28,7 @@ import utils.Constant;
 
 class CSVUtilsTest {
 	/**
-	 * La classe CSVUtilsTest teste toutes les m√©thodes de la classe √† laquelle elle est rattach√©e
+	 * La classe CSVUtilsTest teste toutes les mÈthodes de la classe ‡ laquelle elle est rattachÈe
 	 */
 
 	@Test
@@ -36,18 +36,18 @@ class CSVUtilsTest {
 		String valeur= "yaya,wel,mkk", resultatAttendu= "yaya wel mkk";
 		String resultat= CSVUtils.assureFomatCSV(valeur);
 		assertTrue(!resultat.contains(","),"Format CSV incorrect!!");
-		assertEquals(resultat,resultatAttendu,"Le r√©sultat n'est pas √©gal au r√©sultat attendu!!");
+		assertEquals(resultat,resultatAttendu,"Le rÈsultat n'est pas Ègal au rÈsultat attendu!!");
 		}
 
 	@Test
 	void testConstructFileName() {
 		String url= "https://en.wikipedia.org/wiki/Luka_Modri%C4%87";
 		String res= CSVUtils.constructFileName(url);
-		assertFalse(res.contains("http"),"Probl√®me: le nom du fichier contient 'https' ou 'http'");
-		assertFalse(res.contains("\""),"Probl√®me: le nom du fichier contient \" ");
-		assertFalse(res.contains("*")||res.contains("?"),"Probl√®me: le nom du fichier contient '*' ou '?'");
-		assertFalse(res.contains("<")||res.contains(">"),"Probl√®me: le nom du fichier contient '<' ou '>'");
-		assertFalse(res.contains("|")||res.contains("\\"),"Probl√®me: le nom du fichier contient '|' ou '\\'");
+		assertFalse(res.contains("http"),"ProblËme: le nom du fichier contient 'https' ou 'http'");
+		assertFalse(res.contains("\""),"ProblËme: le nom du fichier contient \" ");
+		assertFalse(res.contains("*")||res.contains("?"),"ProblËme: le nom du fichier contient '*' ou '?'");
+		assertFalse(res.contains("<")||res.contains(">"),"ProblËme: le nom du fichier contient '<' ou '>'");
+		assertFalse(res.contains("|")||res.contains("\\"),"ProblËme: le nom du fichier contient '|' ou '\\'");
 	}
 
 	@Test
@@ -70,7 +70,7 @@ class CSVUtilsTest {
 			liste.add(classe);
 		}
 		br.close();
-		assertNotNull(writer,"Probl√®me avec le writer qui contient null!");
+		assertNotNull(writer,"ProblËme avec le writer qui contient null!");
 		assertTrue(liste.get(0).trim().contains("1e ligne")&&liste.get(0).trim().contains("2e colonne"));
 		assertTrue(liste.get(1).trim().contains("2e ligne")&&liste.get(1).trim().contains("2e colonne"));
 	}
@@ -81,16 +81,14 @@ class CSVUtilsTest {
 		if (!essais.exists()) {
 		essais.createNewFile(); }
 		CSVUtils.deleteOutPutFiles(essais);
-		assertTrue(essais.exists(),"la suppression de l'output n'a pas fonctionn√©!");
+		assertTrue(essais.exists(),"la suppression de l'output n'a pas fonctionnÈ!");
 	}
 
 	@Test
 	void testCreatOutPutFolder() {
 		CSVUtils.creatOutPutFolder(Constant.OUTPUT_PATH);
 		File projet= new File(Constant.OUTPUT_PATH);
-
-       	assertFalse(projet.exists(),"le dossier output existe d√©j√†");
-         
+       	assertTrue(projet.exists(),"le dossier output existe dÈj‡");
 	}
 
 	@Test
@@ -114,7 +112,7 @@ class CSVUtilsTest {
 		Tableau tableau = new Tableau();
 		Tableau tableau2 = new Tableau();
 		Ligne ligne1= new Ligne(); Ligne ligne2= new Ligne(); Ligne ligne3= new Ligne();
-		ligne1.addCellule("1√®re ligne"); ligne1.addCellule("2e colonne");
+		ligne1.addCellule("1Ëre ligne"); ligne1.addCellule("2e colonne");
 		ligne2.addCellule("2e ligne"); ligne2.addCellule("2e colonne");
 		ligne3.addCellule("une 3e ligne");
 		tableau.addLine(ligne1); tableau.addLine(ligne2);
@@ -132,8 +130,8 @@ class CSVUtilsTest {
 	}
 	writer2.flush();
 	writer2.close();
-		assertTrue(CSVUtils.isCsvFileValid(Constant.OUTPUT_PATH+"essais_csvvalid"),"probl√®me avec la fonction isCSVFileValid");
-		assertFalse(CSVUtils.isCsvFileValid(Constant.OUTPUT_PATH+"essais_csvvalid2"),"probl√®me avec la fonction isCSVFileValid");
+		assertTrue(CSVUtils.isCsvFileValid(Constant.OUTPUT_PATH+"essais_csvvalid"),"problËme avec la fonction isCSVFileValid");
+		assertFalse(CSVUtils.isCsvFileValid(Constant.OUTPUT_PATH+"essais_csvvalid2"),"problËme avec la fonction isCSVFileValid");
 	}
 	
 	@Test
@@ -158,8 +156,8 @@ class CSVUtilsTest {
 		System.out.println(maliste.size());
 		System.out.println(listeDepart.size());
 		for(int i=0; i<listeDepart.size();i++) {
-				assertNotNull(maliste.get(i),"Probl√®me de transformation! La table String d√©riv√©e contient null.");
-				assertEquals(maliste.get(i).trim(),listeDepart.get(i).trim(),"La fonction retourne un ou des contenus diff√©rents du contenu d'origine.");
+				assertNotNull(maliste.get(i),"ProblËme de transformation! La table String dÈrivÈe contient null.");
+				assertEquals(maliste.get(i).trim(),listeDepart.get(i).trim(),"La fonction retourne un ou des contenus diffÈrents du contenu d'origine.");
 		}
 	}
 

@@ -1,5 +1,6 @@
 package html;
 
+import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
 import model.Page;
@@ -14,11 +15,9 @@ public interface ExtractorHtml {
  *
  * */
 	
-	public Page  extractTables(String url) throws Exception ;
+	public Page  extractTables(String url, boolean filter ) throws Exception ;
 	
 	
-	
-	
-	
+	public Document Connection(String url);
 	
 }

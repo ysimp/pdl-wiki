@@ -54,7 +54,7 @@ public class CSVUtils {
      * @param url
      * @return
      */
-  //Pour former le nom du fichier gr√¢ce au nom du lien  
+  //Pour former le nom du fichier gr‚ce au nom du lien  
     public static String constructFileName(String url) {
 
         String result = url;
@@ -119,6 +119,16 @@ public class CSVUtils {
     	
     	w.flush();
     	w.close();
+    }
+    
+    public static void writeTableJsoup(Writer w, Tableau table) throws IOException { 
+    	
+    	for (Ligne  line : table.getlisteLignes()) {
+    		
+				w.append(line.toString());
+				w.append("\n ");
+		}
+    	
     }
     /**
      * 
@@ -196,20 +206,20 @@ public class CSVUtils {
      * @throws 
      * **/
     
-    public static boolean isCsvFileValid(String filePaht) throws Exception {
-    		List<String> maliste= new ArrayList<String>();
-    	maliste= CSVUtils.getListFromFile(filePaht);
-    	if(maliste==null)
-    		return false;
-    	else {
-    	int nbr= maliste.get(0).split(",").length;
-    	for(String ligne:maliste) {
-    		if(ligne.split(",").length!=nbr)
-    			return false;
-    	}
-    	return true;
-    	}
-    }
+	public static boolean isCsvFileValid(String filePaht) throws Exception {
+		List<String> maliste= new ArrayList<String>();
+	maliste= CSVUtils.getListFromFile(filePaht);
+	if(maliste==null)
+		return false;
+	else {
+	int nbr= maliste.get(0).split(",").length;
+	for(String ligne:maliste) {
+		if(ligne.split(",").length!=nbr)
+			return false;
+	}
+	return true;
+	}
+}
     
     /**
      * 
@@ -295,5 +305,7 @@ public class CSVUtils {
 	    
 	    return somme;
     }
+    
+    
 	
 }
