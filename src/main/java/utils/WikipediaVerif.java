@@ -1,5 +1,12 @@
 package utils;
 
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+import java.io.IOException;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
 public class WikipediaVerif {
 
 	/**

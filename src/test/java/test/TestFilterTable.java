@@ -1,6 +1,8 @@
 package test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.io.IOException;
 import java.util.List;
@@ -8,6 +10,7 @@ import java.util.Objects;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -93,9 +96,10 @@ public class TestFilterTable {
 	/**
 	 * tester la method qui supprimer les tables qui ont moins de MinRows lignes ou
 	 * moins de colonnes
+	 * @throws IOException 
 	 */
 	@Test
-	public void TestremoveTablesWithMinRowOrColum()
+	public void TestremoveTablesWithMinRowOrColum() throws IOException
 	{
 		docHtml =Jsoup.connect("https://en.wikipedia.org/wiki/Comparison_between_Ido_and_Interlingua").get();
 		 Objects.requireNonNull(docHtml,"Le document ne doit pas être null");

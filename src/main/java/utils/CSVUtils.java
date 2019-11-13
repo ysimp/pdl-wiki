@@ -189,15 +189,16 @@ public class CSVUtils {
 	}
 	
     /**
+     * @throws Exception 
      * Permet de verifier si le fichier csv est valide
      * @param le chemin du fichier csv
      * @return boolean
      * @throws 
      * **/
     
-    public boolean isCsvFileValid(String filePaht) {
+    public static boolean isCsvFileValid(String filePaht) throws Exception {
     		List<String> maliste= new ArrayList<String>();
-    	maliste= CSVUtils.getListFromFile(nom_fichier);
+    	maliste= CSVUtils.getListFromFile(filePaht);
     	if(maliste==null)
     		return false;
     	else {

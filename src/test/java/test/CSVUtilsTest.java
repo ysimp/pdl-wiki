@@ -86,7 +86,7 @@ class CSVUtilsTest {
 
 	@Test
 	void testCreatOutPutFolder() {
-		CSVUtils.creatOutPutFolder();
+		CSVUtils.creatOutPutFolder(Constant.OUTPUT_PATH);
 		File projet= new File(Constant.OUTPUT_PATH);
 
        	assertFalse(projet.exists(),"le dossier output existe déjà");
