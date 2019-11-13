@@ -35,7 +35,7 @@ class ConverterHtmlTest {
 		
 		String fileName= CSVUtils.constructFileName(listUrl.get(indice));
 		
-		int nbtables = CSVUtils.nbreTableau(listUrl.get(indice));
+		int nbtables = CSVUtils.nbreTableauJsoup(listUrl.get(indice));
 		
 		converterHtml.convertAllTablesToCsv(listUrl.get(indice));
 		
@@ -54,7 +54,7 @@ class ConverterHtmlTest {
 		
 		String fileName= CSVUtils.constructFileName(listUrl.get(indice));
 		
-		int nbtables = CSVUtils.nbreTableauBliki(listUrl.get(indice));
+		int nbtables = CSVUtils.nbreTableauJsoup(listUrl.get(indice));
 		
 		converterHtml.convertAllTablesToCsv(listUrl.get(indice));
 		

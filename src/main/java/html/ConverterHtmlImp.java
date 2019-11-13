@@ -32,9 +32,10 @@ public class ConverterHtmlImp implements ConverterHtml{
 			for (Tableau tab : page.getListeTableau()) {
 				tableauCSV =Constant.CSV_HTML_PATH + CSVUtils.mkCSVFileName(fileName, tab.getNumeroTableau());
 				out = new FileWriter(tableauCSV,false);
-				CSVUtils.writeTable(out, tab);
-					out.flush();
-					out.close();
+				CSVUtils.writeTableJsoup(out, tab);
+				out.flush();
+				out.close();
+					
 			}	
 		
 	

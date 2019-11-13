@@ -27,7 +27,7 @@ public class ExtractorWikiTextImpl implements ExtractorWikitext {
 	/**
 	 * {@inheritDoc}
 	 */
-	public Page extractTables(String url) throws Exception {
+	public Page extractTables(String url,boolean withfilter) throws Exception {
 		
 		// recupere document correspond au url 
 		Document docHtml = getDocumentFromUrl(url);
@@ -46,6 +46,7 @@ public class ExtractorWikiTextImpl implements ExtractorWikitext {
 	    	
 	    	page.setTotalTableau(tables.size());
 	    	
+	    	if(withfilter)
 	    	tables =filter.filterTables(docHtml);
 	    	
 	    	
@@ -94,14 +95,13 @@ public class ExtractorWikiTextImpl implements ExtractorWikitext {
 		
 			MediaWikiBot wikiBot = new MediaWikiBot(Constant.BASE_WIKIPEDIA_URL_wikiTest);
 		    Article article = wikiBot.getArticle(url);
-		    if(article==null) {
+		    if(article.getText().isEmpty()) {
 		    	loggerWiki.warning(url+" n'existe pas");
 		    	return null;
 		    }
 		    else {
 		    String html =  WikiModel.toHtml(article.getText());
 		    Document docHtml = Jsoup.parse(html);
-		    
 		    return docHtml;
 		    }
 	}
