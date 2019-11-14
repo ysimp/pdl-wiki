@@ -126,6 +126,7 @@ public class CSVUtils {
     	for (Ligne  line : table.getlisteLignes()) {
     		
 				w.append(line.toString());
+				
 				w.append("\n ");
 		}
     	
@@ -170,7 +171,22 @@ public class CSVUtils {
     	
     }
     
-
+    /**
+     * 
+     */
+    public static void creatOutPutFolder() {
+    	
+    	// supprimer ancien fichiers 
+    	deleteOutPutFiles(new File(Constant.OUTPUT_PATH));
+    	
+    	
+    	//cree a nouveau 
+    	new File(Constant.OUTPUT_PATH).mkdir();
+    	new File(Constant.CSV_HTML_PATH).mkdir();
+    	new File(Constant.CSV_WIKI_PATH).mkdir();
+    	
+    }
+    
 
     
     /**

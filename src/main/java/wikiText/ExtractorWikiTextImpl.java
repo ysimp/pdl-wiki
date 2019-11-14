@@ -20,7 +20,7 @@ import utils.filterTable;
 public class ExtractorWikiTextImpl implements ExtractorWikitext {
 
 
-	Logger loggerWiki = Logger.getLogger("WikiLoger");
+	Logger loggerWiki = Logger.getLogger("WikiLoger2");
 	
 	private filterTable filter=new filterTable(); 
 	

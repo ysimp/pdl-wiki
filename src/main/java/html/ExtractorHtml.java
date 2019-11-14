@@ -15,9 +15,11 @@ public interface ExtractorHtml {
  *
  * */
 	
-	public Page  extractTables(String url, boolean filter ) throws Exception ;
-	
+	public Page  extractTables(String url, boolean filte) throws Exception ;
 	
 	public Document Connection(String url);
+	
+	
+	
 	
 }

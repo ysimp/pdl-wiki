@@ -18,16 +18,17 @@ import utils.filterTable;
 
 public class ExtractorHtmlImp implements ExtractorHtml{
 	
-	Logger loggerHTML = Logger.getLogger("WikiLoger");
-
+	Logger loggerHtml = Logger.getLogger("w");
+	
 	 private filterTable  filter= new filterTable();
 	
 	public Document Connection(String url) {
 		try {
-			Document doc=Jsoup.connect(url).get();
+			Document doc =Jsoup.connect( url).get();
 			return doc;
-		} catch (IOException e) {
-			loggerHTML.info("Erreur de connexion, vous vous êtes sans doute trompé dans la saisie de l'url"+" "+url);
+		} catch (Exception e) {
+			System.err.println("err");
+			loggerHtml.info("Erreur de connexion, vous vous êtes sans doute trompé dans la saisie de l'url"+" "+url);
 			return null;
 		}
 	}
@@ -42,10 +43,9 @@ public class ExtractorHtmlImp implements ExtractorHtml{
 	    Ligne line;
 	    Tableau tab;
 	    int numTab=1;
-	    Document doc= Connection(Constant.BASE_WIKIPEDIA_URL + url);
-
-			if(doc!=null) {
-		
+	    Document doc =this.Connection(Constant.BASE_WIKIPEDIA_URL + url);
+		if (doc!=null){
+			
 		tables = doc.select("table");
 		
     	page.setTotalTableau(tables.size());
