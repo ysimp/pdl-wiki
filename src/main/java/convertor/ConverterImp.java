@@ -34,8 +34,7 @@ public class ConverterImp implements Converter {
 			 w = new FileWriter(tableauCSV,false);
 			
 			CSVUtils.writeTable(w, tab);
-			w.flush();
-			w.close();
+			
 			
 		}
 	}

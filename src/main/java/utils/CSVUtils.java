@@ -20,11 +20,7 @@ import net.sourceforge.jwbf.mediawiki.bots.MediaWikiBot;
 
 public class CSVUtils {
 	
-	
-
-	private static final char DEFAULT_SEPARATOR = ',';
     
-  //lorsau'il y a une virgule dans la cellule mettre le 
    /** 
     * TODO
     * S'il y'a une virgule dans la cellule on doit le remplacer par un point si c'est numeric : 12,5 => 12.5
@@ -118,8 +114,21 @@ public class CSVUtils {
     	for (Ligne  line : table.getlisteLignes()) {
     		
 				w.append(line.toString());
-				w.append("\n ");
+				w.append("\n");
 		}
+    	
+    	w.flush();
+    	w.close();
+    }
+    
+    public static void writeTableJsoup(Writer w, Tableau table) throws IOException { 
+    	
+    	for (Ligne  line : table.getlisteLignes()) {
+    		
+				w.append(line.toString());
+				w.append("\n");
+		}
+    	
     }
     /**
      * 
@@ -132,6 +141,7 @@ public class CSVUtils {
         {
             if(tempFile.isDirectory()){
                File[] entries = tempFile.listFiles();
+               
                for(File currentFile: entries){
             	   deleteOutPutFiles(currentFile);
                }
@@ -150,7 +160,17 @@ public class CSVUtils {
     /**
      * 
      */
-    public static void creatOutPutFolder() {
+    public static void creatOutPutFolder(String filename) {
+    	
+    	// supprimer ancien fichiers 
+    	deleteOutPutFiles(new File(filename));
+    	
+    	//cree a nouveau 
+    	new File(filename).mkdir();  	
+    	
+    }
+    
+  public static void creatOutPutFolder() {
     	
     	// supprimer ancien fichiers 
     	deleteOutPutFiles(new File(Constant.OUTPUT_PATH));
@@ -162,7 +182,6 @@ public class CSVUtils {
     	new File(Constant.CSV_WIKI_PATH).mkdir();
     	
     }
-    
 
 
     
@@ -192,17 +211,37 @@ public class CSVUtils {
 	}
 	
     /**
+     * @throws Exception 
      * Permet de verifier si le fichier csv est valide
      * @param le chemin du fichier csv
      * @return boolean
      * @throws 
      * **/
     
-    public boolean isCsvFileValid(String filePaht) {
-    	return true;
-    }
+	public static boolean isCsvFileValid(String filePaht) throws Exception {
+		List<String> maliste= new ArrayList<String>();
+	maliste= CSVUtils.getListFromFile(filePaht);
+	if(maliste==null)
+		return false;
+	else {
+		
+	int nbr= maliste.get(0).split(",").length ;
+	
+	for(String ligne:maliste) {
+		if(ligne.split(",").length!=nbr)
+			return false;
+	}
+	return true;
+	}
+}
     
-    public static int nbreTableau(String url) throws Exception {
+    /**
+     * 
+     * @param url
+     * @return
+     * @throws Exception
+     */
+    public static int nbreTableauJsoup(String url) throws Exception {
     	
     	Document doc =null;
     	Elements tables =null;
@@ -221,6 +260,12 @@ public class CSVUtils {
     	return -1;
     }
     
+    /**
+     * 
+     * @param url
+     * @return
+     * @throws Exception
+     */
     public static int nbreTableauBliki(String url) throws Exception {
     	
     	Document docHtml =null;
@@ -236,6 +281,12 @@ public class CSVUtils {
 	    }
     }
     
+    /**
+     * 
+     * @param fileName
+     * @return
+     * @throws Exception
+     */
     public static boolean testerFileCsvIsEmpty(String fileName) throws Exception
 	{
 		
@@ -243,8 +294,31 @@ public class CSVUtils {
 		
 		BufferedReader br = new BufferedReader(new FileReader(file));
 		
-		return br.readLine() != null;
+		boolean test=br.readLine() != null;
+		br.close();
+		
+		return test;
 	}
+    
+    
+    /**
+     * 
+     * @return
+     * @throws Exception
+     */
+    
+    public static int nbreTableauBlikiTotal() throws Exception {
+    	
+    	
+	    List<String> listUrls=getListFromFile(Constant.WIKI_URL_PATH);
+	    
+	    int somme=0;
+	    for (String url : listUrls) {
+			somme+=nbreTableauBliki(url);
+		}
+	    
+	    return somme;
+    }
     
     
 	
