@@ -34,6 +34,21 @@ public class ExtractorHtmlTest {
 	}
 	 */
   
+ /* @DisplayName("Tester La connection ")
+  @ParameterizedTest
+  @CsvSource(
+	 			{
+	 				"0",
+	 				"1",
+	 				"2"
+	 			})
+   void testConnection(int indiceUrl)throws Exception{
+		listUrl=CSVUtils.getListFromFile(Constant.WIKI_URL_PATH);
+		this.extractorHtml = new ExtractorHtmlImp();
+		Boolean bl=extractorHtml.Connection(listUrl.get(indiceUrl));
+		System.out.println("connection "+ bl);
+	   assertTrue(bl);
+   }*/
   
   @DisplayName("Tester nbre de tableau ")
   @ParameterizedTest

@@ -20,14 +20,14 @@ import utils.filterTable;
 public class ExtractorWikiTextImpl implements ExtractorWikitext {
 
 
-	Logger loggerWiki = Logger.getLogger("WikiLoger2");
+	Logger loggerWiki = Logger.getLogger("WikiLoger");
 	
 	private filterTable filter=new filterTable(); 
 	
 	/**
 	 * {@inheritDoc}
 	 */
-	public Page extractTables(String url,boolean withfilter) throws Exception {
+	public Page extractTables(String url) throws Exception {
 		
 		// recupere document correspond au url 
 		Document docHtml = getDocumentFromUrl(url);
@@ -46,8 +46,7 @@ public class ExtractorWikiTextImpl implements ExtractorWikitext {
 	    	
 	    	page.setTotalTableau(tables.size());
 	    	
-	    	if(withfilter)
-	    	tables =filter.filterTables(docHtml);
+	    	//tables =filter.filterTables(docHtml);
 	    	
 	    	
 			//Parcours du tableau
@@ -95,13 +94,14 @@ public class ExtractorWikiTextImpl implements ExtractorWikitext {
 		
 			MediaWikiBot wikiBot = new MediaWikiBot(Constant.BASE_WIKIPEDIA_URL_wikiTest);
 		    Article article = wikiBot.getArticle(url);
-		    if(article.getText().isEmpty()) {
+		    if(article==null) {
 		    	loggerWiki.warning(url+" n'existe pas");
 		    	return null;
 		    }
 		    else {
 		    String html =  WikiModel.toHtml(article.getText());
 		    Document docHtml = Jsoup.parse(html);
+		    
 		    return docHtml;
 		    }
 	}

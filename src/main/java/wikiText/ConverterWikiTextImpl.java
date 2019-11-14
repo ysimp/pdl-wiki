@@ -1,31 +1,39 @@
 package wikiText;
 
 import java.io.FileWriter;
+import java.io.IOException;
 import java.io.Writer;
 import java.util.List;
+
+import org.jsoup.nodes.Element;
 
 import model.Page;
 import model.Tableau;
 import utils.CSVUtils;
 import utils.Constant;
+import utils.Stat;
 import utils.StatPrinter;
 
 public class ConverterWikiTextImpl implements ConverterWikitext{
 	
 	private ExtractorWikitext extractorWiki;
 	private Writer writerStats;
-	private boolean withFilter;
 	
 	/**
 	 * Constructor
 	 */
-	public ConverterWikiTextImpl(boolean withFilter)
+	public ConverterWikiTextImpl()
 	{
 		extractorWiki=new ExtractorWikiTextImpl();
-		this.withFilter=withFilter;
+		
 	}
 	
 
+	public void convertTableToCsv(Element table) {
+		//pas utiliser a supprimer 
+		
+		
+	}
 
 	/**
 	 * {@inheritDoc}
@@ -38,11 +46,11 @@ public class ConverterWikiTextImpl implements ConverterWikitext{
 		String tableauCSV;
 		fileName= CSVUtils.constructFileName(url);		
 		
-		Page page=extractorWiki.extractTables(url,withFilter);
+		Page page=extractorWiki.extractTables(url);
 		
 		page.setNomPage(fileName);
 		
-		//Stat.generateStatByPage(page,writerStats);
+		Stat.generateStatByPage(page,writerStats);
 		
 		StatPrinter.printStatPage(page) ;
 		
@@ -56,6 +64,13 @@ public class ConverterWikiTextImpl implements ConverterWikitext{
 			
 		}
 		
+		if(w!=null)
+		{
+			w.flush();
+			w.close();
+		}
+		
+		
 	}
 	
 	
@@ -68,22 +83,26 @@ public class ConverterWikiTextImpl implements ConverterWikitext{
 		
 		
 		List<String> listUrls=CSVUtils.getListFromFile(Constant.WIKI_URL_PATH);
-		 
-		// ouvirir le fichier de statistique 
-		 writerStats= new FileWriter(Constant.OUTPUT_PATH+"stats.csv",true);
 		
-		 // create dossier output wikitext
-		 CSVUtils.creatOutPutFolder(Constant.CSV_WIKI_PATH);
 		
+		 try {
+			 writerStats= new FileWriter(Constant.OUTPUT_PATH+"stats.csv",true);
+		} catch (IOException e) {
+	
+			e.printStackTrace();
+		}
 		 
 		for (String url : listUrls) {
 			
 			convertAllTablesToCsv(url);
 		}
 		
-		// fermer le fichier stats
-		writerStats.flush();
-		writerStats.close();
+		
+		if(writerStats!=null)
+		{
+			writerStats.flush();
+			writerStats.close();
+		}
 		
 		
 	}
