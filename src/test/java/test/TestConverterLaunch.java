@@ -61,12 +61,14 @@ class TestConverterLaunch {
 		
 		File[] entries = f.listFiles();
         
+		
         for(File currentFile: entries){
      	   
         	boolean test=CSVUtils.testerFileCsvIsEmpty(Constant.CSV_HTML_PATH+File.separator+currentFile.getName());
         	assertTrue(test,"le fichier ne doit pas etre vide ");
         	
         }
+        
 	}
 
 	@DisplayName("HTML nb de fichier generer")
@@ -81,7 +83,7 @@ class TestConverterLaunch {
 	
 	@DisplayName("Bliki nb de fichier generer")
 	@Test
-	void testConvertAllPages2() throws Exception {
+	void testNbreDePageGenerer() throws Exception {
 		
 		
 		int numberOfFilebliki = new File(Constant.CSV_WIKI_PATH).listFiles().length;

@@ -96,7 +96,7 @@ class TestConverterUtil {
 		
 		int nbTab = ConverterUtil.nbreTableauJsoup(listUrl.get(0));
 
-		assertEquals(19, nbTab,"Le nombre de tableau doit être -1");
+		assertEquals(19, nbTab,"Le nombre de tableau doit être 19");
 	}
 
 	@DisplayName("Nombre de tableau url Bliki 1")
