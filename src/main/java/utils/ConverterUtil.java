@@ -1,6 +1,7 @@
 package utils;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -12,6 +13,7 @@ import net.sourceforge.jwbf.mediawiki.bots.MediaWikiBot;
 
 public class ConverterUtil {
 
+	static Logger logger = Logger.getLogger("WikiLoger2");
 
     
     /**
@@ -97,6 +99,11 @@ public class ConverterUtil {
 	    
 	    return somme;
     }
+    /**
+     * url du article wikipedia 
+     * @param url
+     * @return
+     */
 	public static Document getDocumentWiki(String url) {
 		
 		
@@ -113,6 +120,11 @@ public class ConverterUtil {
 	    }
 	}
 	
+	/**
+	 * 
+	 * @param url complet avec la base 
+	 * @return
+	 */
 	public  static Document getDocumentJsoup(String url) {
 		
 
@@ -124,7 +136,8 @@ public class ConverterUtil {
 			return doc;
 		} catch (Exception e) {
 			
-			//logger.info("Erreur de connexion, vous vous êtes sans doute trompé dans la saisie de l'url"+" "+url);
+			logger.info("Erreur de connexion, vous vous êtes sans doute trompé dans la saisie de l'url"+" "+url);
+			
 			return null;
 		}
 		

@@ -17,7 +17,7 @@ public class LaunchConvertor {
 	List<String> listUrls=CSVUtils.getListFromFile(Constant.WIKI_URL_PATH);
 	 
 	
-	 // create dossier output wikitext
+	 // create dossier output 
 	 CSVUtils.creatOutPutFolder();
 	
 	 
