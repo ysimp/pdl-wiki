@@ -164,4 +164,5 @@ class TestExtractorImpl {
 				"le nombre de colonnes doit etre "+ nbColonne);
 	
 	}
+	
 }

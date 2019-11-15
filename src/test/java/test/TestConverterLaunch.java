@@ -26,11 +26,12 @@ class TestConverterLaunch {
 		 listUrl = CSVUtils.getListFromFile(Constant.WIKI_URL_PATH);
 		 launchConvertor=new LaunchConvertor();
 		 launchConvertor.convertAllPages();
+		 
 			
 	}
 
 	@Test
-	@DisplayName("Html folder no empty")
+	@DisplayName("Bliki folder no empty")
 	void TestFichierNonVide() throws Exception {
 		
 		File f= new File(Constant.CSV_WIKI_PATH);
@@ -46,7 +47,7 @@ class TestConverterLaunch {
 	}
 	
 	@Test
-	@DisplayName("bliki folder no empty")
+	@DisplayName("HTML folder no empty")
 	void TestFichierNonVide2() throws Exception {
 		
 		File f= new File(Constant.CSV_HTML_PATH);
@@ -80,6 +81,38 @@ class TestConverterLaunch {
 		assertEquals(numberOfFilebliki, ConverterUtil.nbreTableauBlikiTotal(), "Les le nombre de fichiers générés devrait être egal au nombre de tableau total");
 
 		
+	}
+	
+	@Test
+	@DisplayName("Html : Fichier valid")
+	void TestFichierValid() throws Exception {
+		
+		File f= new File(Constant.CSV_HTML_PATH);
+		
+		File[] entries = f.listFiles();
+        
+        for(File currentFile: entries){
+     	   
+        	boolean test=CSVUtils.isCsvFileValid(Constant.CSV_HTML_PATH+File.separator+currentFile.getName());
+        	assertTrue(test,"le fichier doit etre Valide");
+        	
+        }
+	}
+	
+	@Test
+	@DisplayName("Bliki : Fichier valid")
+	void TestFichierValidBliki() throws Exception {
+		
+		File f= new File(Constant.CSV_WIKI_PATH);
+		
+		File[] entries = f.listFiles();
+        
+        for(File currentFile: entries){
+     	   
+        	boolean test=CSVUtils.isCsvFileValid(Constant.CSV_WIKI_PATH+File.separator+currentFile.getName());
+        	assertTrue(test,"le fichier doit etre Valide");
+        	
+        }
 	}
 
 }
