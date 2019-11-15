@@ -4,6 +4,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.List;
 import java.util.Objects;
@@ -175,4 +178,43 @@ public class TestFilterTable {
 	}
 	
 	
+	/**
+	 * 
+	 * @throws Exception
+	 */
+    @Test
+    public void TestremoveTableByAttribut3() throws Exception
+    {
+        docHtml =Jsoup.connect("https://en.wikipedia.org/wiki/Comparison_between_Esperanto_and_Ido").get();
+         Objects.requireNonNull(docHtml,"Le document ne doit pas être null");
+         
+         Elements afterFilter=docHtml.select("table");
+         for(Element tab: afterFilter) {
+             Elements lignes= tab.select("tr");
+    
+                 assertFalse(lignes.hasAttr("rowspan"),"cette table contient l'attribut rowspan!");
+                 assertFalse(lignes.hasAttr("colspan"),"cette table contient l'attribut colspan!");
+    }
+    }
+  
+    /**
+     * 
+     * @throws Exception
+     */
+    @Test
+    public void TestremoveTableByClass2() throws Exception
+    {
+        docHtml =Jsoup.connect("https://en.wikipedia.org/wiki/Comparison_between_Ido_and_Interlingua").get();
+         Elements afterFilter=docHtml.select("table");
+            File file = new File(Constant.CLASS_TO_REMOVE);
+            BufferedReader br = new BufferedReader(new FileReader(file));
+           
+            String classe="";
+            while((classe=br.readLine())!=null) {
+                for(Element tab: afterFilter) {
+                    assertFalse(tab.hasClass(classe)," Erreur ce tableau contient la classe "+classe);
+                }     
+            }
+            br.close();
+    }
 }

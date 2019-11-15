@@ -45,13 +45,7 @@ public class Ligne {
 	public String toString() {
 		
 		return this.listCelluleLigne.stream().collect(Collectors.joining(", "));
-		
-		/*
-		 * for (int i=0; i< this.listCelluleLigne.size(); i++) {
-		 * sb.append(listCelluleLigne.get(i)); if(i<this.listCelluleLigne.size()-1) {
-		 * 
-		 * } }
-		 */
+	
 	}
 
 }

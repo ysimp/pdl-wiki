@@ -22,6 +22,7 @@ import utils.ConverterUtil;
  * @author El Mahjoub
  *
  */
+
 class TestConverterLaunch {
 
 	static LaunchConvertor launchConvertor;
@@ -29,6 +30,7 @@ class TestConverterLaunch {
 	
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
+		
 		
 		 listUrl = CSVUtils.getListFromFile(Constant.WIKI_URL_PATH);
 		 launchConvertor=new LaunchConvertor();

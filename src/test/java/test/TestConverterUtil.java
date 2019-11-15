@@ -31,6 +31,8 @@ class TestConverterUtil {
 	
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
+		CSVUtils.creatOutPutFolder();// create dossier output 
+		
 		listUrl= CSVUtils.getListFromFile(Constant.WIKI_URL_PATH);
 	}
 

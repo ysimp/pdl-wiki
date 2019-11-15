@@ -34,6 +34,8 @@ class TestExtractorImpl {
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
 		
+		CSVUtils.creatOutPutFolder();// create dossier output 
+		
 		 listUrl = CSVUtils.getListFromFile(Constant.WIKI_URL_PATH);
 		 extractor=new ExtractorImpl();
 	}

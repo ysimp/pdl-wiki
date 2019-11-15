@@ -23,11 +23,8 @@ public class LaunchConvertor {
 	  
 	List<String> listUrls=CSVUtils.getListFromFile(Constant.WIKI_URL_PATH);
 	 
+	CSVUtils.creatOutPutFolder();// create dossier output 
 	
-	 // create dossier output 
-	 CSVUtils.creatOutPutFolder();
-	
-	 
 	for (String url : listUrls) {
 		
 		Document html=ConverterUtil.getDocumentJsoup(Constant.BASE_WIKIPEDIA_URL+url);

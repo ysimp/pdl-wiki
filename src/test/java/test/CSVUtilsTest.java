@@ -18,6 +18,7 @@ import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import model.Ligne;
@@ -35,6 +36,12 @@ class CSVUtilsTest {
 	 * La classe CSVUtilsTest teste toutes les méthodes de la classe à laquelle elle est rattachée
 	 */
 
+	@BeforeAll
+    static	void setup()
+    {
+		CSVUtils.creatOutPutFolder();// create dossier output 
+    }
+	
 	@Test
 	void testAssureFomatCSV() {
 		String valeur= "yaya,wel,mkk", resultatAttendu= "yaya wel mkk";
