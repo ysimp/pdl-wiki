@@ -24,7 +24,6 @@ import model.Ligne;
 import model.Tableau;
 import utils.CSVUtils;
 import utils.Constant;
-import utils.ConverterUtil;
 
 class CSVUtilsTest {
 	/**

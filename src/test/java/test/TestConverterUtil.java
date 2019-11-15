@@ -1,5 +1,6 @@
 package test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
@@ -19,15 +20,16 @@ import utils.ConverterUtil;
 
 class TestConverterUtil {
 
-	List<String> listUrl ;
+	static List<String> listUrl ;
 	
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
+		listUrl= CSVUtils.getListFromFile(Constant.WIKI_URL_PATH);
 	}
 
 	@BeforeEach
 	void setUp() throws Exception {
-		listUrl= CSVUtils.getListFromFile(Constant.WIKI_URL_PATH);
+		
 	}
 
 	
@@ -71,5 +73,40 @@ class TestConverterUtil {
 		assertNull(docHtml, "Le document  doit être null pour ce article");
 		
 	}
+	
+	@DisplayName("Nombre de tableau url Jsoup 1")
+	@Test
+	public void testnbreTableauJsoup1() throws Exception {
+		
+		int nbTab = ConverterUtil.nbreTableauJsoup("sffsfsfsfqffqfqfqfq");
 
+		assertEquals(-1, nbTab,"Le nombre de tableau doit être -1");
+	}
+	
+	@DisplayName("Nombre de tableau url Jsoup 2")
+	@Test
+	public void testnbreTableauJsoup2() throws Exception {
+		
+		int nbTab = ConverterUtil.nbreTableauJsoup(listUrl.get(0));
+
+		assertEquals(19, nbTab,"Le nombre de tableau doit être -1");
+	}
+
+	@DisplayName("Nombre de tableau url Bliki 1")
+	@Test
+	public void testnbreTableauBliki1() throws Exception {
+		
+		int nbTab = ConverterUtil.nbreTableauBliki("sffsfsfsfqffqfqfqfq");
+
+		assertEquals(-1, nbTab,"Le nombre de tableau doit être -1");
+	}
+	
+	@DisplayName("Nombre de tableau url Bliki 2")
+	@Test
+	public void testnbreTableauBliki2() throws Exception {
+		
+		int nbTab = ConverterUtil.nbreTableauBliki(listUrl.get(0));
+		//Bliki retourne 10 tableau
+		assertEquals(15, nbTab,"Le nombre de tableau doit être -1");
+	}
 }

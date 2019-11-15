@@ -65,8 +65,6 @@ class TestConvertorImpl {
 	@ParameterizedTest
 	@ValueSource(ints = {0})
 	public void testConvertAllTablesToCsv2(int indice) throws Exception {
-		
-		
 		String fileName= CSVUtils.constructFileName(listUrl.get(indice));
 		
 		int nbtables = ConverterUtil.nbreTableauBliki(listUrl.get(indice));
@@ -116,7 +114,7 @@ class TestConvertorImpl {
 		
 	}
 	
-	@DisplayName("Bliki Tester si les fichiers sont vides ou pas")
+	@DisplayName("HTML Tester si les fichiers sont vides ou pas")
 	@ParameterizedTest
 	@ValueSource(ints = {0})
 	
@@ -139,10 +137,9 @@ class TestConvertorImpl {
 			assertNotNull(file,"file ne doit pas etre null");
 			
 			 assertTrue("Le fichier "+i+" devrait ne doit pas etre vide ",CSVUtils.testerFileCsvIsEmpty(tableauCSV));
-			
 		}
-		
 	}
+	
 	
 
 }

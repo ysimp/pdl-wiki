@@ -29,16 +29,23 @@ public class ConverterUtil {
     	
     	String urlpage = Constant.BASE_WIKIPEDIA_URL + url;
     	
-    	
-			doc = Jsoup.connect(urlpage).get();
-			
-			if(doc!=null) {
-				
+    	try {
+    		doc = Jsoup.connect(urlpage).get();
+    		
+    		if(doc!=null) {
 				tables =doc.select("table");
 				return tables.size();
 			}
+    		return -1;
+    		
+		} catch (Exception e) {
+			return -1;
+		}
+			
+			
+			
 	
-    	return -1;
+    	
     }
     
     /**

@@ -8,7 +8,6 @@ import org.jsoup.nodes.Document;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -35,18 +34,77 @@ class TestExtractorImpl {
 	void setUp() throws Exception {
 	}
 
-	@Test
-	void test() {
+	@DisplayName("Test NbreDeTableauJsoup sans le filtre")
+    @ParameterizedTest
+    @CsvSource(
+            {"0, 13",
+             "1, 9"
+            })
+    public void testNbreDeTableauJsoup(int indiceUrls,int nbTableTotal) throws Exception {
+    
+		Document dochtml= ConverterUtil.getDocumentJsoup(Constant.BASE_WIKIPEDIA_URL+listUrl.get(indiceUrls));
 		
-	}
+        Page page = extractor.extractTables(dochtml, false);
+        
+        assertEquals(nbTableTotal, page.getTotalTableau(), "le nombre total de tableau devrait être egal à "+ nbTableTotal);
+    
+    }
 	
-	@DisplayName("HTML Test l'extracteur : tester le nombre de lignes d'un tableau ")
+	@DisplayName("Test NbreDeTableauBliki sans le filtre")
+    @ParameterizedTest
+    @CsvSource(
+            {"0, 13",
+             "1, 9"
+            })
+    public void testNbreDeTableauBliki(int indiceUrls,int nbTableTotal) throws Exception {
+    
+		Document dochtml= ConverterUtil.getDocumentWiki(listUrl.get(indiceUrls));
+		
+        Page page = extractor.extractTables(dochtml, false);
+        
+        assertEquals(nbTableTotal, page.getTotalTableau(), "le nombre total de tableau devrait être egal à "+ nbTableTotal);
+    
+    }
+	
+	@DisplayName("test NbreDeTableauJsoup2 avec le filtre")
+    @ParameterizedTest
+    @CsvSource(
+            {"0, 13",
+             "1, 9"
+            })
+    public void testNbreDeTableauJsoup2(int indiceUrls,int nbTableTotal) throws Exception {
+    
+		Document dochtml= ConverterUtil.getDocumentJsoup(Constant.BASE_WIKIPEDIA_URL+listUrl.get(indiceUrls));
+		
+        Page page = extractor.extractTables(dochtml, true);
+        
+        assertEquals(nbTableTotal, page.getTotalTableau(), "le nombre total de tableau devrait être egal à "+ nbTableTotal);
+    
+    }
+	
+	@DisplayName("test NbreDeTableauBliki2 avec le filtre")
+    @ParameterizedTest
+    @CsvSource(
+            {"0, 13",
+             "1, 9"
+            })
+    public void testNbreDeTableauBliki2(int indiceUrls,int nbTableTotal) throws Exception {
+    
+		Document dochtml= ConverterUtil.getDocumentWiki(listUrl.get(indiceUrls));
+		
+        Page page = extractor.extractTables(dochtml, true);
+        
+        assertEquals(nbTableTotal, page.getTotalTableau(), "le nombre total de tableau devrait être egal à "+ nbTableTotal);
+    
+    }
+	
+	@DisplayName("test NombreLigneTableau Html")
 	@ParameterizedTest
 	@CsvSource(
-			{"0, 0, 6",
-			 "0 ,1,  2"
+			{"0, 0, 0",
+			 "0 ,1, 15"
 			})
-	public void testNombreLigneTableau(int indiceUrls,int NUMtableau,int nbLigne) throws Exception {
+	public void testNombreLigneTableauHtml(int indiceUrls,int NUMtableau,int nbLigne) throws Exception {
 	
 		Document dochtml= ConverterUtil.getDocumentJsoup(Constant.BASE_WIKIPEDIA_URL+listUrl.get(indiceUrls));
 		
@@ -57,13 +115,13 @@ class TestExtractorImpl {
 	
 	}
 
-	@DisplayName("Bliki Test l'extracteur : tester le nombre de lignes d'un tableau ")
+	@DisplayName(" test NombreLigneTableau Bliki")
 	@ParameterizedTest
 	@CsvSource(
 			{"0, 0, 6",
 			 "0 ,1,  2"
 			})
-	public void testNombreLigneTableau2(int indiceUrls,int NUMtableau,int nbLigne) throws Exception {
+	public void testNombreLigneTableauBliki(int indiceUrls,int NUMtableau,int nbLigne) throws Exception {
 	
 		Document dochtml= ConverterUtil.getDocumentWiki(listUrl.get(indiceUrls));
 		
@@ -73,13 +131,13 @@ class TestExtractorImpl {
 				"le nombre de lignes  doit etre "+ nbLigne);
 	
 	}
-	@DisplayName("HTML Test l'extracteur : tester le nombre de colonne d'un tableau ")
+	@DisplayName(" test NombreColonneTableau Html")
 	@ParameterizedTest
 	@CsvSource(
 			{"0, 0, 6",
 			 "0 ,1,  2"
 			})
-	public void testNombreColonneTableau(int indiceUrls,int NUMtableau,int nbColonne) throws Exception {
+	public void testNombreColonneTableauHtml(int indiceUrls,int NUMtableau,int nbColonne) throws Exception {
 	
 		Document dochtml= ConverterUtil.getDocumentJsoup(Constant.BASE_WIKIPEDIA_URL+listUrl.get(indiceUrls));
 		
@@ -90,13 +148,13 @@ class TestExtractorImpl {
 	
 	}
 	
-	@DisplayName("Bliki Test l'extracteur : tester le nombre de colonne d'un tableau ")
+	@DisplayName("test NombreColonneTableau bliki ")
 	@ParameterizedTest
 	@CsvSource(
 			{"0, 0, 6",
 			 "0 ,1,  2"
 			})
-	public void testNombreColonneTableau2(int indiceUrls,int NUMtableau,int nbColonne) throws Exception {
+	public void testNombreColonneTableauBliki(int indiceUrls,int NUMtableau,int nbColonne) throws Exception {
 	
 		Document dochtml= ConverterUtil.getDocumentWiki(listUrl.get(indiceUrls));
 		
