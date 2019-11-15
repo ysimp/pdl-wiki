@@ -1,9 +1,12 @@
-package Test2;
+package test;
 
 /**
  * @author Mahamadou Kandé Konaté
  */
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -11,20 +14,17 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.Reader;
 import java.io.Writer;
-import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import com.google.common.io.Files;
-
 import model.Ligne;
 import model.Tableau;
 import utils.CSVUtils;
 import utils.Constant;
+import utils.ConverterUtil;
 
 class CSVUtilsTest {
 	/**

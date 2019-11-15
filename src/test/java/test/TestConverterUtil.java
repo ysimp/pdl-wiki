@@ -1,6 +1,7 @@
-package Test2;
+package test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 import java.util.List;
 
@@ -12,10 +13,9 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
-import convertor.ConverterUtil;
 import utils.CSVUtils;
 import utils.Constant;
-import wikiText.ExtractorWikitext;
+import utils.ConverterUtil;
 
 class TestConverterUtil {
 
@@ -37,6 +37,7 @@ class TestConverterUtil {
 	  public void testGetDocument1(int indice) {
 	  
 	  Document docHtml = ConverterUtil.getDocumentJsoup(Constant.BASE_WIKIPEDIA_URL+listUrl.get(indice));
+	 
 	  assertNotNull(docHtml,"Le document ne doit pas être null car cet article existe");
 	  
 	  }

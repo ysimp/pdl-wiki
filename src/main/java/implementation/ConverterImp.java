@@ -1,4 +1,4 @@
-package convertor;
+package implementation;
 
 import java.io.FileWriter;
 import java.util.logging.Logger;
@@ -33,8 +33,7 @@ public class ConverterImp implements Converter {
 			tableauCSV =output + CSVUtils.mkCSVFileName(fileName, tab.getNumeroTableau());
 			 w = new FileWriter(tableauCSV,false);
 			
-			CSVUtils.writeTable(w, tab);
-			
+			 CSVUtils.writeTable(w, tab);
 			
 		}
 	}

@@ -8,15 +8,8 @@ import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.select.Elements;
-
-import info.bliki.wiki.model.WikiModel;
 import model.Ligne;
 import model.Tableau;
-import net.sourceforge.jwbf.core.contentRep.Article;
-import net.sourceforge.jwbf.mediawiki.bots.MediaWikiBot;
 
 public class CSVUtils {
 	
@@ -103,33 +96,7 @@ public class CSVUtils {
     }
     
     
-    /**
-     * 
-     * @param w
-     * @param table
-     * @throws IOException
-     */
-    public static void writeTable(Writer w, Tableau table) throws IOException { 
-    	
-    	for (Ligne  line : table.getlisteLignes()) {
-    		
-				w.append(line.toString());
-				w.append("\n");
-		}
-    	
-    	w.flush();
-    	w.close();
-    }
-    
-    public static void writeTableJsoup(Writer w, Tableau table) throws IOException { 
-    	
-    	for (Ligne  line : table.getlisteLignes()) {
-    		
-				w.append(line.toString());
-				w.append("\n");
-		}
-    	
-    }
+  
     /**
      * 
      * @param tempFile
@@ -235,51 +202,7 @@ public class CSVUtils {
 	}
 }
     
-    /**
-     * 
-     * @param url
-     * @return
-     * @throws Exception
-     */
-    public static int nbreTableauJsoup(String url) throws Exception {
-    	
-    	Document doc =null;
-    	Elements tables =null;
-    	
-    	String urlpage = Constant.BASE_WIKIPEDIA_URL + url;
-    	
-    	
-			doc = Jsoup.connect(urlpage).get();
-			
-			if(doc!=null) {
-				
-				tables =doc.select("table");
-				return tables.size();
-			}
-	
-    	return -1;
-    }
-    
-    /**
-     * 
-     * @param url
-     * @return
-     * @throws Exception
-     */
-    public static int nbreTableauBliki(String url) throws Exception {
-    	
-    	Document docHtml =null;
-    	MediaWikiBot wikiBot = new MediaWikiBot(Constant.BASE_WIKIPEDIA_URL_wikiTest);
-	    Article article = wikiBot.getArticle(url);
-	    if(article.getText().isEmpty()) {
-	    	return -1;
-	    }
-	    else {
-	    String html =  WikiModel.toHtml(article.getText());
-	     docHtml = Jsoup.parse(html);
-	    return docHtml.select("table").size();
-	    }
-    }
+   
     
     /**
      * 
@@ -303,23 +226,30 @@ public class CSVUtils {
     
     /**
      * 
-     * @return
-     * @throws Exception
+     * @param w
+     * @param table
+     * @throws IOException
      */
-    
-    public static int nbreTableauBlikiTotal() throws Exception {
+    public static void writeTable(Writer w, Tableau table) throws IOException { 
     	
-    	
-	    List<String> listUrls=getListFromFile(Constant.WIKI_URL_PATH);
-	    
-	    int somme=0;
-	    for (String url : listUrls) {
-			somme+=nbreTableauBliki(url);
+    	for (Ligne  line : table.getlisteLignes()) {
+    		
+				w.append(line.toString());
+				w.append("\n");
 		}
-	    
-	    return somme;
+    	
+    	w.flush();
+    	w.close();
     }
     
-    
+    public static void writeTableJsoup(Writer w, Tableau table) throws IOException { 
+    	
+    	for (Ligne  line : table.getlisteLignes()) {
+    		
+				w.append(line.toString());
+				w.append("\n");
+		}
+    	
+    }
 	
 }
