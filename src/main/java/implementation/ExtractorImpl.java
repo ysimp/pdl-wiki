@@ -6,6 +6,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import Interface.Extractor;
 import model.Ligne;
 import model.Page;
 import model.Tableau;

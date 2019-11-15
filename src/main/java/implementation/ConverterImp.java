@@ -5,6 +5,8 @@ import java.util.logging.Logger;
 
 import org.jsoup.nodes.Document;
 
+import Interface.Converter;
+import Interface.Extractor;
 import model.Page;
 import model.Tableau;
 import utils.CSVUtils;
