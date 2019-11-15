@@ -11,6 +11,11 @@ import java.util.List;
 import model.Ligne;
 import model.Tableau;
 
+/**
+ * @author konate 
+ * 
+ *
+ */
 public class CSVUtils {
 	
     

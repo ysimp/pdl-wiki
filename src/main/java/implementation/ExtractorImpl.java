@@ -13,6 +13,14 @@ import model.Tableau;
 import utils.CSVUtils;
 import utils.filterTable;
 
+/**
+ * @author Hajar 
+ * @author Jihad
+ * @author yaya
+ * @author El Mahjoub
+ *
+ */
+
 public class ExtractorImpl implements Extractor {
 
 Logger loggerWiki = Logger.getLogger("WikiLoger2");

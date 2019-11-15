@@ -11,6 +11,12 @@ import model.Page;
 import model.Tableau;
 import utils.CSVUtils;
 
+/**
+ * 
+ * @author Hajar 
+ * @author Jihad
+ *
+ */
 public class ConverterImp implements Converter {
 
 	Logger logger = Logger.getLogger("WikiLoger2");

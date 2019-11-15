@@ -3,6 +3,13 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Hajar 
+ * @author Jihad
+ * @author yaya
+ * @author El Mahjoub
+ *
+ */
 public class Tableau {
 	private int numeroTableau;
 	private List<Ligne> listeLignes;

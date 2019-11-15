@@ -5,6 +5,12 @@ import java.io.Writer;
 
 import model.Page;
 
+/**
+
+ * @author yaya
+ * @author El Mahjoub
+ *
+ */
 public class Stat {
 	
 	

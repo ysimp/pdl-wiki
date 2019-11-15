@@ -6,6 +6,11 @@ import org.luaj.vm2.ast.Stat;
 
 import model.Page;
 
+/**
+ * @author yaya
+ * @author El Mahjoub
+ *
+ */
 public class StatPrinter {
 	
 	static Logger  logger = Logger.getLogger(Stat.class.getName());

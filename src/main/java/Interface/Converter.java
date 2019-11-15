@@ -2,6 +2,13 @@ package Interface;
 
 import org.jsoup.nodes.Document;
 
+/**
+ * @author Hajar 
+ * @author Jihad
+ * @author yaya
+ * @author El Mahjoub
+ * @author kONATE
+ */
 public interface Converter {
 
 	/**

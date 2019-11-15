@@ -25,6 +25,11 @@ import model.Tableau;
 import utils.CSVUtils;
 import utils.Constant;
 
+/**
+
+ * @author Konate
+ *
+ */
 class CSVUtilsTest {
 	/**
 	 * La classe CSVUtilsTest teste toutes les méthodes de la classe à laquelle elle est rattachée

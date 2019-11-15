@@ -9,6 +9,11 @@ import org.jsoup.select.Collector;
 import org.jsoup.select.Elements;
 import org.jsoup.select.Evaluator;
 
+/**
+ * @author yaya
+ * @author El Mahjoub
+ *
+ */
 public class filterTable {
 
 	

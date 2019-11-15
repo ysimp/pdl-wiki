@@ -4,6 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * @author Hajar 
+ * @author Jihad
+ * @author yaya
+ * @author El Mahjoub
+ *
+ */
 public class Ligne {
 	
 	private int numeroLigne;

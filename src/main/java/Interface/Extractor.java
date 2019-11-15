@@ -4,6 +4,13 @@ import org.jsoup.nodes.Document;
 
 import model.Page;
 
+/**
+ * @author Hajar 
+ * @author Jihad
+ * @author yaya
+ * @author El Mahjoub
+ * @author kONATE
+ */
 public interface Extractor {
 	
 	/**

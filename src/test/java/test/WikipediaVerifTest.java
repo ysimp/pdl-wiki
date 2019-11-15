@@ -8,6 +8,10 @@ import org.junit.jupiter.api.Test;
 
 import utils.WikipediaVerif;
 
+/**
+ * @author Konate
+ *
+ */
 class WikipediaVerifTest {
 
 	@Test

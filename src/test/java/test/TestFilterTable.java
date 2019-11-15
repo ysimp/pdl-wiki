@@ -19,6 +19,11 @@ import utils.CSVUtils;
 import utils.Constant;
 import utils.filterTable;
 
+/**
+ * @author yaya
+ * @author El Mahjoub
+ *
+ */
 
 public class TestFilterTable {
 

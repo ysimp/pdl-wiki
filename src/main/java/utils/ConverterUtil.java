@@ -11,6 +11,13 @@ import info.bliki.wiki.model.WikiModel;
 import net.sourceforge.jwbf.core.contentRep.Article;
 import net.sourceforge.jwbf.mediawiki.bots.MediaWikiBot;
 
+/**
+ * @author Hajar 
+ * @author Jihad
+ * @author yaya
+ * @author El Mahjoub
+ *
+ */
 public class ConverterUtil {
 
 	static Logger logger = Logger.getLogger("WikiLoger2");

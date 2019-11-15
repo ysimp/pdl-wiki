@@ -5,6 +5,11 @@ import java.io.IOException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
+/**
+
+ * @author Konate
+ *
+ */
 public class WikipediaVerif {
 
 	/**
@@ -13,6 +18,7 @@ public class WikipediaVerif {
 	 * @return boolean
 	 * @throws IOException 
 	 * */
+	
 	public static boolean urlExist(String url) throws IOException {
 		try {
 			Document doc=Jsoup.connect(url).get();

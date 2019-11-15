@@ -10,8 +10,12 @@ import java.io.File;
  * */
 
 /**
- * Definition des
- * */
+ * @author Hajar 
+ * @author Jihad
+ * @author yaya
+ * @author El Mahjoub
+ *
+ */
 public class Constant {
 	
 	public static int    MIN_ROW                     = 2;
