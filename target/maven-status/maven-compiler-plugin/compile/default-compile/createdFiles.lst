@@ -1,0 +1,15 @@
+utils\ConverterUtil.class
+utils\Stat.class
+model\Page.class
+model\Tableau.class
+Interface\Extractor.class
+implementation\ConverterImp.class
+Interface\Converter.class
+implementation\ExtractorImpl.class
+utils\filterTable.class
+utils\WikipediaVerif.class
+model\Ligne.class
+utils\CSVUtils.class
+implementation\LaunchConvertor.class
+utils\StatPrinter.class
+utils\Constant.class

@@ -1,8 +1,15 @@
-C:\Users\soumabkar\eclipse-workspace\PDL_2018_2019_groupe7\src\main\java\utils\Ligne.java
-C:\Users\soumabkar\eclipse-workspace\PDL_2018_2019_groupe7\src\main\java\utils\Cellule.java
-C:\Users\soumabkar\eclipse-workspace\PDL_2018_2019_groupe7\src\main\java\utils\CSVUtils.java
-C:\Users\soumabkar\eclipse-workspace\PDL_2018_2019_groupe7\src\main\java\jsoup\API_JsoupImp.java
-C:\Users\soumabkar\eclipse-workspace\PDL_2018_2019_groupe7\src\main\java\WikipediaMediaData.java
-C:\Users\soumabkar\eclipse-workspace\PDL_2018_2019_groupe7\src\main\java\utils\Page.java
-C:\Users\soumabkar\eclipse-workspace\PDL_2018_2019_groupe7\src\main\java\bliki\API_BlikiImp.java
-C:\Users\soumabkar\eclipse-workspace\PDL_2018_2019_groupe7\src\main\java\utils\Tableau.java
+C:\Users\El Mahjoub\pdl\pdl\src\main\java\Interface\Converter.java
+C:\Users\El Mahjoub\pdl\pdl\src\main\java\model\Tableau.java
+C:\Users\El Mahjoub\pdl\pdl\src\main\java\implementation\ConverterImp.java
+C:\Users\El Mahjoub\pdl\pdl\src\main\java\utils\Stat.java
+C:\Users\El Mahjoub\pdl\pdl\src\main\java\implementation\ExtractorImpl.java
+C:\Users\El Mahjoub\pdl\pdl\src\main\java\model\Ligne.java
+C:\Users\El Mahjoub\pdl\pdl\src\main\java\utils\filterTable.java
+C:\Users\El Mahjoub\pdl\pdl\src\main\java\Interface\Extractor.java
+C:\Users\El Mahjoub\pdl\pdl\src\main\java\utils\ConverterUtil.java
+C:\Users\El Mahjoub\pdl\pdl\src\main\java\model\Page.java
+C:\Users\El Mahjoub\pdl\pdl\src\main\java\utils\StatPrinter.java
+C:\Users\El Mahjoub\pdl\pdl\src\main\java\implementation\LaunchConvertor.java
+C:\Users\El Mahjoub\pdl\pdl\src\main\java\utils\Constant.java
+C:\Users\El Mahjoub\pdl\pdl\src\main\java\utils\CSVUtils.java
+C:\Users\El Mahjoub\pdl\pdl\src\main\java\utils\WikipediaVerif.java
