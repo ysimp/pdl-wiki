@@ -29,12 +29,10 @@ public class ConverterImp implements Converter {
 		String tableauCSV;
 		fileName= CSVUtils.constructFileName(url);	
 		
-		Page page=extractor.extractTables(doc,false);
+		Page page=extractor.extractTables(doc,true);
 		
 		page.setNomPage(fileName);
 			
-		//StatPrinter.printStatPage(page) ;
-		
 		for (Tableau tab : page.getListeTableau()) {
 			
 			//Forme le chemin du fichier, nomPage+numTab
@@ -43,9 +41,8 @@ public class ConverterImp implements Converter {
 			
 			 CSVUtils.writeTable(w, tab);
 			
+			
 		}
 	}
-
-
 
 }

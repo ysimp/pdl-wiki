@@ -16,6 +16,8 @@ import org.jsoup.select.Evaluator;
  */
 public class filterTable {
 
+	List<String> listeClasses;
+	List<String> listeattr;
 	
 	/**
 	 * Permet de filtrer les tableaux (url) : supprimer les tableaux qui ne repondent pas aux critère de pertinence
@@ -26,12 +28,24 @@ public class filterTable {
 	 * 
 	 * */
 	
+	public filterTable()
+	{
+		try {
+			 listeattr=CSVUtils.getListFromFile(Constant.ATTRIBUT_TO_REMOVE);
+			
+			 listeClasses=CSVUtils.getListFromFile(Constant.CLASS_TO_REMOVE);
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+		}
+		
+	}
 	public Elements filterTables(Document doc ) throws Exception {
 		Elements tables;
 		
 		tables = removeTableByClass(doc);
+		
 		tables = removeTableByAttribut(tables);
-		tables = removeTablesWithMinRowOrColum(tables);
 		
 		return tables;
 		
@@ -44,7 +58,6 @@ public class filterTable {
 	 * */
 	public  Elements removeTableByClass(Document doc) throws Exception {
 		
-		List<String> listeClasses=CSVUtils.getListFromFile(Constant.CLASS_TO_REMOVE);
 		
 		Elements tables = doc.select("table");
 		Elements tablesToRemove;
@@ -54,7 +67,6 @@ public class filterTable {
 			//Recupère tous les elements dans les elements se trouvant dans le doc ayant la class passée en param
 			//Ensuite selectionne que les tableaux qui seront supprimés
 			tablesToRemove = Collector.collect(new Evaluator.Class(classe), doc).select("table");		
-			
 			
 			tables.removeAll(tablesToRemove);
 	
@@ -71,7 +83,6 @@ public class filterTable {
 	 * */
 	public  Elements removeTableByAttribut(Elements tables) throws Exception {
 
-		List<String> listeattr=CSVUtils.getListFromFile(Constant.ATTRIBUT_TO_REMOVE);
 		
 		List<Element> listTablesToRemove = new ArrayList<Element>();
 
