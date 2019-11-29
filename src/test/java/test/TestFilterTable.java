@@ -56,12 +56,13 @@ public class TestFilterTable {
 	public void TestremoveTableByClass() throws Exception
 	{
 		docHtml =Jsoup.connect("https://en.wikipedia.org/wiki/Comparison_between_Ido_and_Interlingua").get();
-		 Elements afterFilter=filterTable.removeTableByClass(docHtml);
-		 //Comparison_between_Ido_and_Interlingua
-		  int nbPertinentTable= 2;
-		 assertEquals(afterFilter.size(), nbPertinentTable,"Le nombre de tableau pertinent apres Filtrage par class doit être egal "+nbPertinentTable);
+		Elements tables = docHtml.select("table");
+		Elements afterFilter=filterTable.removeTableByClass(docHtml);
+	    System.err.println(tables.size());
 		 
-		 
+		 int nbPertinentTable= 2;
+		 assertEquals(nbPertinentTable,afterFilter.size() ,"Le nombre de tableau pertinent apres Filtrage par class doit être egal "+nbPertinentTable);
+			 
 	}
 	
 	/**
@@ -76,7 +77,7 @@ public class TestFilterTable {
 		 Elements afterFilter=filterTable.removeTableByAttribut(docHtml.select("table"));
 		 
 		 int nbPertinentTable= 8;
-		 assertEquals(afterFilter.size(), nbPertinentTable,"Le nombre de tableau pertinent "
+		 assertEquals(nbPertinentTable,afterFilter.size() ,"Le nombre de tableau pertinent "
 		 						+ "apres Filtrage par class doit être egal "+nbPertinentTable);
 		 
 		 
@@ -86,12 +87,15 @@ public class TestFilterTable {
 	public void TestremoveTableByAttribut2() throws Exception
 	{
 		docHtml =Jsoup.connect("https://en.wikipedia.org/wiki/Comparison_between_Esperanto_and_Ido").get();
-		 Objects.requireNonNull(docHtml,"Le document ne doit pas être null");
 		 
+		Objects.requireNonNull(docHtml,"Le document ne doit pas être null");
+		 
+		
 		 Elements afterFilter=filterTable.removeTableByAttribut(docHtml.select("table"));
 		 
+		
 		 int nbPertinentTable= 9;
-		 assertEquals(afterFilter.size(), nbPertinentTable,"Le nombre de tableau pertinent "
+		 assertEquals(nbPertinentTable,afterFilter.size(),"Le nombre de tableau pertinent "
 		 						+ "apres Filtrage par class doit être egal "+nbPertinentTable);
 		 
 		 
@@ -123,7 +127,6 @@ public class TestFilterTable {
 		 }
 	}
 	
-	
 	/** 
 	 * tester la method global qui vas tous filter 
 	 * @throws Exception 
@@ -132,18 +135,42 @@ public class TestFilterTable {
 	@Test
 	public void testfilterTables() throws Exception
 	{
-		
+			
+	 docHtml =Jsoup.connect("https://en.wikipedia.org/wiki/Comparison_between_Ido_and_Interlingua").get();
+				
+	 Objects.requireNonNull(docHtml,"Le document ne doit pas être null");
+	 Elements afterFilter=filterTable.removeTableByClass(docHtml);
+	 			afterFilter = filterTable.removeTableByAttribut(afterFilter);
+	 			
+	 int nbPertinentTable= 2;
+	 
+	 assertEquals(nbPertinentTable,afterFilter.size(),"Le nombre de tableau pertinent "
+	 						+ "apres Filtrage doit être egal "+nbPertinentTable);
+	
+	
+	}
+	
+	/** 
+	 * tester la method global qui vas tous filter 
+	 * @throws Exception 
+	 */
+
+	@Test
+	public void testfilterTables2() throws Exception
+	{
 			
 	 docHtml =Jsoup.connect("https://en.wikipedia.org/wiki/Comparison_between_Esperanto_and_Ido").get();
-			
+				
 	 Objects.requireNonNull(docHtml,"Le document ne doit pas être null");
 	 Elements afterFilter=filterTable.removeTableByClass(docHtml);
 	 			afterFilter = filterTable.removeTableByAttribut(afterFilter);
 	 			
 	 int nbPertinentTable= 6;
 	 
-	 assertEquals(afterFilter.size(), nbPertinentTable,"Le nombre de tableau pertinent "
+	 assertEquals(nbPertinentTable,afterFilter.size(),"Le nombre de tableau pertinent "
 	 						+ "apres Filtrage doit être egal "+nbPertinentTable);
+	
+	
 	}
 	
 		/** 
@@ -152,7 +179,7 @@ public class TestFilterTable {
 	 */
 
 	@Test
-	public void testfilterTables2() throws Exception{
+	public void testfilterTables3() throws Exception{
 		docHtml =Jsoup.connect("https://en.wikipedia.org/wiki/Comparison_between_Ido_and_Interlingua").get();
 		Objects.requireNonNull(docHtml,"Le document ne doit pas être null");
 		Elements tables= filterTable.filterTables(docHtml);

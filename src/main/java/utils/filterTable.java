@@ -54,6 +54,8 @@ public class filterTable {
 			//Recupère tous les elements dans les elements se trouvant dans le doc ayant la class passée en param
 			//Ensuite selectionne que les tableaux qui seront supprimés
 			tablesToRemove = Collector.collect(new Evaluator.Class(classe), doc).select("table");		
+			
+			
 			tables.removeAll(tablesToRemove);
 	
 		}
@@ -83,7 +85,7 @@ public class filterTable {
 			}
 			
 		}
-		
+	
 		tables.removeAll(listTablesToRemove);
 		
 		return tables;

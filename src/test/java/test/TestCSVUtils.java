@@ -30,7 +30,7 @@ import utils.Constant;
  * @author Konate
  *
  */
-class CSVUtilsTest {
+class TestCSVUtils {
 	/**
 	 * La classe CSVUtilsTest teste toutes les méthodes de la classe à laquelle elle est rattachée
 	 */

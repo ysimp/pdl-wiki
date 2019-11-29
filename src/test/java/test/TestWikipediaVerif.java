@@ -12,7 +12,7 @@ import utils.WikipediaVerif;
  * @author Konate
  *
  */
-class WikipediaVerifTest {
+class TestWikipediaVerif {
 
 	@Test
 	void testUrlExist() throws IOException {
