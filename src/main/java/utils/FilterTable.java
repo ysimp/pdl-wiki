@@ -17,7 +17,7 @@ import org.jsoup.select.Evaluator;
  *
  */
 
-public class filterTable {
+public class FilterTable {
 
 	List<String> listeClasses;
 	List<String> listeattr;
@@ -33,7 +33,7 @@ public class filterTable {
 	 * 
 	 * */
 	
-	public filterTable()
+	public FilterTable()
 	{
 		try {
 			

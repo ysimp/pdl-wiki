@@ -17,7 +17,7 @@ import org.junit.jupiter.api.Test;
 
 import utils.CSVUtils;
 import utils.Constant;
-import utils.filterTable;
+import utils.FilterTable;
 
 /**
  * @author yaya
@@ -28,7 +28,7 @@ import utils.filterTable;
 public class TestFilterTable {
 
 	
-	private filterTable filterTable;
+	private FilterTable filterTable;
 	private Document docHtml;
 	private List<String> listeUrl;
 	/**
@@ -40,7 +40,7 @@ public class TestFilterTable {
 	public  void init() throws Exception
 	{
 		
-		filterTable =new filterTable();
+		filterTable =new FilterTable();
 		listeUrl = CSVUtils.getListFromFile(Constant.WIKI_URL_PATH);
 		
 		// recuperer le 1er article de wikipedia

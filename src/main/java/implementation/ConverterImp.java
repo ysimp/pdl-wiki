@@ -10,7 +10,7 @@ import Interface.Extractor;
 import model.Page;
 import model.Tableau;
 import utils.CSVUtils;
-import utils.filterTable;
+import utils.FilterTable;
 
 /**
  * 
@@ -22,18 +22,20 @@ public class ConverterImp implements Converter {
 
 	 Logger logger;
 	 Extractor extractor;
-	 filterTable filter;
+	 FilterTable filter;
 	
 	public ConverterImp()
 	{
 		extractor=new ExtractorImpl();
 		logger = Logger.getLogger("Logger");
 	}
-	public ConverterImp(filterTable filter)
+	
+	public ConverterImp(FilterTable filter)
 	{
 		extractor=new ExtractorImpl(filter);
 		logger = Logger.getLogger("Logger");
 	}
+	
 	public void convertAllTablesToCsv(Document doc,String url,String output) throws Exception {
 		
 		String fileName;

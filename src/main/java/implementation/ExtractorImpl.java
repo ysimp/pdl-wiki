@@ -11,7 +11,7 @@ import model.Ligne;
 import model.Page;
 import model.Tableau;
 import utils.CSVUtils;
-import utils.filterTable;
+import utils.FilterTable;
 
 /**
  * @author Hajar 
@@ -25,15 +25,15 @@ public class ExtractorImpl implements Extractor {
 
  Logger logger ;
 	
- filterTable filter;
+ FilterTable filter;
 
 public ExtractorImpl()
 {
-	filter=new filterTable();
+	filter=new FilterTable();
 	logger = Logger.getLogger("Logger");
 }
 
-public ExtractorImpl(filterTable filter)
+public ExtractorImpl(FilterTable filter)
 {
 	this.filter=filter;
 	logger = Logger.getLogger("Logger");

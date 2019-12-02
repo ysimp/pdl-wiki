@@ -10,7 +10,7 @@ import utils.CSVUtils;
 import utils.Constant;
 import utils.ConverterUtil;
 import utils.StatistiqueUtils;
-import utils.filterTable;
+import utils.FilterTable;
 
 /**
  * @author Hajar 
@@ -25,14 +25,14 @@ public class LaunchConvertor {
 	private List<String> listUrls;
 	private Document html;
 	private Document wiki;
-	private filterTable filter;
+	private FilterTable filter;
 	Map<String,String> stats;
 	FileWriter writerStats ;
 	
 	public  LaunchConvertor()
 	{
 		
-		filter=new filterTable();	
+		filter=new FilterTable();	
 		convert=new ConverterImp(filter);
 	}
 	public void convertAllPages() throws Exception{
