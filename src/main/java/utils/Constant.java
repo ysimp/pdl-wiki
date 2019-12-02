@@ -21,6 +21,8 @@ public class Constant {
 	public static int    MIN_ROW                     = 2;
 	
 	public static int    MIN_COLUM                   = 2;
+	
+	public static String TRUE_PATH = "veriteTerrain" + File.separator ;
 
 	public static String BASE_WIKIPEDIA_URL_wikiTest = "https://en.wikipedia.org/w/";
 	

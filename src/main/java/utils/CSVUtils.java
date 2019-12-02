@@ -7,6 +7,9 @@ import java.io.IOException;
 import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import org.apache.commons.io.FileUtils;
 
 import model.Ligne;
 import model.Tableau;
@@ -247,5 +250,45 @@ public class CSVUtils {
     	w.close();
     }
 
+    public static boolean CompareTwoFile(String filename1, String filename2) throws IOException {
+    	File file1 = new File(filename1);
+    	File file2 = new File(filename2);
+    	
+    	//Tester si les deux fichiers existent déjà
+    	if(file1.exists() && file2.exists()) {
+    	
+    		boolean isEqual = FileUtils.contentEquals(file1, file2);
+    	
+    	if(isEqual) {
+    		//System.out.println("Okkkkkkkkk");
+    		Logger.getGlobal().log(Level.INFO, "les deux fichiers sont pareils");
+    		return true;
+    	}
+    	
+    	}
+    	
+    	return false;
+    	
+    	}
+   
+
+public static boolean CompareTwoFile(File file1, File file2) throws IOException {
+
+	//Tester si les deux fichiers existent déjà
+	if(file1.exists() && file2.exists()) {
+	
+		boolean isEqual = FileUtils.contentEquals(file1, file2);
+	
+	if(isEqual) {
+		//System.out.println("Okkkkkkkkk");
+		Logger.getGlobal().log(Level.INFO, "les deux fichiers sont pareils");
+		return true;
+	}
+	
+	}
+	
+	return false;
+	
+	}
 	
 }
