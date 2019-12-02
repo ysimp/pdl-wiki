@@ -16,6 +16,7 @@ import org.jsoup.select.Evaluator;
  * @author El Mahjoub
  *
  */
+
 public class filterTable {
 
 	List<String> listeClasses;
@@ -35,11 +36,13 @@ public class filterTable {
 	public filterTable()
 	{
 		try {
-				stats=new HashMap<String, String>();
 			
+			//lire la liste des attributs html ( colspane , rowspane)
 			 listeattr=CSVUtils.getListFromFile(Constant.ATTRIBUT_TO_REMOVE);
 			
+			// lire la liste des classe css (infobox ,colapse) 
 			 listeClasses=CSVUtils.getListFromFile(Constant.CLASS_TO_REMOVE);
+			 
 		} catch (Exception e) {
 			
 			e.printStackTrace();
@@ -47,13 +50,23 @@ public class filterTable {
 		
 	}
 	public Elements filterTables(Document doc ) throws Exception {
+		
 		Elements tables;
 		
-		stats.put("title", doc.title());
+		stats=new HashMap<String, String>();
+		
+		stats.put("Article", doc.title());
+		// avant filtrage
+		String nbreTable=String.valueOf(doc.select("table").size());
+		stats.put("nbreTable",nbreTable );
 		
 		tables = removeTableByClass(doc);
 		
 		tables = removeTableByAttribut(tables);
+		
+		// apres filtrage
+		String nbreTable2=String.valueOf(doc.select("table").size());
+		stats.put("nbreTableAFterFilter",nbreTable2 );
 		
 		return tables;
 		
@@ -120,6 +133,15 @@ public class filterTable {
 	}
 	
 	/**
+	 * return les statistique sur l'article filter
+	 * @return
+	 */
+	public Map<String, String> getStatistique()
+	{
+		return this.stats;
+	}
+	
+	/**
 	 * Supprime les tables ayant moins de ligne
 	 * */
 	public Elements removeTablesWithMinRowOrColum(Elements tables) {
@@ -154,10 +176,7 @@ public class filterTable {
 	
 	
 	
-	public Map<String, String> getStatistique()
-	{
-		return this.stats;
-	}
+	
 
 		
 }

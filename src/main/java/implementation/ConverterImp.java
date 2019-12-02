@@ -10,6 +10,7 @@ import Interface.Extractor;
 import model.Page;
 import model.Tableau;
 import utils.CSVUtils;
+import utils.filterTable;
 
 /**
  * 
@@ -19,9 +20,20 @@ import utils.CSVUtils;
  */
 public class ConverterImp implements Converter {
 
-	Logger logger = Logger.getLogger("WikiLoger2");
-	private Extractor extractor=new ExtractorImpl();
+	 Logger logger;
+	 Extractor extractor;
+	 filterTable filter;
 	
+	public ConverterImp()
+	{
+		extractor=new ExtractorImpl();
+		logger = Logger.getLogger("Logger");
+	}
+	public ConverterImp(filterTable filter)
+	{
+		extractor=new ExtractorImpl(filter);
+		logger = Logger.getLogger("Logger");
+	}
 	public void convertAllTablesToCsv(Document doc,String url,String output) throws Exception {
 		
 		String fileName;

@@ -23,11 +23,22 @@ import utils.filterTable;
 
 public class ExtractorImpl implements Extractor {
 
-Logger loggerWiki = Logger.getLogger("WikiLoger2");
+ Logger logger ;
 	
-private filterTable filter=new filterTable(); 
-	
-	
+ filterTable filter;
+
+public ExtractorImpl()
+{
+	filter=new filterTable();
+	logger = Logger.getLogger("Logger");
+}
+
+public ExtractorImpl(filterTable filter)
+{
+	this.filter=filter;
+	logger = Logger.getLogger("Logger");
+}
+
 public Page extractTables(Document docHtml,boolean withfilter) throws Exception {
 		
 		
