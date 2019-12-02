@@ -1,7 +1,9 @@
 package utils;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -19,6 +21,8 @@ public class filterTable {
 	List<String> listeClasses;
 	List<String> listeattr;
 	
+	private Map<String,String> stats;
+	
 	/**
 	 * Permet de filtrer les tableaux (url) : supprimer les tableaux qui ne repondent pas aux critère de pertinence
 	 * @parm url du page wikipedia
@@ -31,6 +35,8 @@ public class filterTable {
 	public filterTable()
 	{
 		try {
+				stats=new HashMap<String, String>();
+			
 			 listeattr=CSVUtils.getListFromFile(Constant.ATTRIBUT_TO_REMOVE);
 			
 			 listeClasses=CSVUtils.getListFromFile(Constant.CLASS_TO_REMOVE);
@@ -42,6 +48,8 @@ public class filterTable {
 	}
 	public Elements filterTables(Document doc ) throws Exception {
 		Elements tables;
+		
+		stats.put("title", doc.title());
 		
 		tables = removeTableByClass(doc);
 		
@@ -68,6 +76,8 @@ public class filterTable {
 			//Ensuite selectionne que les tableaux qui seront supprimés
 			tablesToRemove = Collector.collect(new Evaluator.Class(classe), doc).select("table");		
 			
+			stats.put(classe, String.valueOf(tablesToRemove.size()));
+			
 			tables.removeAll(tablesToRemove);
 	
 		}
@@ -88,13 +98,19 @@ public class filterTable {
 
 		for(String attr:listeattr)
 		{
+			int nb=0;
 			for (Element table : tables) {
 				
 				Elements trToRemoves =Collector.collect(new Evaluator.Attribute(attr), table);
 				
-				if(!trToRemoves.isEmpty()) { listTablesToRemove.add(table);}
+				if(!trToRemoves.isEmpty())
+				{ 
+					listTablesToRemove.add(table);
+					nb++;
+				}
+				
 			}
-			
+			stats.put(attr, String.valueOf(nb));
 		}
 	
 		tables.removeAll(listTablesToRemove);
@@ -138,6 +154,10 @@ public class filterTable {
 	
 	
 	
+	public Map<String, String> getStatistique()
+	{
+		return this.stats;
+	}
 
 		
 }
