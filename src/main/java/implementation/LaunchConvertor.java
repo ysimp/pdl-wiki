@@ -56,15 +56,20 @@ public class LaunchConvertor {
 			
 			stats=filter.getStatistique();
 			
+			stats.put("Extractor", "Jsoup");
+			stats.put("Article", url);
 			StatistiqueUtils.writeStatByArticle(stats, writerStats);
 			
 			// wikitext 
 		   
 			wiki=ConverterUtil.getDocumentWiki(url);
+			
 			convert.convertAllTablesToCsv(wiki, url,Constant.CSV_WIKI_PATH);
 			
-			stats=filter.getStatistique();
 			
+			stats=filter.getStatistique();
+			stats.put("Extractor", "Bliki");
+			stats.put("Article", url);
 			StatistiqueUtils.writeStatByArticle(stats, writerStats);
 		}
 			

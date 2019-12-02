@@ -26,6 +26,20 @@ public class StatistiqueUtils {
 	public  static void writeStatByArticle(Map<String,String> stats, Writer writer) throws IOException
 	{
 		
+		// ecrire le nom de l'article puis le nom de l'extractor
+		writer.append(stats.get("Article") +" ,");
+		writer.append(stats.get("Extractor") +" ,");
+		
+		writer.append(stats.get("nbreTable") +" ,");
+		writer.append(stats.get("nbreTableAFterFilter") +" ,");
+		
+		stats.remove("Article");
+		stats.remove("Extractor");
+		
+		stats.remove("nbreTable");
+		stats.remove("nbreTableAFterFilter");
+		
+		//ecrire les autres valeurs 
 		for (String valeurs : stats.values()) {
 			
 			writer.append(valeurs +" ,");
@@ -54,12 +68,15 @@ public class StatistiqueUtils {
 		
 		// format du rapport
 		
-		colonnes.add("Extractor");
+		
 		colonnes.add("Article");
+		colonnes.add("Extractor");
+		colonnes.add("nbreTable");
+		colonnes.add("nbreTableAFilter");
+		
 		colonnes.addAll(listeClasses);
 		colonnes.addAll(listeattr);
-		colonnes.add("nbreTable");
-		colonnes.add("nbreTableAFterFilter");
+	
 		
 		for (String colonne : colonnes) {
 			

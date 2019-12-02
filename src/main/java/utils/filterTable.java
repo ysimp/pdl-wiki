@@ -55,7 +55,7 @@ public class filterTable {
 		
 		stats=new HashMap<String, String>();
 		
-		stats.put("Article", doc.title());
+		
 		// avant filtrage
 		String nbreTable=String.valueOf(doc.select("table").size());
 		stats.put("nbreTable",nbreTable );
@@ -65,7 +65,7 @@ public class filterTable {
 		tables = removeTableByAttribut(tables);
 		
 		// apres filtrage
-		String nbreTable2=String.valueOf(doc.select("table").size());
+		String nbreTable2=String.valueOf(tables.size());
 		stats.put("nbreTableAFterFilter",nbreTable2 );
 		
 		return tables;
