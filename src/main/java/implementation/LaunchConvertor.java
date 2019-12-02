@@ -31,7 +31,6 @@ public class LaunchConvertor {
 	
 	public  LaunchConvertor()
 	{
-		
 		filter=new FilterTable();	
 		convert=new ConverterImp(filter);
 	}
@@ -40,36 +39,42 @@ public class LaunchConvertor {
 		//lire fichier input ( tous les urls ) 
 		listUrls=CSVUtils.getListFromFile(Constant.WIKI_URL_PATH);
 		
-		// cree le fichier qui contient les statistique
+		// cree le fichier (rappor)  qui contient les statistique
 		writerStats= new FileWriter("rappport.csv",false);
 		StatistiqueUtils.writeHeaderFileStatistique(writerStats);
 		
-		 // create dossier output 
+		 // create dossier output qui contient les fichiers extraits
 		 CSVUtils.creatOutPutFolder();
 		
+		 // parcouire la liste des urls
+		 
 		for (String url : listUrls) {
 			
-			// html document 
-		    html=ConverterUtil.getDocumentJsoup(Constant.BASE_WIKIPEDIA_URL+url);
+			// convertion du  document html
+		    
+			html=ConverterUtil.getDocumentJsoup(Constant.BASE_WIKIPEDIA_URL+url);
 		    
 			convert.convertAllTablesToCsv(html, url,Constant.CSV_HTML_PATH);
 			
+			// recuperation des stats
 			stats=filter.getStatistique();
 			
 			stats.put("Extractor", "Jsoup");
 			stats.put("Article", url);
+			// ecrire les stats dans le rapport
 			StatistiqueUtils.writeStatByArticle(stats, writerStats);
 			
-			// wikitext 
+			//  convertion du  document  wikitext 
 		   
 			wiki=ConverterUtil.getDocumentWiki(url);
 			
 			convert.convertAllTablesToCsv(wiki, url,Constant.CSV_WIKI_PATH);
 			
-			
 			stats=filter.getStatistique();
+			
 			stats.put("Extractor", "Bliki");
 			stats.put("Article", url);
+			// ecrire les stats dans le rapport
 			StatistiqueUtils.writeStatByArticle(stats, writerStats);
 		}
 			

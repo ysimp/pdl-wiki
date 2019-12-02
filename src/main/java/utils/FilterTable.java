@@ -55,10 +55,11 @@ public class FilterTable {
 		
 		stats=new HashMap<String, String>();
 		
-		
 		// avant filtrage
 		String nbreTable=String.valueOf(doc.select("table").size());
 		stats.put("nbreTable",nbreTable );
+		
+		// application du filtre 
 		
 		tables = removeTableByClass(doc);
 		

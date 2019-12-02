@@ -24,17 +24,19 @@ public class ConverterImp implements Converter {
 	 Extractor extractor;
 	 FilterTable filter;
 	
+	 public ConverterImp(FilterTable filter)
+	{
+			extractor=new ExtractorImpl(filter);
+			logger = Logger.getLogger("Logger");
+	}
+	 
 	public ConverterImp()
 	{
 		extractor=new ExtractorImpl();
 		logger = Logger.getLogger("Logger");
 	}
 	
-	public ConverterImp(FilterTable filter)
-	{
-		extractor=new ExtractorImpl(filter);
-		logger = Logger.getLogger("Logger");
-	}
+	
 	
 	public void convertAllTablesToCsv(Document doc,String url,String output) throws Exception {
 		
@@ -43,19 +45,19 @@ public class ConverterImp implements Converter {
 		String tableauCSV;
 		fileName= CSVUtils.constructFileName(url);	
 		
+		// extraire l'article
 		Page page=extractor.extractTables(doc,true);
 		
 		page.setNomPage(fileName);
 			
+		//pour chaque tableau dans l'article 
 		for (Tableau tab : page.getListeTableau()) {
 			
 			//Forme le chemin du fichier, nomPage+numTab
 			tableauCSV =output + CSVUtils.mkCSVFileName(fileName, tab.getNumeroTableau());
 			 w = new FileWriter(tableauCSV,false);
 			
-			 CSVUtils.writeTable(w, tab);
-			
-			
+			 CSVUtils.writeTable(w, tab);	
 		}
 	}
 

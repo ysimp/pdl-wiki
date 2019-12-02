@@ -121,11 +121,11 @@ public class CSVUtils {
             }else{
                tempFile.delete();
             }
-        //getLogger().info("DELETED Temporal File: " + tempFile.getPath());
+        
         }
         catch(Throwable t)
         {
-            //getLogger().error("Could not DELETE file: " + tempFile.getPath(), t);
+           t.printStackTrace();
         }
     }
     
@@ -246,15 +246,6 @@ public class CSVUtils {
     	w.flush();
     	w.close();
     }
-    
-    public static void writeTableJsoup(Writer w, Tableau table) throws IOException { 
-    	
-    	for (Ligne  line : table.getlisteLignes()) {
-    		
-				w.append(line.toString());
-				w.append("\n");
-		}
-    	
-    }
+
 	
 }

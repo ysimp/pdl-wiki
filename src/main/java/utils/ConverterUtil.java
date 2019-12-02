@@ -20,99 +20,9 @@ import net.sourceforge.jwbf.mediawiki.bots.MediaWikiBot;
  */
 public class ConverterUtil {
 
-	static Logger logger = Logger.getLogger("WikiLoger2");
+	static Logger logger = Logger.getLogger("Loger");
 
-    
-    /**
-     * 
-     * @param url
-     * @return
-     * @throws Exception
-     */
-    public static int nbreTableauJsoup(String url) throws Exception {
-    	
-    	Document doc =null;
-    	Elements tables =null;
-    	
-    	String urlpage = Constant.BASE_WIKIPEDIA_URL + url;
-    	
-    	try {
-    		doc = Jsoup.connect(urlpage).get();
-    		
-    		if(doc!=null) {
-				tables =doc.select("table");
-				return tables.size();
-			}
-    		return -1;
-    		
-		} catch (Exception e) {
-			return -1;
-		}
-			
-			
-			
 	
-    	
-    }
-    
-    /**
-     * 
-     * @param url
-     * @return
-     * @throws Exception
-     */
-    public static int nbreTableauBliki(String url) throws Exception {
-    	
-    	Document docHtml =null;
-    	MediaWikiBot wikiBot = new MediaWikiBot(Constant.BASE_WIKIPEDIA_URL_wikiTest);
-	    Article article = wikiBot.getArticle(url);
-	    if(article.getText().isEmpty()) {
-	    	return -1;
-	    }
-	    else {
-	    String html =  WikiModel.toHtml(article.getText());
-	     docHtml = Jsoup.parse(html);
-	    return docHtml.select("table").size();
-	    }
-    }
-    
-    /**
-     * 
-     * @return
-     * @throws Exception
-     */
-    
-    public static int nbreTableauBlikiTotal() throws Exception {
-    	
-    	
-	    List<String> listUrls=CSVUtils.getListFromFile(Constant.WIKI_URL_PATH);
-	    
-	    int somme=0;
-	    for (String url : listUrls) {
-			somme+=nbreTableauBliki(url);
-		}
-	    
-	    return somme;
-    }
-    
-    /**
-     * 
-     * @return
-     * @throws Exception
-     */
-    
-    public static int nbreTableauJsoupTotal() throws Exception {
-    	
-    	
-	    List<String> listUrls=CSVUtils.getListFromFile(Constant.WIKI_URL_PATH);
-	    
-	    int somme=0;
-	    for (String url : listUrls) {
-			somme+=nbreTableauJsoup(Constant.BASE_WIKIPEDIA_URL+url);
-		}
-	    
-	    return somme;
-    }
     /**
      * url du article wikipedia 
      * @param url
@@ -156,4 +66,96 @@ public class ConverterUtil {
 		}
 		
 	}
+    
+    /**
+     * 
+     * @param url
+     * @return
+     * @throws Exception
+     */
+    public static int nbreTableauJsoup(String url) throws Exception {
+    	
+    	Document doc =null;
+    	Elements tables =null;
+    	
+    	String urlpage = Constant.BASE_WIKIPEDIA_URL + url;
+    	
+    	try {
+    		doc = Jsoup.connect(urlpage).get();
+    		
+    		if(doc!=null) {
+				tables =doc.select("table");
+				return tables.size();
+			}
+    		
+    		return -1;
+    		
+		} catch (Exception e) {
+			return -1;
+		}
+
+    	
+    }
+    
+    /**
+     * 
+     * @param url
+     * @return
+     * @throws Exception
+     */
+    public static int nbreTableauBliki(String url) throws Exception {
+    	
+    	Document docHtml =null;
+    	MediaWikiBot wikiBot = new MediaWikiBot(Constant.BASE_WIKIPEDIA_URL_wikiTest);
+	    Article article = wikiBot.getArticle(url);
+	   
+	    if(article.getText().isEmpty()) {
+	    	return -1;
+	    }
+	    else {
+	    	
+		    String html =  WikiModel.toHtml(article.getText());
+		    docHtml = Jsoup.parse(html);
+		    return docHtml.select("table").size();
+	    }
+    }
+    
+    /**
+     * 
+     * @return
+     * @throws Exception
+     */
+    
+    public static int nbreTableauBlikiTotal() throws Exception {
+    	
+    	
+	    List<String> listUrls=CSVUtils.getListFromFile(Constant.WIKI_URL_PATH);
+	    
+	    int somme=0;
+	    for (String url : listUrls) {
+			somme+=nbreTableauBliki(url);
+		}
+	    
+	    return somme;
+    }
+    
+    /**
+     * 
+     * @return
+     * @throws Exception
+     */
+    
+    public static int nbreTableauJsoupTotal() throws Exception {
+    	
+    	
+	    List<String> listUrls=CSVUtils.getListFromFile(Constant.WIKI_URL_PATH);
+	    
+	    int somme=0;
+	    for (String url : listUrls) {
+			somme+=nbreTableauJsoup(Constant.BASE_WIKIPEDIA_URL+url);
+		}
+	    
+	    return somme;
+    }
+
 }
