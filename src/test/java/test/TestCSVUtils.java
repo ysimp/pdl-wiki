@@ -23,7 +23,6 @@ import org.junit.jupiter.api.Test;
 import model.Ligne;
 import model.Tableau;
 import utils.CSVUtils;
-import utils.Constant;
 
 /**
 
@@ -56,7 +55,7 @@ class TestCSVUtils {
 
 	@Test
 	void testWriteTable() throws Exception {
-		File essais= new File(Constant.OUTPUT_PATH+"essais_writer");
+		File essais= new File("essais_writer");
 		
 		if (!essais.exists()) {
 			essais.createNewFile(); 
@@ -87,7 +86,7 @@ class TestCSVUtils {
 	
 	@Test
 	void testDeleteOutPutFiles() throws IOException {
-		File essais= new File(Constant.OUTPUT_PATH+"essais_delete");
+		File essais= new File("essais_delete");
 		if (!essais.exists()) {
 		essais.createNewFile(); }
 		CSVUtils.deleteOutPutFiles(essais);
@@ -97,7 +96,7 @@ class TestCSVUtils {
 	@Test
 	void testCreatOutPutFolder() {
 		CSVUtils.creatOutPutFolder("CreateFolder");
-		File projet= new File(Constant.OUTPUT_PATH + "CreateFile");
+		File projet= new File("CreateFile");
 		
        	assertTrue(projet.exists(),"le dossier output existe déjà");
 	}
@@ -113,10 +112,10 @@ class TestCSVUtils {
 
 	@Test
 	void testIsCsvFileValid() throws Exception {
-		File essais= new File(Constant.OUTPUT_PATH+"essais_csvvalid");
+		File essais= new File("essais_csvvalid");
 		if (!essais.exists()) {
 		essais.createNewFile(); }
-		File essais2= new File(Constant.OUTPUT_PATH+"essais_csvvalid2");
+		File essais2= new File("essais_csvvalid2");
 		if (!essais2.exists()) {
 		essais2.createNewFile(); }
 		 Writer writer= new FileWriter(essais.getAbsoluteFile());
@@ -144,8 +143,8 @@ class TestCSVUtils {
 	writer2.flush();
 	writer2.close();
 	
-		assertTrue(CSVUtils.isCsvFileValid(Constant.OUTPUT_PATH+"essais_csvvalid"),"problème avec la fonction isCSVFileValid");
-		assertFalse(CSVUtils.isCsvFileValid(Constant.OUTPUT_PATH+"essais_csvvalid2"),"problème avec la fonction isCSVFileValid");
+		assertTrue(CSVUtils.isCsvFileValid("essais_csvvalid"),"problème avec la fonction isCSVFileValid");
+		assertFalse(CSVUtils.isCsvFileValid("essais_csvvalid2"),"problème avec la fonction isCSVFileValid");
 	}
 	
 	@Test
@@ -155,7 +154,7 @@ class TestCSVUtils {
 		listeDepart.add("yaya"); listeDepart.add("hajar"); listeDepart.add("jihad");
 		listeDepart.add("mahjoub"); listeDepart.add("mkk");
 		List<String> maliste = new ArrayList<String>();
-		File essais= new File(Constant.OUTPUT_PATH+"essais_ListfromFile");
+		File essais= new File("essais_ListfromFile");
 		if (!essais.exists()) {
 		essais.createNewFile(); 
 		}
@@ -168,7 +167,7 @@ class TestCSVUtils {
 		writer.flush();
 		writer.close();
 		
-		maliste= CSVUtils.getListFromFile(Constant.OUTPUT_PATH+"essais_ListfromFile");
+		maliste= CSVUtils.getListFromFile("essais_ListfromFile");
 	
 		assertEquals(listeDepart.size(), maliste.size(), "Les deux listes devrait avoir la meme taille");
 		

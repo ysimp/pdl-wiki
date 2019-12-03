@@ -90,10 +90,8 @@ public class TestFilterTable {
 		 
 		Objects.requireNonNull(docHtml,"Le document ne doit pas être null");
 		 
-		
 		 Elements afterFilter=filterTable.removeTableByAttribut(docHtml.select("table"));
 		 
-		
 		 int nbPertinentTable= 9;
 		 assertEquals(nbPertinentTable,afterFilter.size(),"Le nombre de tableau pertinent "
 		 						+ "apres Filtrage par class doit être egal "+nbPertinentTable);

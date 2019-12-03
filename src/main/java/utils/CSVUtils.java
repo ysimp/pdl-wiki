@@ -194,20 +194,23 @@ public class CSVUtils {
      * **/
     
 	public static boolean isCsvFileValid(String filePaht) throws Exception {
-		List<String> maliste= new ArrayList<String>();
-	maliste= CSVUtils.getListFromFile(filePaht);
-	if(maliste==null)
-		return false;
-	else {
 		
-	int nbr= maliste.get(0).split(",").length ;
-	
-	for(String ligne:maliste) {
-		if(ligne.split(",").length!=nbr)
+		List<String> maliste= new ArrayList<String>();
+		maliste= CSVUtils.getListFromFile(filePaht);
+		
+		if(maliste==null)
 			return false;
-	}
-	return true;
-	}
+		else {
+			
+			int nbr= maliste.get(0).split(",").length ;
+			
+			for(String ligne:maliste) {
+				if(ligne.split(",").length!=nbr)
+					return false;
+			}
+			
+			return true;
+		}
 }
     
    
