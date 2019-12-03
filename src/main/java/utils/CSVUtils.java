@@ -51,11 +51,11 @@ public class CSVUtils {
 	}
     
     /**
-     * 
+     * Pour former le nom du fichier grâce au nom du lien
+     * enlver les caracter speciaux depuis le url 
      * @param url
      * @return
-     */
-  //Pour former le nom du fichier grâce au nom du lien  
+     */ 
     public static String constructFileName(String url) {
 
         String result = url;
@@ -133,7 +133,7 @@ public class CSVUtils {
     }
     
     /**
-     * 
+     * supprimer un reperatoir et le cree un nouveau 
      */
     public static void creatOutPutFolder(String filename) {
     	
@@ -145,6 +145,10 @@ public class CSVUtils {
     	
     }
     
+    /**
+     * supprimer l'ouput ( les deux dossier html et wikitexte )
+     * et le cree a nouveau 
+     */
   public static void creatOutPutFolder() {
     	
     	// supprimer ancien fichiers 

@@ -57,6 +57,7 @@ public Page extractTables(Document docHtml,boolean withfilter) throws Exception 
 	    	
 	    	page.setTotalTableau(tables.size());
 	    	
+	    	// application du filter si c'est demande
 	    	if(withfilter)
 	    	tables =filter.filterTables(docHtml);
 	    	

@@ -24,6 +24,7 @@ public class ConverterUtil {
 
 	
     /**
+     * recuper document sous forme wikitext qui correspond au url 
      * url du article wikipedia 
      * @param url
      * @return
@@ -33,19 +34,21 @@ public class ConverterUtil {
 		
 		MediaWikiBot wikiBot = new MediaWikiBot(Constant.BASE_WIKIPEDIA_URL_wikiTest);
 	    Article article = wikiBot.getArticle(url);
+	    
 	    if(article.getText().isEmpty()) {
 	    	
 	    	return null;
 	    }
 	    else {
-	    String html =  WikiModel.toHtml(article.getText());
-	    Document docHtml = Jsoup.parse(html);
-	    return docHtml;
+	    	
+		    String html =  WikiModel.toHtml(article.getText());
+		    Document docHtml = Jsoup.parse(html);
+		    return docHtml;
 	    }
 	}
 	
 	/**
-	 * 
+	 * recuper document sous forme html qui correspond au url 
 	 * @param url complet avec la base 
 	 * @return
 	 */
@@ -121,7 +124,7 @@ public class ConverterUtil {
     }
     
     /**
-     * 
+     * return nombre de tableau total extrait par l'extractor bliki
      * @return
      * @throws Exception
      */
@@ -140,7 +143,7 @@ public class ConverterUtil {
     }
     
     /**
-     * 
+     *  return nombre de tableau total extrait par l'extractor jsoup
      * @return
      * @throws Exception
      */

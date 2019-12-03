@@ -12,8 +12,10 @@ import org.jsoup.nodes.Document;
 public interface Converter {
 
 	/**
-	 * Ecrit sous format CSV tous les tableaux d'une page donnée
+	 * genere des fichiers CSV a partir des tableaux d'une page donnée
+	 * elle fait appel au extractor pour extraire la page 
 	 * @param url
+	 * @param output  ou sera stocke le fichier generer 
 	 * appelle la methode convertTableToCsv
 	 * */
 	public void convertAllTablesToCsv(Document doc,String url,String output) throws Exception;

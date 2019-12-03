@@ -11,6 +11,7 @@ import java.util.List;
  *
  */
 public class Tableau {
+	
 	private int numeroTableau;
 	private List<Ligne> listeLignes;
 	
@@ -43,8 +44,5 @@ public class Tableau {
 		listeLignes.add(line);
 	}
 
-
-	
-	
 
 }

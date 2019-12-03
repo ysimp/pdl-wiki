@@ -12,14 +12,11 @@ import java.util.Objects;
  *
  */
 public class Page {
+	
 	private String nomPage;
 	private List<Tableau> listeTableau;
 	private int TotalTableau;
 	
-	
-
-
-
 	public Page() {
 		
 		listeTableau=new ArrayList<Tableau>();
@@ -58,8 +55,6 @@ public class Page {
 	public int getTotalTableau() {
 		return TotalTableau;
 	}
-
-
 
 	public void setTotalTableau(int totalTableau) {
 		TotalTableau = totalTableau;

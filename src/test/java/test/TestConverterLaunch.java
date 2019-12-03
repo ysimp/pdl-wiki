@@ -85,7 +85,6 @@ class TestConverterLaunch {
 	@Test
 	void testNbreDePageGenerer() throws Exception {
 		
-		
 		int numberOfFilebliki = new File(Constant.CSV_WIKI_PATH).listFiles().length;
 		assertEquals(numberOfFilebliki, ConverterUtil.nbreTableauBlikiTotal(), "Les le nombre de fichiers générés devrait être egal au nombre de tableau total");
 

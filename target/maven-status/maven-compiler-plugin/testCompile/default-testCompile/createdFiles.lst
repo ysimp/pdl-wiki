@@ -3,5 +3,4 @@ test\TestFilterTable.class
 test\TestCSVUtils.class
 test\TestConverterLaunch.class
 test\TestExtractorImpl.class
-test\WikipediaVerifTest.class
 test\TestConvertorImpl.class

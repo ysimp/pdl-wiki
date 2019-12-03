@@ -34,6 +34,19 @@ public class LaunchConvertor {
 		filter=new FilterTable();	
 		convert=new ConverterImp(filter);
 	}
+	
+	/**
+	 * extraire tous les articles wikipedia et generer des fichiers scv
+	 * parcourir la liste des urls et
+	 *  chaque foit elle recuper les deux documents ( html et wikitext)
+	 *   qui correspond au l'article  
+	 *  puis elle fait appele au converter avec le document html 
+	 *  puis le document wikitexte 
+	 *  et generer les statistique concernant l'article 
+	 *   a travers la classe filterTable
+	 *  
+	 * @throws Exception
+	 */
 	public void convertAllPages() throws Exception{
 		
 		//lire fichier input ( tous les urls ) 
@@ -79,11 +92,16 @@ public class LaunchConvertor {
 		}
 			
 
-		//fermer le fichier de stats
+		//fermer le fichier de stats ( rapport) 
 		writerStats.flush();
 		writerStats.close();
 		
 	}
+	
+/**
+ * fonction main pour tester notre application sans executer les tests	
+ * @param args
+ */
 
 public static void main(String[] args) {
 	
