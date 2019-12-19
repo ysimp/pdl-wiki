@@ -39,6 +39,9 @@ public ExtractorImpl(FilterTable filter)
 	logger = Logger.getLogger("Logger");
 }
 
+/**
+ * {@inheritDoc}
+ */
 public Page extractTables(Document docHtml,boolean withfilter) throws Exception {
 		
 		
