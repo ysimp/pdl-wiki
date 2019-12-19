@@ -59,7 +59,7 @@ The **src/test directory** consists of a single package  testPDL which includes 
 <img src="use case.PNG" alt="Use case diagram" />
 
 ## Package Diagram
-<img src="diagram pakcage.PNG" alt="packages diagram" />
+<img src="diagram package.PNG" alt="packages diagram" />
 
 ## Class Diagram
 <img src="diagram class.PNG" alt="class diagram" />
