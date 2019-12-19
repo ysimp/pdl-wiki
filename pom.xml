@@ -4,11 +4,28 @@
   <artifactId>PDL_2019_2020</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>PDL_2019_2020_groupe9</name>
+  <description>Projet PDL ...</description>
   
-  
-   <description>Projet PDL ...</description>
-   <dependencies>
+ <properties>
+    <maven.compiler.source>1.6</maven.compiler.source>
+    <maven.compiler.target>1.6</maven.compiler.target>
+</properties>
 
+<build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>3.0.0-M4</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+  
+   
+   
+   <dependencies>
 		<!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
 		<dependency>
 			<groupId>org.jsoup</groupId>
@@ -16,11 +33,19 @@
 			<version>1.11.3</version>
 		</dependency>
 		
-				<dependency>
-		           <groupId>org.junit.jupiter</groupId>
-		           <artifactId>junit-jupiter-engine</artifactId>
-		           <version>5.3.1</version>
-		      </dependency>
+		<dependency>
+           <groupId>org.junit.jupiter</groupId>
+           <artifactId>junit-jupiter-engine</artifactId>
+           <version>5.0.1</version>
+           <scope>test</scope>
+      	</dependency>
+		      <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-params -->
+			<dependency>
+			    <groupId>org.junit.jupiter</groupId>
+			    <artifactId>junit-jupiter-params</artifactId>
+			    <version>5.0.1</version>
+			    <scope>test</scope>
+			</dependency>
 		      
 		      <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
 				<dependency>
@@ -30,15 +55,12 @@
 				</dependency>
 				
 				<!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
-<dependency>
-    <groupId>commons-logging</groupId>
-    <artifactId>commons-logging</artifactId>
-    <version>1.2</version>
-</dependency>
-				
-		      
-      
-      
+				<dependency>
+				    <groupId>commons-logging</groupId>
+				    <artifactId>commons-logging</artifactId>
+				    <version>1.2</version>
+				</dependency>
+
 				<dependency>
 				    <groupId>org.junit.platform</groupId>
 				    <artifactId>junit-platform-runner</artifactId>
@@ -47,22 +69,24 @@
 				</dependency>
 				
 			<!-- https://mvnrepository.com/artifact/net.sourceforge/jwbf -->
-<dependency>
-    <groupId>net.sourceforge</groupId>
-    <artifactId>jwbf</artifactId>
-    <version>3.1.1</version>
-</dependency>
+				<dependency>
+				    <groupId>net.sourceforge</groupId>
+				    <artifactId>jwbf</artifactId>
+				    <version>3.1.1</version>
+				</dependency>
 
-<dependency>
+			<dependency>
                 <groupId>info.bliki.wiki</groupId>
                 <artifactId>bliki-core</artifactId>
                 <version>3.1.0</version>
             </dependency>
-				
-				
-		
+            
+             <dependency>
+			    <groupId>commons-io</groupId>
+			    <artifactId>commons-io</artifactId>
+			    <version>2.6</version>
+			</dependency>
 
 	</dependencies>
-  
-  
+
 </project>

@@ -20,8 +20,55 @@ import net.sourceforge.jwbf.mediawiki.bots.MediaWikiBot;
  */
 public class ConverterUtil {
 
-	static Logger logger = Logger.getLogger("WikiLoger2");
+	static Logger logger = Logger.getLogger("Loger");
 
+	
+    /**
+     * recuper document sous forme wikitext qui correspond au url 
+     * url du article wikipedia 
+     * @param url
+     * @return
+     */
+	public static Document getDocumentWiki(String url) {
+		
+		
+		MediaWikiBot wikiBot = new MediaWikiBot(Constant.BASE_WIKIPEDIA_URL_wikiTest);
+	    Article article = wikiBot.getArticle(url);
+	    
+	    if(article.getText().isEmpty()) {
+	    	
+	    	return null;
+	    }
+	    else {
+	    	
+		    String html =  WikiModel.toHtml(article.getText());
+		    Document docHtml = Jsoup.parse(html);
+		    return docHtml;
+	    }
+	}
+	
+	/**
+	 * recuper document sous forme html qui correspond au url 
+	 * @param url complet avec la base 
+	 * @return
+	 */
+	public  static Document getDocumentJsoup(String url) {
+		
+
+		Document doc;
+		try {
+			
+			 doc =Jsoup.connect( url).get();
+
+			return doc;
+		} catch (Exception e) {
+			
+			logger.info("Erreur de connexion, vous vous êtes sans doute trompé dans la saisie de l'url"+" "+url);
+			
+			return null;
+		}
+		
+	}
     
     /**
      * 
@@ -43,15 +90,13 @@ public class ConverterUtil {
 				tables =doc.select("table");
 				return tables.size();
 			}
+    		
     		return -1;
     		
 		} catch (Exception e) {
 			return -1;
 		}
-			
-			
-			
-	
+
     	
     }
     
@@ -66,18 +111,20 @@ public class ConverterUtil {
     	Document docHtml =null;
     	MediaWikiBot wikiBot = new MediaWikiBot(Constant.BASE_WIKIPEDIA_URL_wikiTest);
 	    Article article = wikiBot.getArticle(url);
+	   
 	    if(article.getText().isEmpty()) {
 	    	return -1;
 	    }
 	    else {
-	    String html =  WikiModel.toHtml(article.getText());
-	     docHtml = Jsoup.parse(html);
-	    return docHtml.select("table").size();
+	    	
+		    String html =  WikiModel.toHtml(article.getText());
+		    docHtml = Jsoup.parse(html);
+		    return docHtml.select("table").size();
 	    }
     }
     
     /**
-     * 
+     * return nombre de tableau total extrait par l'extractor bliki
      * @return
      * @throws Exception
      */
@@ -96,7 +143,7 @@ public class ConverterUtil {
     }
     
     /**
-     * 
+     *  return nombre de tableau total extrait par l'extractor jsoup
      * @return
      * @throws Exception
      */
@@ -113,47 +160,5 @@ public class ConverterUtil {
 	    
 	    return somme;
     }
-    /**
-     * url du article wikipedia 
-     * @param url
-     * @return
-     */
-	public static Document getDocumentWiki(String url) {
-		
-		
-		MediaWikiBot wikiBot = new MediaWikiBot(Constant.BASE_WIKIPEDIA_URL_wikiTest);
-	    Article article = wikiBot.getArticle(url);
-	    if(article.getText().isEmpty()) {
-	    	
-	    	return null;
-	    }
-	    else {
-	    String html =  WikiModel.toHtml(article.getText());
-	    Document docHtml = Jsoup.parse(html);
-	    return docHtml;
-	    }
-	}
-	
-	/**
-	 * 
-	 * @param url complet avec la base 
-	 * @return
-	 */
-	public  static Document getDocumentJsoup(String url) {
-		
 
-		Document doc;
-		try {
-			
-			 doc =Jsoup.connect( url).get();
-
-			return doc;
-		} catch (Exception e) {
-			
-			logger.info("Erreur de connexion, vous vous êtes sans doute trompé dans la saisie de l'url"+" "+url);
-			
-			return null;
-		}
-		
-	}
 }

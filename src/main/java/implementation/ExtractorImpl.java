@@ -11,7 +11,7 @@ import model.Ligne;
 import model.Page;
 import model.Tableau;
 import utils.CSVUtils;
-import utils.filterTable;
+import utils.FilterTable;
 
 /**
  * @author Hajar 
@@ -23,11 +23,22 @@ import utils.filterTable;
 
 public class ExtractorImpl implements Extractor {
 
-Logger loggerWiki = Logger.getLogger("WikiLoger2");
+ Logger logger ;
 	
-private filterTable filter=new filterTable(); 
-	
-	
+ FilterTable filter;
+
+public ExtractorImpl()
+{
+	filter=new FilterTable();
+	logger = Logger.getLogger("Logger");
+}
+
+public ExtractorImpl(FilterTable filter)
+{
+	this.filter=filter;
+	logger = Logger.getLogger("Logger");
+}
+
 public Page extractTables(Document docHtml,boolean withfilter) throws Exception {
 		
 		
@@ -46,6 +57,7 @@ public Page extractTables(Document docHtml,boolean withfilter) throws Exception 
 	    	
 	    	page.setTotalTableau(tables.size());
 	    	
+	    	// application du filter si c'est demande
 	    	if(withfilter)
 	    	tables =filter.filterTables(docHtml);
 	    	

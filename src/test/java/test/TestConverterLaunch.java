@@ -7,6 +7,7 @@ import java.io.File;
 import java.util.List;
 
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -41,6 +42,7 @@ class TestConverterLaunch {
 
 	@Test
 	@DisplayName("Bliki folder no empty")
+	@Disabled
 	void TestFichierNonVide() throws Exception {
 		
 		File f= new File(Constant.CSV_WIKI_PATH);
@@ -57,6 +59,7 @@ class TestConverterLaunch {
 	
 	@Test
 	@DisplayName("HTML folder no empty")
+	@Disabled
 	void TestFichierNonVide2() throws Exception {
 		
 		File f= new File(Constant.CSV_HTML_PATH);
@@ -75,6 +78,7 @@ class TestConverterLaunch {
 
 	@DisplayName("HTML nb de fichier generer")
 	@Test
+	@Disabled
 	void testConvertAllPages() throws Exception {
 		
 		
@@ -85,8 +89,8 @@ class TestConverterLaunch {
 	
 	@DisplayName("Bliki nb de fichier generer")
 	@Test
+	@Disabled
 	void testNbreDePageGenerer() throws Exception {
-		
 		
 		int numberOfFilebliki = new File(Constant.CSV_WIKI_PATH).listFiles().length;
 		assertEquals(numberOfFilebliki, ConverterUtil.nbreTableauBlikiTotal(), "Les le nombre de fichiers générés devrait être egal au nombre de tableau total");
@@ -96,6 +100,7 @@ class TestConverterLaunch {
 	
 	@Test
 	@DisplayName("Html : Fichier valid")
+	@Disabled
 	void TestFichierValid() throws Exception {
 		
 		File f= new File(Constant.CSV_HTML_PATH);
@@ -112,6 +117,7 @@ class TestConverterLaunch {
 	
 	@Test
 	@DisplayName("Bliki : Fichier valid")
+	@Disabled
 	void TestFichierValidBliki() throws Exception {
 		
 		File f= new File(Constant.CSV_WIKI_PATH);

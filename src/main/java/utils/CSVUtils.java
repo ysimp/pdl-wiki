@@ -7,6 +7,9 @@ import java.io.IOException;
 import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import org.apache.commons.io.FileUtils;
 
 import model.Ligne;
 import model.Tableau;
@@ -48,11 +51,11 @@ public class CSVUtils {
 	}
     
     /**
-     * 
+     * Pour former le nom du fichier grâce au nom du lien
+     * enlver les caracter speciaux depuis le url 
      * @param url
      * @return
-     */
-  //Pour former le nom du fichier grâce au nom du lien  
+     */ 
     public static String constructFileName(String url) {
 
         String result = url;
@@ -121,16 +124,16 @@ public class CSVUtils {
             }else{
                tempFile.delete();
             }
-        //getLogger().info("DELETED Temporal File: " + tempFile.getPath());
+        
         }
         catch(Throwable t)
         {
-            //getLogger().error("Could not DELETE file: " + tempFile.getPath(), t);
+           t.printStackTrace();
         }
     }
     
     /**
-     * 
+     * supprimer un reperatoir et le cree un nouveau 
      */
     public static void creatOutPutFolder(String filename) {
     	
@@ -142,6 +145,10 @@ public class CSVUtils {
     	
     }
     
+    /**
+     * supprimer l'ouput ( les deux dossier html et wikitexte )
+     * et le cree a nouveau 
+     */
   public static void creatOutPutFolder() {
     	
     	// supprimer ancien fichiers 
@@ -191,20 +198,23 @@ public class CSVUtils {
      * **/
     
 	public static boolean isCsvFileValid(String filePaht) throws Exception {
-		List<String> maliste= new ArrayList<String>();
-	maliste= CSVUtils.getListFromFile(filePaht);
-	if(maliste==null)
-		return false;
-	else {
 		
-	int nbr= maliste.get(0).split(",").length ;
-	
-	for(String ligne:maliste) {
-		if(ligne.split(",").length!=nbr)
+		List<String> maliste= new ArrayList<String>();
+		maliste= CSVUtils.getListFromFile(filePaht);
+		
+		if(maliste==null)
 			return false;
-	}
-	return true;
-	}
+		else {
+			
+			int nbr= maliste.get(0).split(",").length ;
+			
+			for(String ligne:maliste) {
+				if(ligne.split(",").length!=nbr)
+					return false;
+			}
+			
+			return true;
+		}
 }
     
    
@@ -246,15 +256,46 @@ public class CSVUtils {
     	w.flush();
     	w.close();
     }
-    
-    public static void writeTableJsoup(Writer w, Tableau table) throws IOException { 
+
+    public static boolean CompareTwoFile(String filename1, String filename2) throws IOException {
+    	File file1 = new File(filename1);
+    	File file2 = new File(filename2);
     	
-    	for (Ligne  line : table.getlisteLignes()) {
-    		
-				w.append(line.toString());
-				w.append("\n");
-		}
+    	//Tester si les deux fichiers existent déjà
+    	if(file1.exists() && file2.exists()) {
     	
-    }
+    		boolean isEqual = FileUtils.contentEquals(file1, file2);
+    	
+    	if(isEqual) {
+    		//System.out.println("Okkkkkkkkk");
+    		Logger.getGlobal().log(Level.INFO, "les deux fichiers sont pareils");
+    		return true;
+    	}
+    	
+    	}
+    	
+    	return false;
+    	
+    	}
+   
+
+public static boolean CompareTwoFile(File file1, File file2) throws IOException {
+
+	//Tester si les deux fichiers existent déjà
+	if(file1.exists() && file2.exists()) {
+	
+		boolean isEqual = FileUtils.contentEquals(file1, file2);
+	
+	if(isEqual) {
+		//System.out.println("Okkkkkkkkk");
+		Logger.getGlobal().log(Level.INFO, "les deux fichiers sont pareils");
+		return true;
+	}
+	
+	}
+	
+	return false;
+	
+	}
 	
 }

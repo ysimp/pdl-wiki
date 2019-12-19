@@ -1,0 +1,13 @@
+utils\ConverterUtil.class
+model\Page.class
+model\Tableau.class
+Interface\Extractor.class
+implementation\ConverterImp.class
+Interface\Converter.class
+implementation\ExtractorImpl.class
+utils\WikipediaVerif.class
+model\Ligne.class
+utils\CSVUtils.class
+implementation\LaunchConvertor.class
+utils\FilterTable.class
+utils\Constant.class

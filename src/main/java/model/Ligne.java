@@ -45,7 +45,7 @@ public class Ligne {
 	public String toString() {
 		
 		return this.listCelluleLigne.stream().collect(Collectors.joining(", "));
-	
+		
 	}
 
 }
