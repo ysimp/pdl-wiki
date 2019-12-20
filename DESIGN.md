@@ -39,6 +39,7 @@ the source directory, which is in src / main / java; the source directory of the
 When performing a task or goal, Maven searches for the POM in the current directory. It reads the POM, retrieves the configuration information, and then executes the objective.
 Some of the configurations that can be specified in the POM are project dependencies, plug-ins or goals that can be executed, build profiles, and so on. Other information such as the project version, description, developers, contact lists, and more can also be specified.
 
+
 # Package Organization and Class Descriptions
 
 In order to properly organize our project, we have created a number of packages in the src/main and src/test directories :
