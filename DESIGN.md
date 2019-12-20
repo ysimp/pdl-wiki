@@ -55,11 +55,13 @@ The **src/main** directory contains four packages :
 
 The **src/test directory** consists of a single package  testPDL which includes all the unit tests of our program.
 
-## Use case Diagram
-<img src="use case.PNG" alt="Use case diagram" />
 
 ## Package Diagram
 <img src="diagram package.PNG" alt="packages diagram" />
 
 ## Class Diagram
 <img src="diagram class.PNG" alt="class diagram" />
+
+## Use case Diagram
+<img src="use case.PNG" alt="Use case diagram" />
+
