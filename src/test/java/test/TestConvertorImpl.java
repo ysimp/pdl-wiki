@@ -101,16 +101,17 @@ class TestConvertorImpl {
 	@ValueSource(ints = {0})
 	public void testConvertAllTablesToCsv4(int indice) throws Exception {
 		
+		
 		String fileName= CSVUtils.constructFileName(listUrl.get(indice));
 		
-		int nbtables = ConverterUtil.nbreTableauBliki(listUrl.get(indice));
+		//int nbtables = ConverterUtil.nbreTableauBliki(listUrl.get(indice));
 		Document dochtml= ConverterUtil.getDocumentWiki(listUrl.get(indice));
 		
 		assertNotNull(dochtml,"doc ne doit pas etre null");
 		
 		converter.convertAllTablesToCsv(dochtml,listUrl.get(indice),Constant.CSV_WIKI_PATH);
 		
-		for(int i=1 ; i<= nbtables; i++) {
+		for(int i=1 ; i<= 4; i++) {
 			String tableauCSV =Constant.CSV_WIKI_PATH + CSVUtils.mkCSVFileName(fileName, i);
 				
 			File file =new File(tableauCSV);
@@ -131,14 +132,14 @@ class TestConvertorImpl {
 		
 		String fileName= CSVUtils.constructFileName(listUrl.get(indice));
 		
-		int nbtables = ConverterUtil.nbreTableauJsoup(listUrl.get(indice));
+		//int nbtables = ConverterUtil.nbreTableauJsoup(listUrl.get(indice));
 		Document dochtml= ConverterUtil.getDocumentJsoup(Constant.BASE_WIKIPEDIA_URL+listUrl.get(indice));
 		
 		assertNotNull(dochtml,"doc ne doit pas etre null");
 		
 		converter.convertAllTablesToCsv(dochtml,listUrl.get(indice),Constant.CSV_HTML_PATH);
 		
-		for(int i=1 ; i<= nbtables; i++) {
+		for(int i=1 ; i<= 4; i++) {
 			String tableauCSV =Constant.CSV_HTML_PATH + CSVUtils.mkCSVFileName(fileName, i);
 				
 			File file =new File(tableauCSV);

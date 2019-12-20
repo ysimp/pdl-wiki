@@ -223,12 +223,13 @@ public class CSVUtils {
      * 
      * @param fileName
      * @return
-     * @throws Exception
+     * 
      */
     public static boolean testerFileCsvIsEmpty(String fileName) throws Exception
 	{
 		
 		File file = new File(fileName);
+		
 		
 		BufferedReader br = new BufferedReader(new FileReader(file));
 		
