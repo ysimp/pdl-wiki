@@ -32,6 +32,8 @@ public class FilterTable {
 	{
 		try {
 			
+			stats=new HashMap<String, String>();
+			
 			//lire la liste des attributs html ( colspane , rowspane)
 			 listeattr=CSVUtils.getListFromFile(Constant.ATTRIBUT_TO_REMOVE);
 			
@@ -58,6 +60,7 @@ public class FilterTable {
 		Elements tables;
 		
 		stats=new HashMap<String, String>();
+		
 		
 		// avant filtrage
 		String nbreTable=String.valueOf(doc.select("table").size());
