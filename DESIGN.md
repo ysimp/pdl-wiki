@@ -45,13 +45,13 @@ In order to properly organize our project, we have created a number of packages 
 
 The **src/main** directory contains four packages :
 
-**the Default Package:** it contains the class allowing the execution of our application.
+**the interface package:** it contains All ours fonctionalities .
 
-**the Bliki package :** is composed of the class API_BlikiImp which allows to extract the tables of a Wikipedia page from the code wikitext.
+**the implementation package :**  includes all the classes that implement the interfaces .
 
-**the Jsoup package :** contains the API_JsoupImp class that extracts the tables from a Wikipedia page from the html code.
+**the model package :** includes all the classes that represent our data (page,  table , line ).
 
-**the utils package:** includes all the classes that represent a web page, a table, a row and a cell of a table
+**the utils package:** includes all the methods that help the extractor and the converter .
 
 The **src/test directory** consists of a single package  testPDL which includes all the unit tests of our program.
 
