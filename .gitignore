@@ -1,7 +1,6 @@
 /target/
 
 /input/
-/output/
 .csv
 .class
 .classpath

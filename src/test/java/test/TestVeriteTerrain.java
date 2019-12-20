@@ -26,13 +26,9 @@ class TestVeriteTerrain {
 	void setUp() throws Exception {
 	}
 	
-	@Test
-	@DisplayName("Comparer deux fichiers CSV")
-	@Disabled
-	void CompareTwoFile1() throws IOException {
-	
-		assertTrue(CSVUtils.CompareTwoFile("test1.txt","test2.txt"),"Devarit etre pareil");
-	}
+	/*
+	 * Verité terrain HTML
+	 */
 
 	@Test
 	@DisplayName("Verité terrain 0 : Comparison_between_Ido_and_Interlingua-1.csv")
@@ -48,7 +44,7 @@ class TestVeriteTerrain {
 	}
 	
 	// Fchier différent à cause de certains caractère speciaux
-	@DisplayName("Verité terrain 1 :")
+	 @DisplayName("Verité terrain 1 les fichiers Jsoup  générés")
 	 @ParameterizedTest
 	 @CsvSource({
 		         "Comparison_between_Ido_and_Interlingua-1.csv,Comparison_between_Ido_and_Interlingua-2.mine.csv"})
@@ -64,7 +60,7 @@ class TestVeriteTerrain {
 		}
 	
 	
-	@DisplayName("Verité terrain 2 With generate file Jsoup")
+	@DisplayName("Verité terrain 2 les fichiers Jsoup  générés")
 	 @ParameterizedTest
 	 @CsvSource({"Comparison_of_ALGOL_68_and_C++-1.csv,Comparison_of_ALGOL_68_and_C++-1.csv",
 		         "Comparison_of_Android_e-book_reader_software-1.csv,Comparison_of_Android_e-book_reader_software-1.csv",
@@ -90,5 +86,50 @@ class TestVeriteTerrain {
 			
 			assertTrue(CSVUtils.CompareTwoFile(file1,file2),"Les deux fichiers doivent être pareil" );
 		}
+	
+	/*
+	 * Verité terrain Bliki
+	 */
+	
+	// Fchier différent à cause de certains caractère speciaux
+		 @DisplayName("Verité terrain  de certains fichiers Biliki  générés")
+		 @ParameterizedTest
+		 @CsvSource({
+			         "Comparison_between_Ido_and_Interlingua-2.csv,Comparison_between_Ido_and_Interlingua-2.mine.csv"})
+		 void testBliki1(String nomArticle, String mine ) throws IOException {
+				//Comparison_between_Ido_and_Interlingua-2.csv;
+				File file1 = new File (Constant.CSV_WIKI_PATH + nomArticle);
+				File file2 = new File (Constant.TRUE_PATH + mine);
+				
+				assertTrue(file1.exists(),"Le fichier doit exister");
+				assertTrue(file2.exists(),"Le fichier doit exister");
+				
+				assertTrue(CSVUtils.CompareTwoFile(file1,file2),"Les deux fichiers doivent être pareil" );
+			}
+		 
+		 @DisplayName("Verité terrain e certains fichiers Biliki  générés")
+		 @ParameterizedTest
+		 @CsvSource({"Comparison_of_ALGOL_68_and_C++-2.csv,Comparison_of_ALGOL_68_and_C++-1.csv",
+			         "Comparison_of_Android_e-book_reader_software-2.csv,Comparison_of_Android_e-book_reader_software-1.csv",
+			         "Comparison_of_Android_e-book_reader_software-3.csv,Comparison_of_Android_e-book_reader_software-2.csv",
+			         "Comparison_of_Android_e-book_reader_software-4.csv,Comparison_of_Android_e-book_reader_software-3.csv",
+			         "Comparison_of_Android_e-book_reader_software-5.csv,Comparison_of_Android_e-book_reader_software-4.csv",
+			         "Comparison_of_Chernobyl_and_other_radioactivity_releases-2.csv,Comparison_of_Chernobyl_and_other_radioactivity_releases-2.csv",
+			         "Comparison_of_Linux_distributions-2.csv,Comparison_of_Linux_distributions-1.csv",
+			         "Comparison_of_Linux_distributions-3.csv,Comparison_of_Linux_distributions-2.csv",
+			         "Comparison_of_Linux_distributions-4.csv,Comparison_of_Linux_distributions-3.csv",
+			         "Comparison_of_Linux_distributions-5.csv,Comparison_of_Linux_distributions-4.csv",
+			         "Comparison_of_Symbian_devices-1.csv,Comparison_of_Symbian_devices-1.csv"
+			         })
+		 void testBiliki2(String nomArticle, String mine ) throws IOException {
+				//Comparison_between_Ido_and_Interlingua-2.csv;
+				File file1 = new File (Constant.CSV_WIKI_PATH + nomArticle);
+				File file2 = new File (Constant.TRUE_PATH + mine);
+				
+				assertTrue(file1.exists(),"Le fichier doit exister");
+				assertTrue(file2.exists(),"Le fichier doit exister");
+				
+				assertTrue(CSVUtils.CompareTwoFile(file1,file2),"Les deux fichiers doivent être pareil" );
+			}
 
 }
