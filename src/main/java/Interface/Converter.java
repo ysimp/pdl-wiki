@@ -12,6 +12,7 @@ import org.jsoup.nodes.Document;
 public interface Converter {
 
 	/**
+	 * 
 	 * genere des fichiers CSV a partir des tableaux d'une page donnée
 	 * elle fait appel au extractor pour extraire la page 
 	 * @param url
