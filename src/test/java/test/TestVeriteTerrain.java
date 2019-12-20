@@ -75,6 +75,28 @@ class TestVeriteTerrain {
 			assertTrue(CSVUtils.CompareTwoFile(file1,file2),"Les deux fichiers doivent être pareil" );
 		}
 	
+	@DisplayName("Jsoup 3 :Verité terrain e certains fichiers Biliki  générés")
+	 @ParameterizedTest
+	 @CsvSource({"Comparison_between_Esperanto_and_Ido-1.csv,Comparison_between_Esperanto_and_Ido-1.mine.csv",
+		 		"Comparison_between_Esperanto_and_Ido-2.csv,Comparison_between_Esperanto_and_Ido-2.mine.csv",
+		 		"Comparison_between_Esperanto_and_Ido-3.csv,Comparison_between_Esperanto_and_Ido-3.mine.csv",
+		 		"Comparison_between_Esperanto_and_Ido-4.csv,Comparison_between_Esperanto_and_Ido-4.mine.csv",
+		 		"Comparison_between_Esperanto_and_Ido-5.csv,Comparison_between_Esperanto_and_Ido-5.mine.csv",
+		 		"Comparison_between_Esperanto_and_Novial-1.csv,Comparison_between_Esperanto_and_Novial-1.mine.csv",
+		 		"Comparison_between_Esperanto_and_Novial-2.csv,Comparison_between_Esperanto_and_Novial-2.mine.csv",
+		 		"Comparison_between_Esperanto_and_Novial-3.csv,Comparison_between_Esperanto_and_Novial-3.mine.csv",
+		 		"Comparison_between_Esperanto_and_Novial-4.csv,Comparison_between_Esperanto_and_Novial-4.mine.csv"})
+	 void test4(String nomArticle, String mine ) throws IOException {
+			//Comparison_between_Ido_and_Interlingua-2.csv;
+			File file1 = new File (Constant.CSV_WIKI_PATH + nomArticle);
+			File file2 = new File (Constant.TRUE_PATH + mine);
+			
+			assertTrue(file1.exists(),"Le fichier doit exister");
+			assertTrue(file2.exists(),"Le fichier doit exister");
+			
+			assertTrue(CSVUtils.CompareTwoFile(file1,file2),"Les deux fichiers doivent être pareil" );
+		}
+	
 	/*
 	 * Verité terrain Bliki
 	 */
@@ -110,6 +132,28 @@ class TestVeriteTerrain {
 			         "Comparison_of_Symbian_devices-1.csv,Comparison_of_Symbian_devices-1.csv"
 			         })
 		 void testBiliki2(String nomArticle, String mine ) throws IOException {
+				//Comparison_between_Ido_and_Interlingua-2.csv;
+				File file1 = new File (Constant.CSV_WIKI_PATH + nomArticle);
+				File file2 = new File (Constant.TRUE_PATH + mine);
+				
+				assertTrue(file1.exists(),"Le fichier doit exister");
+				assertTrue(file2.exists(),"Le fichier doit exister");
+				
+				assertTrue(CSVUtils.CompareTwoFile(file1,file2),"Les deux fichiers doivent être pareil" );
+			}
+		 
+		 @DisplayName("Bliki 3 :Verité terrain e certains fichiers Biliki  générés")
+		 @ParameterizedTest
+		 @CsvSource({"Comparison_between_Esperanto_and_Ido-2.csv,Comparison_between_Esperanto_and_Ido-1.mine.csv",
+			 		"Comparison_between_Esperanto_and_Ido-3.csv,Comparison_between_Esperanto_and_Ido-2.mine.csv",
+			 		"Comparison_between_Esperanto_and_Ido-4.csv,Comparison_between_Esperanto_and_Ido-3.mine.csv",
+			 		"Comparison_between_Esperanto_and_Ido-5.csv,Comparison_between_Esperanto_and_Ido-4.mine.csv",
+			 		"Comparison_between_Esperanto_and_Ido-6.csv,Comparison_between_Esperanto_and_Ido-5.mine.csv",
+			 		"Comparison_between_Esperanto_and_Novial-2.csv,Comparison_between_Esperanto_and_Novial-1.mine.csv",
+			 		"Comparison_between_Esperanto_and_Novial-3.csv,Comparison_between_Esperanto_and_Novial-2.mine.csv",
+			 		"Comparison_between_Esperanto_and_Novial-4.csv,Comparison_between_Esperanto_and_Novial-3.mine.csv",
+			 		"Comparison_between_Esperanto_and_Novial-5.csv,Comparison_between_Esperanto_and_Novial-4.mine.csv"})
+		 void testBiliki3(String nomArticle, String mine ) throws IOException {
 				//Comparison_between_Ido_and_Interlingua-2.csv;
 				File file1 = new File (Constant.CSV_WIKI_PATH + nomArticle);
 				File file2 = new File (Constant.TRUE_PATH + mine);
