@@ -30,21 +30,9 @@ class TestVeriteTerrain {
 	 * Verité terrain HTML
 	 */
 
-	@Test
-	@DisplayName("Verité terrain 0 : Comparison_between_Ido_and_Interlingua-1.csv")
-	void test1() throws IOException {
-		//Comparison_between_Ido_and_Interlingua-2.csv;
-		File file1 = new File (Constant.CSV_HTML_PATH + "Comparison_between_Ido_and_Interlingua-1.csv");
-		File file2 = new File (Constant.TRUE_PATH + "Comparison_between_Ido_and_Interlingua-2.mine.csv");
-		
-		assertTrue(file1.exists(),"Le fichier doit exister");
-		assertTrue(file2.exists(),"Le fichier doit exister");
-		
-		assertTrue(CSVUtils.CompareTwoFile(file1,file2),"Les deux fichiers doivent être pareil" );
-	}
 	
 	// Fchier différent à cause de certains caractère speciaux
-	 @DisplayName("Verité terrain 1 les fichiers Jsoup  générés")
+	 @DisplayName("Jsoup 1: Verité terrain 1 les fichiers Jsoup  générés")
 	 @ParameterizedTest
 	 @CsvSource({
 		         "Comparison_between_Ido_and_Interlingua-1.csv,Comparison_between_Ido_and_Interlingua-2.mine.csv"})
@@ -60,7 +48,7 @@ class TestVeriteTerrain {
 		}
 	
 	
-	@DisplayName("Verité terrain 2 les fichiers Jsoup  générés")
+	@DisplayName("JSoup 2: Verité terrain les fichiers Jsoup  générés")
 	 @ParameterizedTest
 	 @CsvSource({"Comparison_of_ALGOL_68_and_C++-1.csv,Comparison_of_ALGOL_68_and_C++-1.csv",
 		         "Comparison_of_Android_e-book_reader_software-1.csv,Comparison_of_Android_e-book_reader_software-1.csv",
@@ -92,7 +80,7 @@ class TestVeriteTerrain {
 	 */
 	
 	// Fchier différent à cause de certains caractère speciaux
-		 @DisplayName("Verité terrain  de certains fichiers Biliki  générés")
+		 @DisplayName(" Bliki 1: Verité terrain  de certains fichiers Biliki  générés")
 		 @ParameterizedTest
 		 @CsvSource({
 			         "Comparison_between_Ido_and_Interlingua-2.csv,Comparison_between_Ido_and_Interlingua-2.mine.csv"})
@@ -107,7 +95,7 @@ class TestVeriteTerrain {
 				assertTrue(CSVUtils.CompareTwoFile(file1,file2),"Les deux fichiers doivent être pareil" );
 			}
 		 
-		 @DisplayName("Verité terrain e certains fichiers Biliki  générés")
+		 @DisplayName("Bliki 2 :Verité terrain e certains fichiers Biliki  générés")
 		 @ParameterizedTest
 		 @CsvSource({"Comparison_of_ALGOL_68_and_C++-2.csv,Comparison_of_ALGOL_68_and_C++-1.csv",
 			         "Comparison_of_Android_e-book_reader_software-2.csv,Comparison_of_Android_e-book_reader_software-1.csv",
