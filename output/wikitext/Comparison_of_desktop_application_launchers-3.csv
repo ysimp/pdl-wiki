@@ -1,9 +1,0 @@
-, Creator, Latest stable version, Release date, OS, Software license, Open source, Programming language, Plugin support
-9menu, Arnold Robbins, 1.8, {{dts|2004|06|01}}, Linux, GPL, {{yes}}, C, {{no}}
-Avant Window Navigator, Neil J. Patel, 0.4.2 [2], {{dts|2013|11|27}}, Linux, GPL, {{yes}}, C, {{yes}}
-dmenu, dwm developers, 4.5[3], {{dts|2011|12|19}}, Linux, MIT License, {{yes}}, C, {{no}}
-GNOME Do, GNOME Do Developers, 0.95.1[4], {{dts|2014|01|23}}, Linux, GPL, {{yes}}, C#, {{yes}}
-LXPanel, LXDE Developers, 0.10.0[5], February 26  2019[6], Linux, GPL, {{yes}}, C, {{yes}}[7]
-Katapult, TDE Developers, R14.0.6[8], {{dts|2019|03|05}}, Linux with TDE, GPL, {{yes}}, C++, {{yes}}
-rofi, Dave Davenport, 1.5.4[9], {{dts|2019|10|26}}, Linux, MIT/X11 License, {{yes}}, C, {{no}}
-Unity Dash, Canonical Ltd., 7.3.0[10], {{dts|2014|06|19}}, Ubuntu, GPLv3, {{yes}}, Vala, {{yes}} ("lenses" and "scopes")
