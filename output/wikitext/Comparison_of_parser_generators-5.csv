@@ -1,0 +1,32 @@
+Name, Parsing algorithm, Input grammar notation, Output languages, Grammar  code, Lexer, Development platform, IDE, License
+ACCENT, Earley, Yacc variant, C, {{D-A|Mixed}}, external, {{Yes|All}}, {{No}}, {{Free}}  GNU GPL
+APaGeD, GLR  LALR(1)  LL(k), ?, D, {{D-A|Mixed}}, generated, {{Yes|All}}, {{No}}, {{Free}}  Artistic
+Bison, LALR(1)  LR(1)  IELR(1)  GLR, Yacc, C  C++  Java  XML, {{D-A|Mixed}}  except XML, external, {{Yes|All}}, {{No}}, {{Free}}  GNU GPL
+DMS Software Reengineering Toolkit, GLR, ?, Parlanse, {{D-A|Mixed}}, generated, {{Some|Windows}}, {{No}}, {{Proprietary}}
+DParser, Scannerless GLR, ?, C, {{D-A|Mixed}}, scannerless, {{Some|POSIX}}, {{No}}, {{Free}}  BSD
+Dypgen, Runtime-extensible GLR, ?, OCaml, {{D-A|Mixed}}, generated, {{Yes|All}}, {{No}}, {{Free}}  CeCILL-B
+E3, Earley, ?, OCaml, {{D-A|Mixed}}, external  or scannerless, {{Yes|All}}, {{No}}, ?
+Elkhound, GLR, ?, C++  OCaml, {{D-A|Mixed}}, external, {{Yes|All}}, {{No}}, {{Free}}  BSD
+eu.h8me.Parsing, GLR, ?, N/A (state machine is runtime generated), {{D-P|Separate}}, external, {{Some|.NET Framework}}, {{No}}, {{Free}}  BSD
+GDK, LALR(1)  GLR, ?, C  Lex  Haskell  HTML  Java  Object Pascal  Yacc, {{D-A|Mixed}}, generated, {{Some|POSIX}}, {{No}}, {{Free}}  MIT
+Happy, LALR  GLR, ?, Haskell, {{D-A|Mixed}}, external, {{Yes|All}}, {{No}}, {{Free}}  BSD
+Hime Parser Generator, GLR, ?, C#  Java  Rust, {{D-P|Separate}}, generated, {{Some|.NET Framework  Java virtual machine}}, {{No}}, {{Free}}  GNU LGPL
+IronText Library, LALR(1)  GLR, C#, C#, {{D-A|Mixed}}, generated or external, {{Some|.NET Framework}}, {{No}}, {{Free}}  Apache 2.0
+Jison, LALR(1)  LR(0)  SLR(1), Yacc, JavaScript  C#  PHP, {{D-A|Mixed}}, generated, {{Yes|All}}, {{No}}, {{Free}}  MIT
+Syntax, LALR(1)  LR(0)  SLR(1) CLR(1) LL(1), JSON/Yacc, JavaScript  Python  PHP  Ruby  C#  Rust  Java, {{D-A|Mixed}}, generated, {{Yes|All}}, {{No}}, {{Free}}  MIT
+Laja, Scannerless  two phase, Laja, Java, {{D-P|Separate}}, scannerless, {{Yes|All}}, {{No}}, {{Free}}  GNU GPL
+ModelCC, Earley, Annotated class model, Java, Generated, generated, {{Yes|All}}, {{No}}, {{Free}}  BSD
+parglare, Scannerless LR/GLR, BNF-like, Python interpreted  automata run-time generated, {{D-A|Mixed}}, scannerless, {{Yes|All}}, {{No}}, {{Free}}  MIT
+P1, Combinators, BNF-like, OCaml, {{D-A|Mixed}}, external  or scannerless, {{Yes|All}}, {{No}}, ?
+P3, Earley–combinators, BNF-like, OCaml, {{D-A|Mixed}}, external  or scannerless, {{Yes|All}}, {{No}}, ?
+P4, Earley–combinators  infinitary CFGs, BNF-like, OCaml, {{D-A|Mixed}}, external  or scannerless, {{Yes|All}}, {{No}}, ?
+Scannerless Boolean Parser, Scannerless GLR (Boolean grammars), ?, Haskell  Java, {{D-P|Separate}}, scannerless, {{Some|Java virtual machine}}, {{No}}, {{Free}}  BSD
+SDF/SGLR, Scannerless GLR, SDF, C  Java, {{D-P|Separate}}, scannerless, {{Yes|All}}, {{Yes}}, {{Free}}  BSD
+SmaCC, GLR(1)  LALR(1)  LR(1), ?, Smalltalk, {{D-A|Mixed}}, internal, {{Yes|All}}, {{Yes}}, {{Free}}  MIT
+SPARK, Earley, ?, Python, {{D-A|Mixed}}, external, {{Yes|All}}, {{No}}, {{Free}}  MIT
+Tom, GLR, ?, C, Generated, none, {{Yes|All}}, {{No}}, {{Free}}  "No licensing or copyright restrictions"
+UltraGram, LALR  LR  GLR, ?, C++  C#  Java  Visual Basic .NET, {{D-P|Separate}}, generated, {{Some|Windows}}, {{Yes}}, {{Proprietary}}
+Wormhole, Pruning  LR  GLR  Scannerless GLR, ?, C  Python, {{D-A|Mixed}}, scannerless, {{Some|Windows}}, {{No}}, {{Free}}  MIT
+Whale Calf, General tabular  SLL(k)  Linear normal form (conjunctive grammars)  LR  Binary normal form (Boolean grammars), ?, C++, {{D-P|Separate}}, external, {{Yes|All}}, {{No}}, {{Proprietary}}
+yaep, Earley, Yacc-like, C, {{D-A|Mixed}}, external, {{Yes|All}}, {{No}}, {{Free}}  GNU LGPL
+Zecc, Recursive pattern matching, Zecc/Zacc, Linkable library, {{D-A|Mixed}}, Scannerless, {{Some|macOS}}, {{Yes}}, {{Proprietary}}

@@ -16,6 +16,7 @@ public interface Extractor {
 	/**
 	 * Permet d'extraire les tableaux dans une page (url)
 	 * @parm url du page wikipedia
+	 * @param filte pour savoir si on applique le filtre ou pas
 	 * @return les tableaux extrait de la page
 	 * @throws IOException
 	 * @throws

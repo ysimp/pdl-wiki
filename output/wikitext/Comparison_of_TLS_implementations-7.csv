@@ -1,0 +1,16 @@
+Implementation, sect163k1 {{nowrap|NIST K-163}} (1)[69], sect163r1 (2)[69], sect163r2 {{nowrap|NIST B-163}} (3)[69], sect193r1 (4)[69], sect193r2 (5)[69], sect233k1 {{nowrap|NIST K-233}} (6)[69], sect233r1 {{nowrap|NIST B-233}} (7)[69], sect239k1 (8)[69], sect283k1 {{nowrap|NIST K-283}} (9)[69], sect283r1 {{nowrap|NIST B-283}} (10)[69], sect409k1 {{nowrap|NIST K-409}} (11)[69], sect409r1 {{nowrap|NIST B-409}} (12)[69], sect571k1 {{nowrap|NIST K-571}} (13)[69], sect571r1 {{nowrap|NIST B-571}} (14)[69]
+Botan, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+BoringSSL, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+GnuTLS, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+JSSE, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}
+LibreSSL, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}
+MatrixSSL, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+mbed TLS, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+NSS, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}
+OpenSSL, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}
+RSA BSAFE, {{yes}}, {{no}}, {{yes}}, {{no}}, {{no}}, {{yes}}, {{yes}}, {{no}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}
+SChannel Vista/2008  7/2008R2  8/2012  8.1/2012R2  10, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+Secure Transport, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+wolfSSL, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}, {{no}}
+Erlang/OTP SSL application, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}, {{yes}}
+Implementation, sect163k1 {{nowrap|NIST K-163}} (1)[69], sect163r1 (2)[69], sect163r2 {{nowrap|NIST B-163}} (3)[69], sect193r1 (4)[69], sect193r2 (5)[69], sect233k1 {{nowrap|NIST K-233}} (6)[69], sect233r1 {{nowrap|NIST B-233}} (7)[69], sect239k1 (8)[69], sect283k1 {{nowrap|NIST K-283}} (9)[69], sect283r1 {{nowrap|NIST B-283}} (10)[69], sect409k1 {{nowrap|NIST K-409}} (11)[69], sect409r1 {{nowrap|NIST B-409}} (12)[69], sect571k1 {{nowrap|NIST K-571}} (13)[69], sect571r1 {{nowrap|NIST B-571}} (14)[69]

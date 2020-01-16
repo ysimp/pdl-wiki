@@ -1,0 +1,4 @@
+Database, Create database, Delete database, List databases, Use a db, Create table, Delete table, List tables, List table fields
+MySQL, {{mono|create database dbname;}}, {{mono|drop database dbname;}}, {{mono|show databases;}}, {{mono|use dbname;}}, {{mono|create table tbname;}}, {{mono|drop table tbname;}}, {{mono|show tables;}}, {{mono|describe tbname;}}
+PostgreSQL, {{mono|create database dbname;}}, {{mono|drop database dbname;}}, {{mono|\l (in psql)}}, {{mono|\c dbname (in psql) For schemas (a similar feature): set search_path = schema_name;}}, {{mono|create table tbname (field1 value_type1  field2 value_type2  ... );}}, {{mono|drop table tbname;}}, {{mono|\d (in psql)}}, {{mono|\d tbname (in psql)}}
+Sqlite ver 3, {{mono|? }}, {{mono|? }}, {{mono|? }}, {{mono|$ sqlite3 filename}}, {{mono|create table tbname (field1 value_type1  field2 value_type2  ... )}}, {{mono|drop table tbname}}, {{mono|.tables}}, {{mono|.schema}}

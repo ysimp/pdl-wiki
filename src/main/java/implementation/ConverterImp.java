@@ -59,6 +59,7 @@ public class ConverterImp implements Converter {
 			tableauCSV =output + CSVUtils.mkCSVFileName(fileName, tab.getNumeroTableau());
 			 w = new FileWriter(tableauCSV,false);
 			
+			 //ecrire le contenu du  tableau dans un fichier scv
 			 CSVUtils.writeTable(w, tab);	
 		}
 	}

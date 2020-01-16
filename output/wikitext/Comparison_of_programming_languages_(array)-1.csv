@@ -1,0 +1,43 @@
+Languages, Size, First, Last
+Ada, {{Mono|name'Length}}, {{Mono|name'First}}, {{Mono|name'Last}}
+ALGOL 68, {{Mono|UPB name - LWB name+1}} {{Mono|2 UPB name - 2 LWB name+1}} etc., {{Mono|LWB name}} {{Mono|2 LWB name}} etc., {{Mono|UPB name}} {{Mono|2 UPB name}} etc.
+APL, {{Mono|? name (? name)[index]}}, {{Mono|?IO}}, {{Mono|(? name)-~?IO (? name)[index]-~?IO}}
+AWK, {{Mono|length}}, {{Mono|1}}, {{Mono|asorti}}
+C#  Visual Basic .NET  Windows PowerShell  F#, {{Mono|name.Length}}, {{Mono|name.GetLowerBound(dimension)}}, {{Mono|name.GetUpperBound(dimension)}}
+CFML, {{Mono|arrayLen(name)}} {{Mono|name.len()}}, {{Mono|1}}, {{Mono|name.len()}}
+Ch, {{Mono|max(shape(name))}}, {{Mono|0}}, {{Mono|max(shape(name))-1}}
+Common Lisp, {{Mono|(length name)}}, {{Mono|0}}, {{Mono|(1- (length name))}}
+D, {{Mono|name.length}}, {{Mono|0}}, {{Mono|name.length-1}} {{Mono|$-1}}
+Fortran, {{Mono|SIZE(name)}}, {{Mono|LBOUND(name)}}, {{Mono|UBOUND(name)}}
+Go, {{Mono|len(name)}}, {{Mono|0}}, {{Mono|len(name) - 1}}
+Haskell, {{Mono|rangeSize (bounds name)}}, {{Mono|fst (bounds name)}}, {{Mono|snd (bounds name)}}
+ISLISP, {{Mono|(length name)}}, {{Mono|0}}, {{Mono|(1- (length name))}}
+Cobra  D  Haxe  Java  JavaScript  Scala, {{Mono|name.length}}, {{Mono|0}}, {{Mono|name.length - 1}}
+J, {{Mono|#name}}, {{Mono|0}}, {{Mono|<:@#name}}
+Julia, {{Mono|length(name) size(name)}}, {{Mono|1 first.(axes(name))}}, {{Mono|end last.(axes(name))}}
+Lingo, {{Mono|count(name)}}, {{Mono|1}}, {{Mono|getLast(name)}}
+LiveCode, {{Mono|length(name)}}, {{Mono|1}} {{Mono|first}}, {{Mono|-1}} {{Mono|last}}
+Lua, {{Mono|#name}}, {{Mono|1 by convention; any integer[2]}}, {{Mono|#name}}
+Mathematica, {{Mono|Length[name]}}, {{Mono|1}} {{Mono|First[name]}}, {{Mono|-1}} {{Mono|Last[name]}}
+MATLAB  GNU Octave, {{Mono|length(name)}}, {{Mono|1}}, {{Mono|end}}
+Nim, {{Mono|name.len}}, {{Mono|name.low}}[3], {{Mono|name.high}}
+Oberon, {{Mono|LEN(name)}}, {{Mono|0}}, {{Mono|LEN(name) - 1}}
+Object Pascal, {{Mono|Length(name)}}, {{Mono|0}} {{Mono|low(name)}}, {{Mono|Length(name)-1}} {{Mono|high(name)}}
+Objective-C (NSArray * only), {{Mono|[name count]}}, {{Mono|0}}, {{Mono|[name count] - 1}}
+OCaml, {{Mono|Array.length name}}, {{Mono|0}}, {{Mono|Array.length name - 1}}
+Perl, {{Mono|scalar(@name)}}, {{Mono|$[}}, {{Mono|$#name}}
+PHP, {{Mono|count(}}${{Mono|name)}}, {{Mono|0}}, {{Mono|count(}}${{Mono|name) - 1}}
+Python, {{Mono|len(name)}}, {{Mono|0}}, {{Mono|-1}} {{Mono|len(name) - 1}}
+R, {{Mono|length(name)}}, {{Mono|1}}, {{Mono|length(name)}}
+Raku, @{{Mono|name.elems}}, {{Mono|0}}, {{Mono|@name.end}}
+Red, {{Mono|length? name}}, {{Mono|name/1}} {{Mono|first name}}, {{Mono|last name}}
+Ruby, {{Mono|name.size}}, {{Mono|0}} {{Mono|name.first}}, {{Mono|-1}} {{Mono|name.size - 1}} {{Mono|name.last}}
+Rust, {{Mono|name.len()}}, {{Mono|0}}, {{Mono|name.len() - 1}}
+S-Lang, {{Mono|length(name)}}, {{Mono|0}}, {{Mono|-1}} {{Mono|length(name)-1}}
+Scheme, {{Mono|(vector-length vector)}}, {{Mono|0}}, {{Mono|(- (vector-length vector) 1)}}
+Smalltalk, {{Mono|name size}}, {{Mono|1}} {{Mono|name first}}, {{Mono|name size}} {{Mono|name last}}
+Swift, {{Mono|name.count}}, {{Mono|0}}, {{Mono|name.count - 1}}
+Visual Basic, {{Mono|UBound(name)-LBound(name)+1}}, {{Mono|LBound(name)}}, {{Mono|UBound(name)}}
+Wolfram Language, {{Mono|Length[name]}}, {{Mono|1}} {{Mono|First[name]}}, {{Mono|-1}} {{Mono|Last[name]}}
+Xojo, {{Mono|UBound(name)}}, {{Mono|0}}, {{Mono|UBound(name)}}
+XPath/XQuery, {{Mono|count($name)}}, {{Mono|1}}, {{Mono|count($name)}} {{Mono|last()}} {{Mono|array:size(name)}}[4]

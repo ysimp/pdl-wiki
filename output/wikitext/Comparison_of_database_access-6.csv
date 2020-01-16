@@ -1,0 +1,3 @@
+Prog Language, Describe, List table content, Search
+raw MySQL access, {{mono|describe tablename;}}, {{mono|select field from tablename;}}, 
+PHP, , , 
